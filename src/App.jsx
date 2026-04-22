@@ -40,6 +40,8 @@ function App() {
     const [velocityData, setVelocityData] = useState({})
     const [narrative, setNarrative] = useState('')
     const [generatingNarrative, setGeneratingNarrative] = useState(false)
+    const [discrepancies, setDiscrepancies] = useState('')
+    const [runningAudit, setRunningAudit] = useState(false)
 
     useEffect(() => {
         checkHealth()
@@ -162,6 +164,24 @@ function App() {
         } catch (e) {
             alert("Export failed. Check backend logs.");
         }
+    };
+
+    const runDiscrepancyAudit = async () => {
+        setRunningAudit(true);
+        setDiscrepancies('System actively cross-referencing timeline nodes for lies, omissions, and behavioral contradictions... This may take up to 2 minutes on local AI.');
+        try {
+            const items = evidence.filter(e => e.content || e.summary).slice(0, 30);
+            const res = await fetch('http://localhost:3001/api/audit/discrepancies', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ items })
+            });
+            const data = await res.json();
+            setDiscrepancies(data.discrepancies || "No discrepancies found in the sampled node batch.");
+        } catch (e) {
+            setDiscrepancies("Critical Error: Audit failed to complete.");
+        }
+        setRunningAudit(false);
     };
 
     const handleChat = async () => {
@@ -585,6 +605,22 @@ function App() {
                                                 e.target.value = "";
                                             }
                                         }} />
+                                    </div>
+                                </div>
+
+                                <div className="gov-control-card full-row" style={{ borderLeft: "4px solid #f43f5e" }}>
+                                    <div className="card-header">
+                                        <h3>Truth Check: Contradiction Alerts</h3>
+                                        <button className="secondary-btn-xs" onClick={runDiscrepancyAudit} disabled={runningAudit} style={{ borderColor: "#f43f5e", color: "#f43f5e", marginLeft: "auto", background: "none", cursor: "pointer", padding: "5px 10px", borderRadius: "4px" }}>
+                                            {runningAudit ? 'Scanning Vault...' : '▶ Run Cross-Reference Audit'}
+                                        </button>
+                                    </div>
+                                    <div className="audit-results-box" style={{ padding: "15px", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "6px", marginTop: "15px" }}>
+                                        {discrepancies ? (
+                                            <pre className="audit-output" style={{ color: "#e2e8f0", whiteSpace: "pre-wrap", fontSize: "0.9rem", maxWidth: "100%", overflowX: "hidden" }}>{discrepancies}</pre>
+                                        ) : (
+                                            <p className="empty-msg" style={{ margin: 0, color: "#94a3b8" }}>No active alerts. Run an audit to cross-reference event timelines for contradictions.</p>
+                                        )}
                                     </div>
                                 </div>
 

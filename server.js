@@ -901,7 +901,39 @@ app.get('/api/export/download/:file', (req, res) => {
     if (!fs.existsSync(filePath)) return res.status(404).send("File not found");
     res.download(filePath);
 });
-app.listen(PORT, () => {
-    console.log(`Vault Backend running on http://localhost:${PORT}`);
+
+app.post('/api/audit/discrepancies', async (req, res) => {
+    try {
+        const { items } = req.body;
+        if (!items || items.length === 0) {
+            return res.json({ success: true, discrepancies: 'Not enough chronological data points to detect contradictions.' });
+        }
+
+        let promptLines = [
+            "Analyze the following list of chronological statements/events and specifically hunt for explicit contradictions, timeline overlaps, or behavioral discrepancies between the entities.",
+            "Cross-reference 'Party A' vs 'Party B' claims where available. Format your findings strictly into bullet points marking any detected lies or inconsistencies:\n"
+        ];
+
+        items.forEach((item, idx) => {
+            const dateStr = item.date || 'Unknown Date';
+            const context = item.content || item.summary || item.text || 'No data';
+            promptLines.push(`[Event ${idx + 1} (${dateStr})]: ${context}`);
+        });
+
+        const response = await axios.post('http://localhost:11434/api/generate', {
+            model: 'llama3.1:8b', // Enforce local privacy layer
+            prompt: promptLines.join('\n'),
+            stream: false,
+            options: { temperature: 0.1 } // Very low temp for strict truth evaluation
+        }, { timeout: 120000 });
+
+        res.json({ success: true, discrepancies: response.data.response });
+    } catch (e) {
+        console.error("Discrepancy audit failed", e);
+        res.status(500).json({ error: "Audit logic failure" });
+    }
 });
 
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Vault Backend running on http://localhost:${PORT}`);
+});
