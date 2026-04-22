@@ -1,0 +1,47 @@
+[
+    {
+        "id": "pixel8",
+        "name": "Primary Phone (Google Pixel 8)",
+        "description": "SMS messages, call logs, and captured media (2020-2024).",
+        "type": "device",
+        "lastSync": "2024-04-19 20:26:40",
+        "status": "ready",
+        "integrity": "verified",
+        "localPath": "/Backups/phone/pixel",
+        "readOnly": true
+    },
+    {
+        "id": "personal_email",
+        "name": "Personal Gmail Archive",
+        "description": "Primary communication account (2008-Present).",
+        "type": "account",
+        "lastSync": "2024-04-15 14:30:00",
+        "status": "ready",
+        "integrity": "verified",
+        "localPath": "/evidence/raw/personal_drafts",
+        "readOnly": true
+    },
+    {
+        "id": "old_laptop",
+        "name": "Old Laptop (Dell Latitude)",
+        "description": "Historical files and older email archives (2010-2020).",
+        "type": "device",
+        "lastSync": "Never",
+        "status": "ready",
+        "integrity": "unverified",
+        "localPath": "/Backups/old_laptop",
+        "readOnly": true
+    },
+    {
+        "id": "legal_email",
+        "name": "Legal Email Archive",
+        "description": "Main case history archive.",
+        "type": "account",
+        "lastSync": "Never",
+        "status": "ready",
+        "integrity": "unverified",
+        "localPath": "/media/chrishallberg/Storage 22/002_Personal/Katherine Legal/email",
+        "readOnly": true,
+        "monitoredContacts": []
+    }
+]

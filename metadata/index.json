@@ -1,0 +1,856 @@
+[
+  {
+    "id": "1000006202.png_976888",
+    "title": "Image: 1000006202.png",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "media",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "1000006202.png"
+  },
+  {
+    "id": "1000006332.jpg_976941",
+    "title": "Image: 1000006332.jpg",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "media",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "1000006332.jpg"
+  },
+  {
+    "id": "1000006334.jpg_976988",
+    "title": "Image: 1000006334.jpg",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "media",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "1000006334.jpg"
+  },
+  {
+    "id": "2025-10-03 Chris Hallberg LT.pdf_977081",
+    "title": "Document: 2025-10-03 Chris Hallberg LT.pdf",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2025-10-03 Chris Hallberg LT.pdf"
+  },
+  {
+    "id": "2026-02-20 Chris Hallberg LT_1.pdf_977182",
+    "title": "Document: 2026-02-20 Chris Hallberg LT_1.pdf",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2026-02-20 Chris Hallberg LT_1.pdf"
+  },
+  {
+    "id": "Fw_ Katherine Andersen & Yourself_1.eml_977642",
+    "title": "Fw_ Katherine Andersen & Yourself_1.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Fw_ Katherine Andersen & Yourself_1.eml"
+  },
+  {
+    "id": "Fw_ Katherine Andersen & Yourself_2.eml_977686",
+    "title": "Fw_ Katherine Andersen & Yourself_2.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Fw_ Katherine Andersen & Yourself_2.eml"
+  },
+  {
+    "id": "Fw_ Katherine Andersen & Yourself_3.eml_977733",
+    "title": "Fw_ Katherine Andersen & Yourself_3.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Fw_ Katherine Andersen & Yourself_3.eml"
+  },
+  {
+    "id": "Fw_ Katherine Andersen & Yourself_4.eml_977779",
+    "title": "Fw_ Katherine Andersen & Yourself_4.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Fw_ Katherine Andersen & Yourself_4.eml"
+  },
+  {
+    "id": "Re_ Fw_ Katherine Andersen & Yourself.eml_978330",
+    "title": "Re_ Fw_ Katherine Andersen & Yourself.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Fw_ Katherine Andersen & Yourself.eml"
+  },
+  {
+    "id": "Re_ Katherine Andersen & Yourself.eml_978471",
+    "title": "Re_ Katherine Andersen & Yourself.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine Andersen & Yourself.eml"
+  },
+  {
+    "id": "Re_ Katherine Andersen & Yourself_1.eml_978516",
+    "title": "Re_ Katherine Andersen & Yourself_1.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine Andersen & Yourself_1.eml"
+  },
+  {
+    "id": "Re_ Katherine Andersen & Yourself_10.eml_978559",
+    "title": "Re_ Katherine Andersen & Yourself_10.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine Andersen & Yourself_10.eml"
+  },
+  {
+    "id": "Re_ Katherine Andersen & Yourself_11.eml_978604",
+    "title": "Re_ Katherine Andersen & Yourself_11.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine Andersen & Yourself_11.eml"
+  },
+  {
+    "id": "Re_ Katherine Andersen & Yourself_12.eml_978648",
+    "title": "Re_ Katherine Andersen & Yourself_12.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine Andersen & Yourself_12.eml"
+  },
+  {
+    "id": "Re_ Katherine Andersen & Yourself_2.eml_978693",
+    "title": "Re_ Katherine Andersen & Yourself_2.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine Andersen & Yourself_2.eml"
+  },
+  {
+    "id": "Re_ Katherine Andersen & Yourself_3.eml_978738",
+    "title": "Re_ Katherine Andersen & Yourself_3.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine Andersen & Yourself_3.eml"
+  },
+  {
+    "id": "Fwd_ Katherine Andersen & Yourself.eml_979243",
+    "title": "Fwd_ Katherine Andersen & Yourself.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Fwd_ Katherine Andersen & Yourself.eml"
+  },
+  {
+    "id": "Fwd_ Katherine Andersen & Yourself_1.eml_979288",
+    "title": "Fwd_ Katherine Andersen & Yourself_1.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Fwd_ Katherine Andersen & Yourself_1.eml"
+  },
+  {
+    "id": "Re_ Katherine Andersen & Yourself_5.eml_979334",
+    "title": "Re_ Katherine Andersen & Yourself_5.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine Andersen & Yourself_5.eml"
+  },
+  {
+    "id": "Re_ Katherine Andersen & Yourself_6.eml_979379",
+    "title": "Re_ Katherine Andersen & Yourself_6.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine Andersen & Yourself_6.eml"
+  },
+  {
+    "id": "Re_ Katherine Andersen & Yourself_7.eml_979424",
+    "title": "Re_ Katherine Andersen & Yourself_7.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine Andersen & Yourself_7.eml"
+  },
+  {
+    "id": "RE_ Katherine Andersen & Yourself_8.eml_979470",
+    "title": "RE_ Katherine Andersen & Yourself_8.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "RE_ Katherine Andersen & Yourself_8.eml"
+  },
+  {
+    "id": "Re_ Katherine Andersen & Yourself_9.eml_979517",
+    "title": "Re_ Katherine Andersen & Yourself_9.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine Andersen & Yourself_9.eml"
+  },
+  {
+    "id": "Re_ Katherine- law.eml_979563",
+    "title": "Re_ Katherine- law.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine- law.eml"
+  },
+  {
+    "id": "Screenshot_20251008_122415_Chrome.jpg_979989",
+    "title": "Image: Screenshot_20251008_122415_Chrome.jpg",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "media",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Screenshot_20251008_122415_Chrome.jpg"
+  },
+  {
+    "id": "Screenshot_20251008_122431_Chrome.jpg_980038",
+    "title": "Image: Screenshot_20251008_122431_Chrome.jpg",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "media",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Screenshot_20251008_122431_Chrome.jpg"
+  },
+  {
+    "id": "Katherine Andersen & Yourself.eml_980291",
+    "title": "Katherine Andersen & Yourself.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Katherine Andersen & Yourself.eml"
+  },
+  {
+    "id": "Re_ Katherine Andersen & Yourself_4.eml_980387",
+    "title": "Re_ Katherine Andersen & Yourself_4.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Katherine Andersen & Yourself_4.eml"
+  },
+  {
+    "id": "Katherine Andersen & Yourself_1.eml_980435",
+    "title": "Katherine Andersen & Yourself_1.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Katherine Andersen & Yourself_1.eml"
+  },
+  {
+    "id": "Katherine Andersen & Yourself_2.eml_980482",
+    "title": "Katherine Andersen & Yourself_2.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Katherine Andersen & Yourself_2.eml"
+  },
+  {
+    "id": "Katherine Andersen & Yourself_3.eml_980530",
+    "title": "Katherine Andersen & Yourself_3.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Katherine Andersen & Yourself_3.eml"
+  },
+  {
+    "id": "Katherine Andersen & Yourself_4.eml_980575",
+    "title": "Katherine Andersen & Yourself_4.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Katherine Andersen & Yourself_4.eml"
+  },
+  {
+    "id": "Katherine Andersen & Yourself_5.eml_980619",
+    "title": "Katherine Andersen & Yourself_5.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Katherine Andersen & Yourself_5.eml"
+  },
+  {
+    "id": "Katherine Andersen & Yourself_6.eml_980664",
+    "title": "Katherine Andersen & Yourself_6.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Katherine Andersen & Yourself_6.eml"
+  },
+  {
+    "id": "Katherine Andersen & Yourself_7.eml_980707",
+    "title": "Katherine Andersen & Yourself_7.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Katherine Andersen & Yourself_7.eml"
+  },
+  {
+    "id": "Katherine- law.eml_980752",
+    "title": "Katherine- law.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Katherine- law.eml"
+  },
+  {
+    "id": "New bill arrival. Katherine Andersen-Hallberg vs Chris Hallberg.eml_980845",
+    "title": "New bill arrival. Katherine Andersen-Hallberg vs Chris Hallberg.eml",
+    "timestamp": "2026-04-20 04:40:34",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "New bill arrival. Katherine Andersen-Hallberg vs Chris Hallberg.eml"
+  },
+  {
+    "id": ".~lock.jan_10_2026_katherine-v-chris_served.odt#_976798",
+    "title": ".~lock.jan_10_2026_katherine-v-chris_served.odt#",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": ".~lock.jan_10_2026_katherine-v-chris_served.odt#"
+  },
+  {
+    "id": "1000007151.png_977034",
+    "title": "Image: 1000007151.png",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "media",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "1000007151.png"
+  },
+  {
+    "id": "2026-03-09.01 Tim Turple LT.pdf_977228",
+    "title": "Document: 2026-03-09.01 Tim Turple LT.pdf",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2026-03-09.01 Tim Turple LT.pdf"
+  },
+  {
+    "id": "FW_ Katherine Andersen and Chris Hallberg.eml_977825",
+    "title": "FW_ Katherine Andersen and Chris Hallberg.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "FW_ Katherine Andersen and Chris Hallberg.eml"
+  },
+  {
+    "id": "INSTRUCTIONS_ Demand for Complete Correspondence File from Opposing Counsel & Case Index.eml_978049",
+    "title": "INSTRUCTIONS_ Demand for Complete Correspondence File from Opposing Counsel & Case Index.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "INSTRUCTIONS_ Demand for Complete Correspondence File from Opposing Counsel & Case Index.eml"
+  },
+  {
+    "id": "Re_ Answer and Counter-Petition_ Andersen v Hallberg_.eml_978095",
+    "title": "Re_ Answer and Counter-Petition_ Andersen v Hallberg_.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Answer and Counter-Petition_ Andersen v Hallberg_.eml"
+  },
+  {
+    "id": "re_ Answer and Counter-Petition_ Andersen v Hallberg__1.eml_978145",
+    "title": "re_ Answer and Counter-Petition_ Andersen v Hallberg__1.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "re_ Answer and Counter-Petition_ Andersen v Hallberg__1.eml"
+  },
+  {
+    "id": "re_ DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml_978190",
+    "title": "re_ DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "re_ DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml"
+  },
+  {
+    "id": "Re_ Hallberg v Anderson.eml_978381",
+    "title": "Re_ Hallberg v Anderson.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Hallberg v Anderson.eml"
+  },
+  {
+    "id": "20260119_133615-1.PDF_978828",
+    "title": "Document: 20260119_133615-1.PDF",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "20260119_133615-1.PDF"
+  },
+  {
+    "id": "2449 Eastview - Saskatoon.pdf_978873",
+    "title": "Document: 2449 Eastview - Saskatoon.pdf",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2449 Eastview - Saskatoon.pdf"
+  },
+  {
+    "id": "Answer and Counter Petitioner Mar 12, 2026.pdf_978970",
+    "title": "Document: Answer and Counter Petitioner Mar 12, 2026.pdf",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Answer and Counter Petitioner Mar 12, 2026.pdf"
+  },
+  {
+    "id": "Answer and Counter Petitioner Mar 12, 2026_1.pdf_979015",
+    "title": "Document: Answer and Counter Petitioner Mar 12, 2026_1.pdf",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Answer and Counter Petitioner Mar 12, 2026_1.pdf"
+  },
+  {
+    "id": "Answer and Counter Petitioner Mar 23, 2026.pdf_979059",
+    "title": "Document: Answer and Counter Petitioner Mar 23, 2026.pdf",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Answer and Counter Petitioner Mar 23, 2026.pdf"
+  },
+  {
+    "id": "DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml_979152",
+    "title": "DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml"
+  },
+  {
+    "id": "Re_ Retainer Agreement.eml_979618",
+    "title": "Re_ Retainer Agreement.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Retainer Agreement.eml"
+  },
+  {
+    "id": "Re_ Retainer Agreement_1.eml_979672",
+    "title": "Re_ Retainer Agreement_1.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Retainer Agreement_1.eml"
+  },
+  {
+    "id": "RE_ Retainer Agreement_2.eml_979720",
+    "title": "RE_ Retainer Agreement_2.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "RE_ Retainer Agreement_2.eml"
+  },
+  {
+    "id": "Re_ Retainer Agreement_3.eml_979766",
+    "title": "Re_ Retainer Agreement_3.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Retainer Agreement_3.eml"
+  },
+  {
+    "id": "re_ Retainer Agreement_4.eml_979809",
+    "title": "re_ Retainer Agreement_4.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "re_ Retainer Agreement_4.eml"
+  },
+  {
+    "id": "Tim from Merchant Law.eml_980137",
+    "title": "Tim from Merchant Law.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Tim from Merchant Law.eml"
+  },
+  {
+    "id": "Letter to Valerie Watson - Mar 23, 2026.pdf_980799",
+    "title": "Document: Letter to Valerie Watson - Mar 23, 2026.pdf",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Letter to Valerie Watson - Mar 23, 2026.pdf"
+  },
+  {
+    "id": "Retainer Agreement - Dec 22, 2025.pdf_980890",
+    "title": "Document: Retainer Agreement - Dec 22, 2025.pdf",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Retainer Agreement - Dec 22, 2025.pdf"
+  },
+  {
+    "id": "re_ Andersen v Hallberg_ Letter to Valerie Watson.eml_980938",
+    "title": "re_ Andersen v Hallberg_ Letter to Valerie Watson.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "re_ Andersen v Hallberg_ Letter to Valerie Watson.eml"
+  },
+  {
+    "id": "Re_ Annual Income_ Andersen v Hallberg.eml_980988",
+    "title": "Re_ Annual Income_ Andersen v Hallberg.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Annual Income_ Andersen v Hallberg.eml"
+  },
+  {
+    "id": "Re_ Annual Income_ Andersen v Hallberg_1.eml_981034",
+    "title": "Re_ Annual Income_ Andersen v Hallberg_1.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Annual Income_ Andersen v Hallberg_1.eml"
+  },
+  {
+    "id": "RE_ Annual Income_ Andersen v Hallberg_2.eml_981080",
+    "title": "RE_ Annual Income_ Andersen v Hallberg_2.eml",
+    "timestamp": "2026-04-20 04:40:32",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "RE_ Annual Income_ Andersen v Hallberg_2.eml"
+  },
+  {
+    "id": "2026-02-20 Chris Hallberg LT.pdf_977135",
+    "title": "Document: 2026-02-20 Chris Hallberg LT.pdf",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2026-02-20 Chris Hallberg LT.pdf"
+  },
+  {
+    "id": "2026-04-01 DRAFT Order - JCC.pdf_977275",
+    "title": "Document: 2026-04-01 DRAFT Order - JCC.pdf",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2026-04-01 DRAFT Order - JCC.pdf"
+  },
+  {
+    "id": "2026-04-01 DRAFT Order - JCC_1.pdf_977321",
+    "title": "Document: 2026-04-01 DRAFT Order - JCC_1.pdf",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2026-04-01 DRAFT Order - JCC_1.pdf"
+  },
+  {
+    "id": "2026-04-01 DRAFT Order - JCC_2.pdf_977368",
+    "title": "Document: 2026-04-01 DRAFT Order - JCC_2.pdf",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2026-04-01 DRAFT Order - JCC_2.pdf"
+  },
+  {
+    "id": "2026-04-01 DRAFT Order - JCC_3.pdf_977414",
+    "title": "Document: 2026-04-01 DRAFT Order - JCC_3.pdf",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2026-04-01 DRAFT Order - JCC_3.pdf"
+  },
+  {
+    "id": "2026-04-01 Request for JCC.pdf_977459",
+    "title": "Document: 2026-04-01 Request for JCC.pdf",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2026-04-01 Request for JCC.pdf"
+  },
+  {
+    "id": "2026-04-01 Request for JCC_1.pdf_977504",
+    "title": "Document: 2026-04-01 Request for JCC_1.pdf",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2026-04-01 Request for JCC_1.pdf"
+  },
+  {
+    "id": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml_977550",
+    "title": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml"
+  },
+  {
+    "id": "Fw_ Katherine Andersen & Yourself.eml_977596",
+    "title": "Fw_ Katherine Andersen & Yourself.eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Fw_ Katherine Andersen & Yourself.eml"
+  },
+  {
+    "id": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml_977871",
+    "title": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml"
+  },
+  {
+    "id": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml_977916",
+    "title": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml"
+  },
+  {
+    "id": "image001.jpg_977960",
+    "title": "Image: image001.jpg",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "media",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "image001.jpg"
+  },
+  {
+    "id": "image001_1.jpg_978006",
+    "title": "Image: image001_1.jpg",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "media",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "image001_1.jpg"
+  },
+  {
+    "id": "Re_ Financial Statement_ Andersen v Hallberg.eml_978238",
+    "title": "Re_ Financial Statement_ Andersen v Hallberg.eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Financial Statement_ Andersen v Hallberg.eml"
+  },
+  {
+    "id": "re_ Financial Statement_ Andersen v Hallberg_1.eml_978284",
+    "title": "re_ Financial Statement_ Andersen v Hallberg_1.eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "re_ Financial Statement_ Andersen v Hallberg_1.eml"
+  },
+  {
+    "id": "re_ Income Tax Statements.eml_978426",
+    "title": "re_ Income Tax Statements.eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "re_ Income Tax Statements.eml"
+  },
+  {
+    "id": "2026-04-01 Request for JCC_3.pdf_978783",
+    "title": "Document: 2026-04-01 Request for JCC_3.pdf",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2026-04-01 Request for JCC_3.pdf"
+  },
+  {
+    "id": "Answer and Counter Petition - Revision - Mar 24, 2026.pdf_978922",
+    "title": "Document: Answer and Counter Petition - Revision - Mar 24, 2026.pdf",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Answer and Counter Petition - Revision - Mar 24, 2026.pdf"
+  },
+  {
+    "id": "April 1st surgery, cancellation.eml_979107",
+    "title": "April 1st surgery, cancellation.eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "April 1st surgery, cancellation.eml"
+  },
+  {
+    "id": "Financial Statement - Client - Apr 8, 2026.pdf_979198",
+    "title": "Document: Financial Statement - Client - Apr 8, 2026.pdf",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Financial Statement - Client - Apr 8, 2026.pdf"
+  },
+  {
+    "id": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml_979853",
+    "title": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml"
+  },
+  {
+    "id": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_1.eml_979899",
+    "title": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_1.eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_1.eml"
+  },
+  {
+    "id": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_2.eml_979945",
+    "title": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_2.eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_2.eml"
+  },
+  {
+    "id": "Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml_980084",
+    "title": "Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml"
+  },
+  {
+    "id": "2026-04-01 Request for JCC_2.pdf_980186",
+    "title": "Document: 2026-04-01 Request for JCC_2.pdf",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "document",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "2026-04-01 Request for JCC_2.pdf"
+  },
+  {
+    "id": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml_980234",
+    "title": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml"
+  },
+  {
+    "id": "re_ Answer and Counter Petition_ Andersen v Hallberg_DIV-SA-05-2026.eml_980339",
+    "title": "re_ Answer and Counter Petition_ Andersen v Hallberg_DIV-SA-05-2026.eml",
+    "timestamp": "2026-04-20 04:40:30",
+    "type": "generic",
+    "source": "legal_email",
+    "status": "vault",
+    "path": "re_ Answer and Counter Petition_ Andersen v Hallberg_DIV-SA-05-2026.eml"
+  },
+  {
+    "id": "pixel8_2024-04-19_202640_5551234.md_638628",
+    "title": "5551234",
+    "timestamp": "2024-04-19 20:26:40",
+    "type": "sms",
+    "source": "pixel8",
+    "status": "discovery",
+    "path": "sms/pixel8_2024-04-19_202640_5551234.md",
+    "flagged": true,
+    "flags": [
+      "divorce"
+    ]
+  },
+  {
+    "id": "old_laptop_test.md_637895",
+    "title": "Initial Consultation",
+    "timestamp": "2015-05-12 14:30:00",
+    "type": "email",
+    "source": "old_laptop",
+    "status": "discovery",
+    "path": "emails/old_laptop_test.md",
+    "flagged": true,
+    "flags": [
+      "lawyer@firm.com"
+    ]
+  }
+]

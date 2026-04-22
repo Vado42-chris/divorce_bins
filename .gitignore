@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Local Environment
+.env
+.env.local
+
+# Build output
+dist/
+build/
+*.log
+
+# Sensitive App Data (Do not commit PII or evidence)
+evidence/
+exports/
+reports/
+
+# Ideally, metadata/ should be ignored or only checked in as empty templates
+# If metadata is meant to be local state:
+# metadata/*.json
+
+# Editor directories and files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

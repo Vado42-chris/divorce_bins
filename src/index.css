@@ -1,0 +1,52 @@
+:root {
+  --bg-deep: #121417;
+  --bg-surface: #1e2227;
+  --accent: #d4af37;
+  --text-main: #e0e0e0;
+  --text-dim: #a0a0a0;
+  --border: rgba(212, 175, 55, 0.2);
+  --glass: rgba(30, 34, 39, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+.vault-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: radial-gradient(circle at top right, #1a1e23, #121417);
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.status-card {
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
