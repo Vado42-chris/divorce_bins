@@ -1,19 +1,23 @@
 {
   "keywords": [
     {
-      "value": "settlement",
+      "value": "SAID",
       "priority": true
     },
     {
-      "value": "custody",
+      "value": "disability",
       "priority": true
     },
     {
-      "value": "wire transfer",
+      "value": "accommodation",
       "priority": true
     },
     {
-      "value": "hidden",
+      "value": "medical",
+      "priority": false
+    },
+    {
+      "value": "Saskatchewan",
       "priority": false
     }
   ],
@@ -24,9 +28,14 @@
       "priority": true
     },
     {
-      "label": "Banker",
-      "value": "Chase Representative",
+      "label": "Provincial Worker",
+      "value": "SAID Caseworker",
       "priority": false
+    },
+    {
+      "label": "Medical Specialist",
+      "value": "Dr. Miller",
+      "priority": true
     }
   ]
 }

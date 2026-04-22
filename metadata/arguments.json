@@ -1,20 +1,16 @@
 [
   {
     "id": "arg_1776888397265",
-    "title": "Concealment of Financial Assets",
-    "description": "Evidence demonstrating undisclosed financial transfers occurring directly prior to the separation date.",
-    "items": [
-      {
-        "path": "/media/chrishallberg/Storage 22/002_Personal/divorce_bins/evidence/processed/emails/old_laptop_test.md"
-      }
-    ],
-    "legalMemo": "## Tactical Synthesis: Financial Concealment\n\nBased on timeline analysis, there is a clear pattern of shifting marital funds bypassing joint accounts. The attached evidentiary nodes confirm transactions initiated without mutual consent, establishing grounds for a full financial audit request during discovery."
+    "title": "Spousal Support & SAID Income Impact",
+    "description": "Evidence detailing the interaction between requested spousal support and the Saskatchewan Assured Income for Disability (SAID) benefits.",
+    "items": [],
+    "legalMemo": "## Tactical Synthesis: Disability Support & Income\n\nUnder Saskatchewan family law, the interplay between spousal support and SAID benefits requires careful documentation. The attached evidence demonstrates the absolute necessity of maintaining medical support without triggering provincial clawbacks from the SAID program."
   },
   {
     "id": "arg_1776888397266",
-    "title": "Violations of Temporary Parenting Plan",
-    "description": "Communications and logs showing unilateral deviations from the mediated custody schedule.",
+    "title": "Failure to Accommodate Medical Needs",
+    "description": "Communications showing deliberate disregard or failure to accommodate documented disability needs during custody exchanges.",
     "items": [],
-    "legalMemo": "## Tactical Synthesis: Custody Schedule\n\nPreliminary analysis reveals multiple instances where agreed-upon transition windows were ignored. Further SMS timeline harvesting is recommended to cement this argument."
+    "legalMemo": "## Tactical Synthesis: Medical Accommodation\n\nPreliminary analysis reveals a pattern of non-accommodation regarding the petitioner's documented disability (contrary to Saskatchewan Human Rights Code principles) during court-mandated transition times."
   }
 ]
