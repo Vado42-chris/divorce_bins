@@ -54,4 +54,10 @@ This document outlines the evolutionary phases of the Legal Evidence Management 
 * Lock-down read-only frontend mode for clean projection/presentation masking specific nodes dynamically.
 * Full-screen chronological playback of Evidence nodes connected to a selected Argument.
 
+### Phase 11: Deployment & Alpha Readiness (Friends & Family Release)
+
+* **Digital Ingestion Wizard**: Replace Python scripts with a web UI allowing users to drag-and-drop structural MBOX/ZIP files or securely type IMAP credentials for automatic background syncing.
+* **First-Run Onboarding Flow**: Build setup wizards to handle "Empty Vault" states so non-technical users know exactly how to start pulling in their data.
+* **Standalone Packaging**: Containerize or package the Node.js backend, React frontend, and local Python/Ollama bindings into a 1-click installer (e.g., Electron `exe`/`dmg` or an automated Docker script).
+
 *(Always review this roadmap and the architectural rules mapped in README.md before launching task commands.)*
