@@ -1,40 +1,53 @@
 {
   "keywords": [
     {
-      "value": "SAID",
+      "value": "collision",
       "priority": true
     },
     {
-      "value": "disability",
+      "value": "liability",
       "priority": true
     },
     {
-      "value": "accommodation",
+      "value": "SGI claim",
       "priority": true
     },
     {
-      "value": "medical",
-      "priority": false
+      "value": "SAID application",
+      "priority": true
     },
     {
-      "value": "Saskatchewan",
+      "value": "spousal support",
+      "priority": true
+    },
+    {
+      "value": "medical restriction",
+      "priority": true
+    },
+    {
+      "value": "settlement",
       "priority": false
     }
   ],
   "entities": [
     {
-      "label": "Opposing Counsel",
-      "value": "John Smith",
+      "label": "At-Fault Party",
+      "value": "Sarah Andersen",
       "priority": true
     },
     {
-      "label": "Provincial Worker",
-      "value": "SAID Caseworker",
-      "priority": false
+      "label": "Insurance Regulator",
+      "value": "SGI Adjuster",
+      "priority": true
     },
     {
-      "label": "Medical Specialist",
+      "label": "Medical Proof",
       "value": "Dr. Miller",
+      "priority": true
+    },
+    {
+      "label": "Provincial Support",
+      "value": "SAID Caseworker",
       "priority": true
     }
   ]

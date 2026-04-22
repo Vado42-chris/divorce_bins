@@ -8,7 +8,7 @@
             "challberg",
             "dad"
         ],
-        "role": "Petitioner"
+        "role": "Petitioner / Claimant"
     },
     {
         "id": "id_1776888300002",
@@ -17,9 +17,10 @@
             "Sarah",
             "S. Andersen",
             "sarah.a",
-            "mom"
+            "mom",
+            "At-Fault Driver"
         ],
-        "role": "Respondent"
+        "role": "Respondent / Liable Party"
     },
     {
         "id": "id_1776888300003",
@@ -30,5 +31,34 @@
             "jsmith@lawfirm"
         ],
         "role": "Opposing Counsel"
+    },
+    {
+        "id": "id_1776888300004",
+        "primaryName": "SGI Adjuster",
+        "aliases": [
+            "Saskatchewan Government Insurance",
+            "claims_dept",
+            "Adjuster"
+        ],
+        "role": "Insurance Authority"
+    },
+    {
+        "id": "id_1776888300005",
+        "primaryName": "Dr. Miller",
+        "aliases": [
+            "Primary Care",
+            "Specialist Documenter",
+            "clinic"
+        ],
+        "role": "Medical Authority"
+    },
+    {
+        "id": "id_1776888300006",
+        "primaryName": "SAID Caseworker",
+        "aliases": [
+            "Ministry of Social Services",
+            "Saskatchewan Assured Income"
+        ],
+        "role": "Provincial Worker"
     }
 ]
