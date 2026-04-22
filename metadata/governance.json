@@ -1,40 +1,32 @@
 {
-  "entities": [
-    {
-      "type": "email",
-      "value": "lawyer@firm.com",
-      "label": "Counsel",
-      "priority": true
-    },
-    {
-      "type": "phone",
-      "value": "555-1234",
-      "label": "Spouse",
-      "priority": true
-    },
-    {
-      "label": "Phone",
-      "value": "555-1234",
-      "priority": true
-    }
-  ],
   "keywords": [
+    {
+      "value": "settlement",
+      "priority": true
+    },
     {
       "value": "custody",
       "priority": true
     },
     {
-      "value": "bank",
+      "value": "wire transfer",
       "priority": true
     },
     {
-      "value": "divorce",
-      "priority": true
-    },
-    {
-      "value": "Katherine",
-      "priority": true
+      "value": "hidden",
+      "priority": false
     }
   ],
-  "sources": []
+  "entities": [
+    {
+      "label": "Opposing Counsel",
+      "value": "John Smith",
+      "priority": true
+    },
+    {
+      "label": "Banker",
+      "value": "Chase Representative",
+      "priority": false
+    }
+  ]
 }

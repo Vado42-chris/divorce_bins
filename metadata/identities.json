@@ -1,1 +1,34 @@
-[]
+[
+    {
+        "id": "id_1776888300001",
+        "primaryName": "Chris Hallberg",
+        "aliases": [
+            "Chris",
+            "Christopher",
+            "challberg",
+            "dad"
+        ],
+        "role": "Petitioner"
+    },
+    {
+        "id": "id_1776888300002",
+        "primaryName": "Sarah Andersen",
+        "aliases": [
+            "Sarah",
+            "S. Andersen",
+            "sarah.a",
+            "mom"
+        ],
+        "role": "Respondent"
+    },
+    {
+        "id": "id_1776888300003",
+        "primaryName": "John Smith Esq.",
+        "aliases": [
+            "Smith",
+            "Opposing Counsel",
+            "jsmith@lawfirm"
+        ],
+        "role": "Opposing Counsel"
+    }
+]

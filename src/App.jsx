@@ -322,14 +322,14 @@ function App() {
                 <nav>
                     <button className={view === 'dashboard' ? 'active' : ''} onClick={() => setView('dashboard')}>Dashboard</button>
                     <button className={view === 'sources' ? 'active' : ''} onClick={() => setView('sources')}>Sources</button>
-                    <button className={view === 'governance' ? 'active' : ''} onClick={() => setView('governance')}>Governance Center</button>
-                    <button className={view === 'arguments' ? 'active' : ''} onClick={() => setView('arguments')}>Argument Builder</button>
-                    <button className={view === 'analytics' ? 'active' : ''} onClick={() => setView('analytics')}>Temporal Analytics</button>
+                    <button className={view === 'governance' ? 'active' : ''} onClick={() => setView('governance')}>People & Alerts</button>
+                    <button className={view === 'arguments' ? 'active' : ''} onClick={() => setView('arguments')}>Case Strategy</button>
+                    <button className={view === 'analytics' ? 'active' : ''} onClick={() => setView('analytics')}>Timeline Heatmap</button>
                     <hr className="nav-divider" />
-                    <button className={view === 'timeline' ? 'active' : ''} onClick={() => setView('timeline')}>Secure Vault</button>
-                    <button className={view === 'reports' ? 'active' : ''} onClick={async () => { setView('reports'); const res = await fetch('http://localhost:3001/api/reports'); setReports(await res.json()); }}>Reports Center</button>
-                    <button className={view === 'sms' ? 'active' : ''} onClick={() => setView('sms')}>SMS Discovery</button>
-                    <button className={view === 'email' ? 'active' : ''} onClick={() => setView('email')}>Email Discovery</button>
+                    <button className={view === 'timeline' ? 'active' : ''} onClick={() => setView('timeline')}>Evidence Vault</button>
+                    <button className={view === 'reports' ? 'active' : ''} onClick={async () => { setView('reports'); const res = await fetch('http://localhost:3001/api/reports'); setReports(await res.json()); }}>Downloads & Reports</button>
+                    <button className={view === 'sms' ? 'active' : ''} onClick={() => setView('sms')}>Text Messages</button>
+                    <button className={view === 'email' ? 'active' : ''} onClick={() => setView('email')}>Emails</button>
                 </nav>
             </aside>
 
@@ -365,7 +365,7 @@ function App() {
                                 </div>
                                 <div className="stat-pill">
                                     <span className="stat-value">{argumentsList.length}</span>
-                                    <span className="stat-name">Strategic Vectors</span>
+                                    <span className="stat-name">Key Arguments</span>
                                 </div>
                             </div>
 
@@ -491,7 +491,7 @@ function App() {
                         <section className="governance-view-v2">
                             <div className="view-header">
                                 <div className="title-area">
-                                    <h2>Governance & Risk Center</h2>
+                                    <h2>People & Alerts</h2>
                                     <p>Configure automated discovery triggers for priority entities and keywords.</p>
                                 </div>
                             </div>
@@ -663,9 +663,9 @@ function App() {
                     {view === 'arguments' && (
                         <section className="strategy-view">
                             <div className="view-header">
-                                <div className="title-area">
-                                    <h2>Case Strategy Board</h2>
-                                    <p>Group evidence into tactical arguments and generate strategic memos.</p>
+                                <div className="section-header">
+                                    <h2>Case Strategy</h2>
+                                    <p>Group evidence into arguments to build your case.</p>
                                 </div>
                                 <button className="primary-btn" onClick={() => {
                                     const title = prompt("Argument Title:");
