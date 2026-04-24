@@ -19,14 +19,15 @@ def analyze_file(file_id, file_path, model="llama3"):
         with open(full_path, 'r', errors='ignore') as f:
             content = f.read()
 
-        prompt = f"""Analyze this piece of legal evidence. 
+        prompt = f"""You are a specialized legal intelligence assistant trained in Saskatchewan Family Law, Canadian Disability Law, and SGI (Saskatchewan Government Insurance) regulations.
+        Analyze this piece of legal evidence. 
         Extract:
-        1. A concise 1-sentence summary of the core interaction.
+        1. A concise 1-sentence summary interpreting the interaction through the lens of Saskatchewan legal frameworks.
         2. Factual events (dates/actions) mentioned.
-        3. A conflict/sentiment score from 1-10 (10 being high conflict).
+        3. A conflict/severity score from 1-10 (10 being high conflict or severe impact).
         4. Any mentioned names/entities not already known.
         
-        Return ONLY a JSON object with: {{ "summary": "...", "events": ["..."], "score": 5, "entities": ["..."] }}
+        Return ONLY a JSON object exactly matching this schema without any markdown wrapping: {{ "summary": "...", "events": ["..."], "score": 5, "entities": ["..."] }}
         
         Content:
         {content[:4000]}"""

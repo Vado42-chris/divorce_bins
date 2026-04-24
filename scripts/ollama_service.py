@@ -1,5 +1,6 @@
-import requests
 import json
+import os
+from flight_recorder import log_event
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 
@@ -14,6 +15,7 @@ def query_ollama(prompt, model="llama3"):
         response.raise_for_status()
         return response.json().get("response", "No response from Ollama.")
     except Exception as e:
+        log_event("ERROR", "OllamaService", f"Connection Failed: {str(e)}")
         return f"Error connecting to Ollama: {e}"
 
 def summarize_evidence(text):

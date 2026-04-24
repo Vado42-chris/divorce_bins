@@ -40,26 +40,58 @@ function App() {
     const [velocityData, setVelocityData] = useState({})
     const [narrative, setNarrative] = useState('')
     const [generatingNarrative, setGeneratingNarrative] = useState(false)
-    const [discrepancies, setDiscrepancies] = useState('')
-    const [runningAudit, setRunningAudit] = useState(false)
+    const [flightLog, setFlightLog] = useState([])
+    const [reconciledForm, setReconciledForm] = useState(null)
+    const [sgiResults, setSgiResults] = useState(null)
+    const [isReconciling, setIsReconciling] = useState(false)
+    const [pulseData, setPulseData] = useState({})
 
     useEffect(() => {
         checkHealth()
         fetchAnalytics()
         fetchArguments()
         fetchVelocity()
+
+        // Real-time Flight Recorder Stream (SSE)
+        const eventSource = new EventSource('/api/stream/events');
+
+        eventSource.onmessage = (event) => {
+            try {
+                const data = JSON.parse(event.data);
+                const type = data.type ? data.type.toLowerCase() : '';
+                if (type === 'log' || type === 'event') {
+                    setFlightLog(prev => [data, ...prev].slice(0, 100));
+                }
+                if (type === 'heartbeat') {
+                    setHealth(prev => ({ ...prev, backend: 'online' }));
+                }
+            } catch (e) {
+                console.error("SSE Parse Error", e);
+            }
+        };
+
+        eventSource.onerror = () => {
+            setHealth(prev => ({ ...prev, backend: 'offline' }));
+            eventSource.close();
+        };
+
         const interval = setInterval(() => {
             checkHealth()
             fetchAnalytics()
             fetchArguments()
             fetchVelocity()
+            fetchPulse()
         }, 5000)
-        return () => clearInterval(interval)
+
+        return () => {
+            clearInterval(interval);
+            eventSource.close();
+        }
     }, [])
 
     const fetchAnalytics = async () => {
         try {
-            const res = await fetch('http://localhost:3001/api/analytics')
+            const res = await fetch('/api/analytics')
             const data = await res.json()
             setAnalytics(data)
         } catch (e) {
@@ -69,11 +101,21 @@ function App() {
 
     const fetchVelocity = async () => {
         try {
-            const res = await fetch('http://localhost:3001/api/analytics/velocity')
+            const res = await fetch('/api/analytics/velocity')
             const data = await res.json()
             setVelocityData(data)
         } catch (e) {
             console.error("Velocity fetch failed")
+        }
+    }
+
+    const fetchPulse = async () => {
+        try {
+            const res = await fetch('/api/analytics/temporal-pulse')
+            const data = await res.json()
+            setPulseData(data)
+        } catch (e) {
+            console.error("Pulse fetch failed")
         }
     }
 
@@ -84,7 +126,7 @@ function App() {
             poll = setInterval(async () => {
                 const newSync = { ...sync }
                 for (const id of activeSyncs) {
-                    const res = await fetch(`http://localhost:3001/api/pipeline/status?id=${id}`)
+                    const res = await fetch(`/api/pipeline/status?id=${id}`)
                     const data = await res.json()
                     newSync[id] = data
                 }
@@ -92,7 +134,7 @@ function App() {
 
                 if (Object.values(newSync).every(s => !s.active)) {
                     // Refresh data
-                    const iRes = await fetch('http://localhost:3001/api/index')
+                    const iRes = await fetch('/api/index')
                     const iData = await iRes.json()
                     setEvidence(iData)
                     clearInterval(poll)
@@ -104,7 +146,7 @@ function App() {
 
     const startSync = async (sourceId) => {
         setSync(prev => ({ ...prev, [sourceId]: { active: true, step: 'Starting', progress: 5, message: 'Initiating...' } }))
-        await fetch('http://localhost:3001/api/pipeline/sync', {
+        await fetch('/api/pipeline/sync', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ sourceId })
@@ -112,19 +154,45 @@ function App() {
     }
 
     const fetchThreads = async () => {
-        const res = await fetch('http://localhost:3001/api/sms/threads')
+        const res = await fetch('/api/sms/threads')
         const data = await res.json()
         setThreads(data)
     }
 
     const fetchEmails = async () => {
-        const res = await fetch('http://localhost:3001/api/email/inbox')
+        const res = await fetch('/api/email/inbox')
         const data = await res.json()
         setEmails(data)
     }
 
+    const handleReconcileForm131 = async () => {
+        setIsReconciling(true)
+        try {
+            const res = await fetch('/api/forensics/financial/reconcile', { method: 'POST' })
+            const data = await res.json()
+            setReconciledForm(data)
+        } catch (e) {
+            console.error("Reconciliation failed", e)
+        }
+        setIsReconciling(false)
+    }
+
+    const handleSGIExtraction = async (text) => {
+        try {
+            const res = await fetch('/api/forensics/sgi/parse', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text })
+            })
+            const data = await res.json()
+            setSgiResults(data)
+        } catch (e) {
+            console.error("SGI Extraction failed", e)
+        }
+    }
+
     const fetchArguments = async () => {
-        const res = await fetch('http://localhost:3001/api/arguments')
+        const res = await fetch('/api/arguments')
         const data = await res.json()
         setArgumentsList(data)
     }
@@ -135,10 +203,16 @@ function App() {
         if (view === 'arguments') fetchArguments()
     }, [view])
 
+    const handleSelectItem = (item) => {
+        setSelectedItem(item);
+        setSgiResults(null);
+        fetchContent(item);
+    }
+
     const fetchContent = (item) => {
         setSelectedItem(item)
         setItemContent('Loading...')
-        fetch(`http://localhost:3001/api/content?path=${item.path}`)
+        fetch(`/api/content?path=${item.path}`)
             .then(res => res.text())
             .then(data => setItemContent(data))
     }
@@ -146,7 +220,7 @@ function App() {
 
     const fetchExportHistory = async () => {
         try {
-            const res = await fetch('http://localhost:3001/api/reports/history');
+            const res = await fetch('/api/reports/history');
             setExportHistory(await res.json());
         } catch (e) {
             console.error("Failed to load export history");
@@ -155,33 +229,15 @@ function App() {
 
     const handleExportBundle = async (arg) => {
         try {
-            const res = await fetch(`http://localhost:3001/api/export/bundle/${arg.id}`, { method: 'POST' });
+            const res = await fetch(`/api/export/bundle/${arg.id}`, { method: 'POST' });
             const data = await res.json();
             if (data.file) {
-                window.open(`http://localhost:3001/api/export/download/${data.file}`);
+                window.open(`/api/export/download/${data.file}`);
                 fetchExportHistory();
             }
         } catch (e) {
             alert("Export failed. Check backend logs.");
         }
-    };
-
-    const runDiscrepancyAudit = async () => {
-        setRunningAudit(true);
-        setDiscrepancies('System actively cross-referencing timeline nodes for lies, omissions, and behavioral contradictions... This may take up to 2 minutes on local AI.');
-        try {
-            const items = evidence.filter(e => e.content || e.summary).slice(0, 30);
-            const res = await fetch('http://localhost:3001/api/audit/discrepancies', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ items })
-            });
-            const data = await res.json();
-            setDiscrepancies(data.discrepancies || "No discrepancies found in the sampled node batch.");
-        } catch (e) {
-            setDiscrepancies("Critical Error: Audit failed to complete.");
-        }
-        setRunningAudit(false);
     };
 
     const handleChat = async () => {
@@ -191,7 +247,7 @@ function App() {
         setChatHistory(prev => [...prev, { role: 'user', text: msg }])
 
         try {
-            const res = await fetch('http://localhost:3001/api/chat', {
+            const res = await fetch('/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ prompt: msg, model: selectedModel })
@@ -212,11 +268,11 @@ function App() {
         formData.append('file', file)
 
         try {
-            await fetch('http://localhost:3001/api/upload', {
+            await fetch('/api/upload', {
                 method: 'POST',
                 body: formData
             })
-            const res = await fetch('http://localhost:3001/api/index')
+            const res = await fetch('/api/index')
             const data = await res.json()
             setEvidence(data)
         } catch (e) {
@@ -227,14 +283,14 @@ function App() {
     const restartOllama = async () => {
         setHealth(prev => ({ ...prev, ollama: 'restarting' }))
         try {
-            await fetch('http://localhost:3001/api/ollama/restart', { method: 'POST' })
+            await fetch('/api/ollama/restart', { method: 'POST' })
         } catch (e) { }
         setTimeout(checkHealth, 3000)
     }
 
     const checkHealth = async () => {
         try {
-            const res = await fetch('http://localhost:3001/api/index')
+            const res = await fetch('/api/index')
             const data = await res.json()
             setEvidence(data)
             setHealth(prev => ({ ...prev, backend: 'online' }))
@@ -243,31 +299,31 @@ function App() {
         }
 
         try {
-            const sRes = await fetch('http://localhost:3001/api/sources')
+            const sRes = await fetch('/api/sources')
             const sData = await sRes.json()
             setSources(sData)
 
-            const dRes = await fetch('http://localhost:3001/api/device/detect')
+            const dRes = await fetch('/api/device/detect')
             const dData = await dRes.json()
             setHealth(prev => ({ ...prev, device: dData.connected ? 'connected' : 'disconnected' }))
 
-            const gRes = await fetch('http://localhost:3001/api/governance')
+            const gRes = await fetch('/api/governance')
             const gData = await gRes.json()
             setGovernance(gData)
 
-            const argRes = await fetch('http://localhost:3001/api/arguments')
+            const argRes = await fetch('/api/arguments')
             const argData = await argRes.json()
             setArgumentsList(argData)
 
-            const iRes = await fetch('http://localhost:3001/api/intelligence')
+            const iRes = await fetch('/api/intelligence')
             const iData = await iRes.json()
             setIntelligence(iData)
 
-            const idRes = await fetch('http://localhost:3001/api/identities')
+            const idRes = await fetch('/api/identities')
             const idData = await idRes.json()
             setIdentities(idData)
 
-            const vRes = await fetch('http://localhost:3001/api/analytics/velocity')
+            const vRes = await fetch('/api/analytics/velocity')
             const vData = await vRes.json()
             setVelocityData(vData)
         } catch (e) { }
@@ -278,7 +334,7 @@ function App() {
     const handleRunAnalysis = async (item) => {
         setAnalyzingIds(prev => new Set([...prev, item.id]));
         try {
-            const res = await fetch('http://localhost:3001/api/intelligence/analyze', {
+            const res = await fetch('/api/intelligence/analyze', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ itemId: item.id, path: item.path, model: selectedModel })
@@ -297,7 +353,7 @@ function App() {
 
     const saveIdentities = async (idList) => {
         setIdentities(idList);
-        await fetch('http://localhost:3001/api/identities', {
+        await fetch('/api/identities', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(idList)
@@ -308,7 +364,7 @@ function App() {
         if (!item) return;
         const newStatus = item.status === 'vault' ? 'discovery' : 'vault';
         try {
-            await fetch('http://localhost:3001/api/index/promote', {
+            await fetch('/api/index/promote', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ id: item.id, path: item.path, status: newStatus })
@@ -322,7 +378,7 @@ function App() {
     const generateNarrative = async () => {
         setGeneratingNarrative(true);
         try {
-            const res = await fetch('http://localhost:3001/api/analytics/narrative', {
+            const res = await fetch('/api/analytics/narrative', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ model: selectedModel })
@@ -347,7 +403,7 @@ function App() {
                     <button className={view === 'analytics' ? 'active' : ''} onClick={() => setView('analytics')}>Timeline Heatmap</button>
                     <hr className="nav-divider" />
                     <button className={view === 'timeline' ? 'active' : ''} onClick={() => setView('timeline')}>Evidence Vault</button>
-                    <button className={view === 'reports' ? 'active' : ''} onClick={async () => { setView('reports'); const res = await fetch('http://localhost:3001/api/reports'); setReports(await res.json()); }}>Downloads & Reports</button>
+                    <button className={view === 'reports' ? 'active' : ''} onClick={async () => { setView('reports'); const res = await fetch('/api/reports'); setReports(await res.json()); }}>Downloads & Reports</button>
                     <button className={view === 'sms' ? 'active' : ''} onClick={() => setView('sms')}>Text Messages</button>
                     <button className={view === 'email' ? 'active' : ''} onClick={() => setView('email')}>Emails</button>
                 </nav>
@@ -373,76 +429,134 @@ function App() {
 
                 <div className="content-grid">
                     {view === 'dashboard' && (
-                        <section className="dashboard-view-v2">
-                            <div className="hero-stats-row">
-                                <div className="stat-pill">
-                                    <span className="stat-value">{evidence.length}</span>
-                                    <span className="stat-name">Discovery Nodes</span>
+                        <section className="dashboard-grid-v3">
+                            <div className="discovery-header-v3">
+                                <div className="header-intel">
+                                    <span className="system-status-pill">FLIGHT RECORDER ACTIVE</span>
+                                    <h2>Forensic Intelligence Dashboard</h2>
                                 </div>
-                                <div className={`stat-pill ${evidence.filter(e => e.flagged).length > 0 ? 'alert' : ''}`}>
-                                    <span className="stat-value">{evidence.filter(e => e.flagged).length}</span>
-                                    <span className="stat-name">Active Alerts</span>
-                                </div>
-                                <div className="stat-pill">
-                                    <span className="stat-value">{argumentsList.length}</span>
-                                    <span className="stat-name">Key Arguments</span>
+                                <div className="header-stats-v3">
+                                    <div className="stat-v3">
+                                        <label>Nodes</label>
+                                        <span className="stat-value">{evidence.length}</span>
+                                    </div>
+                                    <div className="stat-v3 alert">
+                                        <label>Alerts</label>
+                                        <span className="stat-value">{evidence.filter(e => e.flagged).length}</span>
+                                    </div>
+                                    <div className="stat-v3">
+                                        <label>Stratagems</label>
+                                        <span className="stat-value">{argumentsList.length}</span>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="dash-core-grid">
-                                <div className="alert-feed">
-                                    <div className="section-header">
-                                        <h3>Critical Evidence Alerts</h3>
-                                        {evidence.filter(e => e.flagged).length > 0 && <span className="u-badge">G-LEVEL-1</span>}
-                                    </div>
-                                    <div className="alert-scroll">
-                                        {evidence.filter(e => e.flagged).length === 0 && <p className="empty-msg">No governance matches in the current archive.</p>}
-                                        {evidence.filter(e => e.flagged).map(alert => (
-                                            <div key={alert.id} className="alert-node" onClick={() => fetchContent(alert)}>
-                                                <div className="alert-meta">
-                                                    <span className="severity">HIGH</span>
-                                                    <span className="timestamp">{alert.timestamp}</span>
-                                                </div>
-                                                <h4>{alert.title}</h4>
-                                                <div className="match-tags">
-                                                    {alert.flags?.map((f, i) => <span key={i} className="m-tag">{f}</span>)}
-                                                </div>
+                            <div className="dashboard-main-row">
+                                <div className="tactical-col">
+                                    <div className="premium-panel">
+                                        <div className="panel-header">
+                                            <h3>Conflict Velocity Heatmap</h3>
+                                            <span className="zoom-label">Temporal Variance</span>
+                                        </div>
+                                        <div className="heatmap-container-v3">
+                                            <div className="heatmap-grid-v3">
+                                                <div className="heatmap-cell label"></div>
+                                                {Array.from({ length: 24 }).map((_, i) => <div key={i} className="heatmap-cell label">{i}h</div>)}
+                                                {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day, d) => (
+                                                    <div key={day} style={{ display: 'contents' }}>
+                                                        <div className="heatmap-cell label">{day}</div>
+                                                        {(analytics.heatmap && analytics.heatmap[d]) ? analytics.heatmap[d].map((val, h) => (
+                                                            <div key={`${d}-${h}`}
+                                                                className={`heatmap-cell intensity-${Math.floor(val)}`}
+                                                                title={`Conflict Intensity: ${val.toFixed(2)}`}>
+                                                            </div>
+                                                        )) : Array.from({ length: 24 }).map((_, h) => <div key={h} className="heatmap-cell intensity-0"></div>)}
+                                                    </div>
+                                                ))}
                                             </div>
-                                        ))}
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div className="activity-center">
-                                    <h3>Conflict Velocity Heatmap</h3>
-                                    <div className="heatmap-container">
-                                        <div className="heatmap-grid">
-                                            <div className="heatmap-cell label"></div>
-                                            {Array.from({ length: 24 }).map((_, i) => <div key={i} className="heatmap-cell label">{i}</div>)}
-                                            {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day, d) => (
-                                                <div key={day} style={{ display: 'contents' }}>
-                                                    <div className="heatmap-cell label">{day}</div>
-                                                    {analytics.heatmap[d]?.map((val, h) => (
-                                                        <div key={`${d}-${h}`}
-                                                            className={`heatmap-cell intensity-${Math.floor(val)}`}
-                                                            title={`Conflict: ${val.toFixed(1)}`}>
+                                    <div className="premium-panel flight-recorder">
+                                        <div className="panel-header">
+                                            <h3>Evidence Pulse (Tactical Density)</h3>
+                                            <span className="live-tag">7-Day Burst Map</span>
+                                        </div>
+                                        <div className="pulse-container-v3">
+                                            <div className="pulse-grid">
+                                                {Object.keys(pulseData).slice(-7).map(day => (
+                                                    <div key={day} className="pulse-row">
+                                                        <span className="pulse-label">{day.split('-').slice(1).join('/')}</span>
+                                                        <div className="pulse-hours">
+                                                            {pulseData[day].map((h, i) => (
+                                                                <div key={i}
+                                                                    className={`pulse-tick density-${Math.min(h.count, 5)}`}
+                                                                    title={`${day} @ ${i}h: ${h.count} nodes`}>
+                                                                </div>
+                                                            ))}
                                                         </div>
-                                                    ))}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="premium-panel flight-recorder">
+                                        <div className="panel-header">
+                                            <h3>Mission Flight Recorder</h3>
+                                            <span className="live-tag">LIVE SSE</span>
+                                        </div>
+                                        <div className="flight-log-stream">
+                                            {flightLog.length === 0 && <div className="log-empty">Waiting for telemetry heartbeat...</div>}
+                                            {flightLog.map((log, i) => (
+                                                <div key={i} className={`log-entry ${log.level || 'info'}`}>
+                                                    <span className="log-time">{new Date(log.timestamp).toLocaleTimeString()}</span>
+                                                    <span className="log-msg">{log.message}</span>
+                                                    {log.details && <span className="log-extra">{log.details}</span>}
                                                 </div>
                                             ))}
                                         </div>
                                     </div>
+                                </div>
 
-                                    <h3>Vault Stream</h3>
-                                    <div className="stream-list">
-                                        {evidence.slice(0, 6).map(item => (
-                                            <div key={item.id} className="stream-item" onClick={() => fetchContent(item)}>
-                                                <div className="s-icon">{item.type === 'email' ? '✉️' : '💬'}</div>
-                                                <div className="s-body">
-                                                    <p><strong>{item.title}</strong> processed from {item.source}</p>
-                                                    <span className="s-date">{item.timestamp}</span>
+                                <div className="strategic-col">
+                                    <div className="premium-panel alert-vault">
+                                        <div className="panel-header">
+                                            <h3>Forensic Alerts</h3>
+                                            <span className="security-rank">OIG COMPLIANT</span>
+                                        </div>
+                                        <div className="alert-list-v3">
+                                            {evidence.filter(e => e.flagged).length === 0 && <div className="empty-alert">No high-risk vectors detected.</div>}
+                                            {evidence.filter(e => e.flagged).map(alert => (
+                                                <div key={alert.id} className="alert-card-v3" onClick={() => fetchContent(alert)}>
+                                                    <div className="alert-meta">
+                                                        <span className="alert-rank">G-LEVEL-1</span>
+                                                        <span className="alert-date">{alert.timestamp}</span>
+                                                    </div>
+                                                    <h4>{alert.title}</h4>
+                                                    <div className="tag-row">
+                                                        {alert.flags?.map((f, i) => <span key={i} className="evidence-tag">{f}</span>)}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        ))}
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className="premium-panel live-vault">
+                                        <div className="panel-header">
+                                            <h3>Vault Feed</h3>
+                                            <button className="text-btn" onClick={() => setView('timeline')}>View All</button>
+                                        </div>
+                                        <div className="feed-v3">
+                                            {evidence.slice(0, 8).map(item => (
+                                                <div key={item.id} className="feed-node" onClick={() => fetchContent(item)}>
+                                                    <div className="node-icon">{item.type === 'email' ? '✉️' : '💬'}</div>
+                                                    <div className="node-info">
+                                                        <span className="node-title">{item.title}</span>
+                                                        <span className="node-meta">{item.source} • {item.timestamp}</span>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -476,7 +590,7 @@ function App() {
                                             </button>
                                             <button className="settings-btn" onClick={async () => {
                                                 if (confirm(`Remove "${source.name}"?`)) {
-                                                    await fetch(`http://localhost:3001/api/sources/${source.id}`, { method: 'DELETE' });
+                                                    await fetch(`/api/sources/${source.id}`, { method: 'DELETE' });
                                                     checkHealth();
                                                 }
                                             }}>Remove</button>
@@ -529,7 +643,7 @@ function App() {
                                                 <button className="rule-del" onClick={async () => {
                                                     const updated = { ...governance, keywords: governance.keywords.filter((_, idx) => idx !== i) };
                                                     setGovernance(updated);
-                                                    await fetch('http://localhost:3001/api/governance', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
+                                                    await fetch('/api/governance', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
                                                 }}>×</button>
                                             </div>
                                         ))}
@@ -540,7 +654,7 @@ function App() {
                                                 const updated = { ...governance, keywords: [...governance.keywords, { value: e.target.value, priority: true }] };
                                                 setGovernance(updated);
                                                 e.target.value = "";
-                                                await fetch('http://localhost:3001/api/governance', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
+                                                await fetch('/api/governance', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
                                             }
                                         }} />
                                     </div>
@@ -558,7 +672,7 @@ function App() {
                                                 <button className="rule-del" onClick={async () => {
                                                     const updated = { ...governance, entities: governance.entities.filter((_, idx) => idx !== i) };
                                                     setGovernance(updated);
-                                                    await fetch('http://localhost:3001/api/governance', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
+                                                    await fetch('/api/governance', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
                                                 }}>×</button>
                                             </div>
                                         ))}
@@ -570,7 +684,7 @@ function App() {
                                                 const updated = { ...governance, entities: [...governance.entities, { label: label.trim(), value: value.trim(), priority: true }] };
                                                 setGovernance(updated);
                                                 ev.target.value = "";
-                                                await fetch('http://localhost:3001/api/governance', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
+                                                await fetch('/api/governance', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
                                             }
                                         }} />
                                     </div>
@@ -605,22 +719,6 @@ function App() {
                                                 e.target.value = "";
                                             }
                                         }} />
-                                    </div>
-                                </div>
-
-                                <div className="gov-control-card full-row" style={{ borderLeft: "4px solid #f43f5e" }}>
-                                    <div className="card-header">
-                                        <h3>Truth Check: Contradiction Alerts</h3>
-                                        <button className="secondary-btn-xs" onClick={runDiscrepancyAudit} disabled={runningAudit} style={{ borderColor: "#f43f5e", color: "#f43f5e", marginLeft: "auto", background: "none", cursor: "pointer", padding: "5px 10px", borderRadius: "4px" }}>
-                                            {runningAudit ? 'Scanning Vault...' : '▶ Run Cross-Reference Audit'}
-                                        </button>
-                                    </div>
-                                    <div className="audit-results-box" style={{ padding: "15px", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "6px", marginTop: "15px" }}>
-                                        {discrepancies ? (
-                                            <pre className="audit-output" style={{ color: "#e2e8f0", whiteSpace: "pre-wrap", fontSize: "0.9rem", maxWidth: "100%", overflowX: "hidden" }}>{discrepancies}</pre>
-                                        ) : (
-                                            <p className="empty-msg" style={{ margin: 0, color: "#94a3b8" }}>No active alerts. Run an audit to cross-reference event timelines for contradictions.</p>
-                                        )}
                                     </div>
                                 </div>
 
@@ -709,7 +807,7 @@ function App() {
                                         const newArg = { id: `arg_${Date.now()}`, title, description: '', items: [], legalMemo: '' };
                                         const newList = [...argumentsList, newArg];
                                         setArgumentsList(newList);
-                                        fetch('http://localhost:3001/api/arguments', {
+                                        fetch('/api/arguments', {
                                             method: 'POST',
                                             headers: { 'Content-Type': 'application/json' },
                                             body: JSON.stringify(newList)
@@ -731,7 +829,7 @@ function App() {
                                                 const vaultItems = evidence.filter(e => e.status === 'vault').map(e => e.id);
                                                 const newList = argumentsList.map(a => a.id === arg.id ? { ...a, items: vaultItems } : a);
                                                 setArgumentsList(newList);
-                                                fetch('http://localhost:3001/api/arguments', {
+                                                fetch('/api/arguments', {
                                                     method: 'POST',
                                                     headers: { 'Content-Type': 'application/json' },
                                                     body: JSON.stringify(newList)
@@ -742,7 +840,7 @@ function App() {
                                             <button className="primary-btn-xs" onClick={async () => {
                                                 setAnalyzingIds(prev => new Set(prev).add(arg.id));
                                                 const items = evidence.filter(e => (arg.items || []).includes(e.id));
-                                                const res = await fetch('http://localhost:3001/api/arguments/analyze', {
+                                                const res = await fetch('/api/arguments/analyze', {
                                                     method: 'POST',
                                                     headers: { 'Content-Type': 'application/json' },
                                                     body: JSON.stringify({ argumentId: arg.id, items, model: selectedModel })
@@ -790,50 +888,68 @@ function App() {
                                                 value={reportTitle} onChange={e => setReportTitle(e.target.value)} />
                                         </div>
                                         <div className="option-group">
-                                            <label>Target Dataset</label>
-                                            <select value={reportTarget} onChange={e => setReportTarget(e.target.value)}>
-                                                <option value="vault">Secure Vault (Promoted Items Only)</option>
-                                                <option value="all">Full Discovery (All Nodes)</option>
-                                            </select>
-                                        </div>
-                                        <div className="option-group">
                                             <label>Analysis Depth</label>
                                             <select value={reportLevel} onChange={e => setReportLevel(e.target.value)}>
                                                 <option value="summary">Summary (Metadata Only)</option>
                                                 <option value="comprehensive">Comprehensive (Includes Content & AI Synthesis)</option>
                                             </select>
                                         </div>
-                                        <div className="option-group">
-                                            <label>Selected Model</label>
-                                            <select value={selectedModel} onChange={e => setSelectedModel(e.target.value)}>
-                                                {models.map(m => <option key={m.name} value={m.name}>{m.name}</option>)}
-                                            </select>
-                                        </div>
                                     </div>
                                     <div className="wizard-actions">
-                                        <span className="item-count">
-                                            {reportTarget === 'vault' ? evidence.filter(e => e.status === 'vault').length : evidence.length} nodes included
-                                        </span>
                                         <button className="primary-btn" onClick={async () => {
                                             if (!reportTitle) return alert("Title required");
                                             setGeneratingReport(true);
                                             const items = reportTarget === 'vault' ? evidence.filter(e => e.status === 'vault') : evidence;
-                                            const res = await fetch('http://localhost:3001/api/reports/generate', {
+                                            const res = await fetch('/api/reports/generate', {
                                                 method: 'POST',
                                                 headers: { 'Content-Type': 'application/json' },
                                                 body: JSON.stringify({ title: reportTitle, items, detailLevel: reportLevel, model: selectedModel })
                                             });
                                             await res.json();
-                                            const rRes = await fetch('http://localhost:3001/api/reports');
+                                            const rRes = await fetch('/api/reports');
                                             setReports(await rRes.json());
                                             setReportTitle('');
                                             setGeneratingReport(false);
                                         }} disabled={generatingReport}>
                                             {generatingReport ? 'Generating Briefing...' : 'Assemble Report'}
                                         </button>
+                                        <button className="secondary-btn" onClick={handleReconcileForm131} disabled={isReconciling}>
+                                            {isReconciling ? 'Reconciling Ledger...' : 'Reconcile Form 13.1'}
+                                        </button>
                                     </div>
                                 </div>
                             </div>
+
+                            {reconciledForm && (
+                                <div className="forensic-workspace-v3 pro-section">
+                                    <div className="section-header">
+                                        <h3>Form 13.1 Financial Reconciliation</h3>
+                                        <span className="status-pill verified">INTERNAL DRAFT READY</span>
+                                    </div>
+                                    <div className="reconciliation-grid">
+                                        <div className="recon-summary">
+                                            <div className="recon-stat">
+                                                <label>Net Flow</label>
+                                                <span className={reconciledForm.summary.net_flow >= 0 ? "value-pos" : "value-neg"}>
+                                                    ${reconciledForm.summary.net_flow.toLocaleString()}
+                                                </span>
+                                            </div>
+                                            <div className="recon-stat">
+                                                <label>Forensic Flags</label>
+                                                <span className="value-alert">{reconciledForm.evidence_anchors.length} Anchors</span>
+                                            </div>
+                                        </div>
+                                        <div className="recon-audit-trail">
+                                            <h4>Evidence Anchors</h4>
+                                            <ul>
+                                                {reconciledForm.evidence_anchors.map((a, i) => (
+                                                    <li key={i}>{a.title} ({a.status})</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
 
                             <div className="discovery-audit-center pro-section">
                                 <div className="section-header">
@@ -858,7 +974,7 @@ function App() {
                                                     <td>{new Date(h.date).toLocaleString()}</td>
                                                     <td>{(h.size / 1024 / 1024).toFixed(2)} MB</td>
                                                     <td>
-                                                        <a href={`http://localhost:3001/api/export/download/${h.name}`} className="link-btn" target="_blank" rel="noreferrer">Download</a>
+                                                        <a href={`/api/export/download/${h.name}`} className="link-btn" target="_blank" rel="noreferrer">Download</a>
                                                     </td>
                                                 </tr>
                                             ))}
@@ -877,7 +993,7 @@ function App() {
                                         </div>
                                         <div className="report-actions">
                                             <button className="secondary-btn" onClick={async () => {
-                                                const res = await fetch(`http://localhost:3001/api/reports/view/${report.id}`);
+                                                const res = await fetch(`/api/reports/view/${report.id}`);
                                                 const data = await res.json();
                                                 setSelectedItem({ ...report, type: 'report', content: data.content });
                                             }}>View Report</button>
@@ -952,9 +1068,36 @@ function App() {
                                 <h2>{selectedItem.title}</h2>
                                 <span className="item-meta">{selectedItem.source} • {selectedItem.timestamp}</span>
                             </div>
-                            <button className="close-btn" onClick={() => setSelectedItem(null)}>&times;</button>
+                            <div className="header-actions">
+                                {selectedItem.title.match(/sgi|accident|medical/i) && (
+                                    <button className="secondary-btn-xs" onClick={() => handleSGIExtraction(itemContent)}>
+                                        Extract SGI Insights
+                                    </button>
+                                )}
+                                <button className="close-btn" onClick={() => setSelectedItem(null)}>&times;</button>
+                            </div>
                         </header>
                         <div className="modal-body">
+                            {sgiResults && (
+                                <div className="sgi-tactical-panel">
+                                    <div className="sgi-stat">
+                                        <label>Claim #</label>
+                                        <span>{sgiResults.claimNumber || 'N/A'}</span>
+                                    </div>
+                                    <div className="sgi-stat">
+                                        <label>Severity</label>
+                                        <span className={`severity-${sgiResults.injurySeverity.toLowerCase().replace('/', '-')}`}>
+                                            {sgiResults.injurySeverity}
+                                        </span>
+                                    </div>
+                                    <div className="sgi-stat">
+                                        <label>ICD Codes</label>
+                                        <div className="icd-tags">
+                                            {sgiResults.icd_codes.map(c => <span key={c} className="icd-tag">{c}</span>)}
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                             {selectedItem.type === 'report' ? (
                                 <div className="report-viewer-content">
                                     <pre className="report-markdown">{selectedItem.content}</pre>
@@ -962,9 +1105,9 @@ function App() {
                             ) : selectedItem.type === 'media' || (selectedItem.path && selectedItem.path.match(/\.(jpg|png|webp|mp4)$/i)) ? (
                                 <div className="media-viewer-container">
                                     {selectedItem.path.match(/\.mp4$/i) ? (
-                                        <video src={`http://localhost:3001/media/${selectedItem.source}/${selectedItem.path}`} controls />
+                                        <video src={`/media/${selectedItem.source}/${selectedItem.path}`} controls />
                                     ) : (
-                                        <img src={`http://localhost:3001/media/${selectedItem.source}/${selectedItem.path}`} alt="Evidence Preview" />
+                                        <img src={`/media/${selectedItem.source}/${selectedItem.path}`} alt="Evidence Preview" />
                                     )}
                                 </div>
                             ) : (

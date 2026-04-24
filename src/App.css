@@ -2225,6 +2225,7 @@
     border-radius: 16px;
     margin-bottom: 24px;
 }
+
 /* Report Wizard */
 .report-wizard {
     background: rgba(255, 255, 255, 0.05);
@@ -2260,7 +2261,8 @@
     letter-spacing: 0.05em;
 }
 
-.option-group select, .option-group input {
+.option-group select,
+.option-group input {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border);
     border-radius: 6px;
@@ -2310,14 +2312,29 @@
 }
 
 .loading-dots:after {
-  content: ' .';
-  animation: dots 1s steps(5, end) infinite;}
+    content: ' .';
+    animation: dots 1s steps(5, end) infinite;
+}
 
 @keyframes dots {
-  0%, 20% { content: ' .'; }
-  40% { content: ' ..'; }
-  60% { content: ' ...'; }
-  80%, 100% { content: ''; }
+
+    0%,
+    20% {
+        content: ' .';
+    }
+
+    40% {
+        content: ' ..';
+    }
+
+    60% {
+        content: ' ...';
+    }
+
+    80%,
+    100% {
+        content: '';
+    }
 }
 
 /* Strategy Board & Arguments */
@@ -2426,7 +2443,7 @@
     gap: 0.5rem;
     height: 300px;
     padding: 2rem 1rem;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     margin-top: 1rem;
     overflow-x: auto;
@@ -2442,7 +2459,7 @@
 
 .bar-stack {
     width: 24px;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 4px;
     display: flex;
     flex-direction: column-reverse;
@@ -2470,10 +2487,10 @@
 }
 
 .narrative-content {
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     padding: 2rem;
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     min-height: 300px;
     line-height: 1.6;
 }
@@ -2500,3 +2517,187 @@
     color: var(--accent);
     margin-top: 1rem;
 }
+
+/* === Phase 10: Trial Presentation Mode === */
+
+.presentation-mode-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 40px;
+}
+
+.presentation-controls {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    gap: 20px;
+    font-size: 1.4rem;
+    z-index: 10000;
+    color: #555;
+    align-items: center;
+}
+
+.presentation-controls .exit-btn {
+    background: transparent;
+    color: #555;
+    border: 1px solid #333;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.presentation-controls .exit-btn:hover {
+    color: #fff;
+    border-color: #555;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-areas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 9998;
+}
+
+.nav-left,
+.nav-right {
+    flex: 1;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav-left:hover {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.03), transparent);
+}
+
+.nav-right:hover {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.03), transparent);
+}
+
+.presentation-slide {
+    z-index: 9999;
+    max-width: 1400px;
+    width: 100%;
+    background: #111;
+    padding: 60px;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    border: 1px solid #333;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.presentation-slide.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.presentation-slide .slide-header {
+    margin-bottom: 25px;
+}
+
+.presentation-slide h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+.presentation-slide .slide-date {
+    font-size: 1.5rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+.presentation-slide .slide-content {
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+.slide-raw-content {
+    white-space: pre-wrap;
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: #ccc;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #222;
+}
+
+/* Hide Everything Else */
+.app-container.presentation-active .sidebar,
+.app-container.presentation-active .main-header,
+.app-container.presentation-active .main-content>* {
+    display: none !important;
+}
+/* === Evidence Pulse (Tactical Density Map) === */
+.pulse-container-v3 {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.pulse-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pulse-row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pulse-label {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    font-family: monospace;
+}
+
+.pulse-hours {
+    display: flex;
+    gap: 2px;
+    height: 12px;
+}
+
+.pulse-tick {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1px;
+    transition: all 0.2s;
+}
+
+.pulse-tick:hover {
+    outline: 1px solid var(--accent);
+    z-index: 10;
+}
+
+.pulse-tick.density-1 { background: rgba(212, 175, 55, 0.2); }
+.pulse-tick.density-2 { background: rgba(212, 175, 55, 0.4); }
+.pulse-tick.density-3 { background: rgba(212, 175, 55, 0.6); }
+.pulse-tick.density-4 { background: rgba(212, 175, 55, 0.8); }
+.pulse-tick.density-5 { background: var(--accent); box-shadow: 0 0 8px var(--accent); }

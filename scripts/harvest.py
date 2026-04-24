@@ -40,7 +40,19 @@ def safe_harvest():
     os.makedirs(target_pics, exist_ok=True)
     subprocess.run(["adb", "pull", PHONE_PICTURES, BACKUP_DIR])
 
-    print("\n--- Harvest Complete. No data was deleted from the phone. ---")
+    print("\n--- Harvest Complete. Running Intelligence Pipelines ---")
+    
+    # Trigger Re-indexing and Strategic Audit
+    try:
+        print("Regenerating Vault Index...")
+        subprocess.run(["python3", "scripts/index_generator.py"], check=True)
+        print("Running Strategic Cross-Check...")
+        subprocess.run(["python3", "scripts/domain_cross_checker.py"], check=True)
+        print("Intelligence Pipeline: SUCCESS")
+    except Exception as e:
+        print(f"Intelligence Pipeline: FAILED ({e})")
+
+    print("\n--- Process Complete. Vault is up to date. ---")
 
 if __name__ == "__main__":
     safe_harvest()

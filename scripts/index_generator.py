@@ -101,20 +101,85 @@ def generate_index(target_dir=None, source_name=None):
                 
                 # Active Monitoring & Identity Resolution
                 try:
-                    text = content.lower() if content else ""
-                    if not text and not entry['type'] == 'media':
+                    cased_text = content if content else ""
+                    if not cased_text and not entry['type'] == 'media':
                         with open(path, 'r', errors='ignore') as f:
-                            text = f.read().lower()
+                            cased_text = f.read()
                     
-                    if text:
+                    text = cased_text.lower()
+                    
+                    if cased_text:
+                        # Heuristic Summary (first paragraph/sentence approx)
+                        if 'summary' not in entry:
+                            # Strip frontmatter if present
+                            body = re.sub(r'^---\s*.*?\s*---', '', cased_text, flags=re.DOTALL).strip()
+                            entry['summary'] = body[:150].replace('\n', ' ') + ('...' if len(body) > 150 else '')
+
                         # Governance matching
                         flagged_keywords = [k for k in keywords if k in text]
                         flagged_entities = [e for e in entities if e in text]
                         if flagged_keywords or flagged_entities:
                             entry['flagged'] = True
                             entry['flags'] = flagged_keywords + flagged_entities
+                            
+                            # Extract context snippets
+                            snippets = []
+                            for flag in entry['flags']:
+                                idx = text.find(flag)
+                                if idx != -1:
+                                    start = max(0, idx - 45)
+                                    end = min(len(text), idx + 45 + len(flag))
+                                    snippets.append(f"...{cased_text[start:end].replace(chr(10), ' ')}...")
+                            entry['flag_context'] = " | ".join(snippets)
                             print(f"  [ALERT] Flagged: {file} matches {entry['flags']}")
                         
+                        # SGI & Medical Domain Tagging
+                        sgi_medical_keywords = ['sgi', 'injury', 'claim', 'collision', 'physiotherapy', 'diagnosis', 'impairment', 'prescribed', 'rehabilitation', 'saskatchewan government insurance', 'medical', 'hospital']
+                        domain_tags = [k for k in sgi_medical_keywords if k in text]
+                        if domain_tags:
+                            entry['domainTags'] = domain_tags
+                            entry['domain'] = 'SGI/Medical'
+                            try:
+                                import sgi_parser
+                                # Provide original cased content for Regex extraction
+                                sgi_data = sgi_parser.parse_sgi_document(content if content else text)
+                                entry['sgi_metadata'] = sgi_data
+                            except Exception as parse_e:
+                                print(f"SGI Parse Fault: {parse_e}")
+                        # Financial & Bank Statement Tagging
+                        financial_keywords = ['statement', 'transaction', 'withdrawal', 'deposit', 'balance', 'account', 'chequing', 'savings', 'credit card']
+                        fin_tags = [k for k in financial_keywords if k in text]
+                        if fin_tags:
+                            entry['domainTags'] = list(set((entry.get('domainTags', []) + fin_tags)))
+                            entry['domain'] = 'Financial'
+                            try:
+                                import financial_parser
+                                fin_data = financial_parser.parse_financial_statement(cased_text)
+                                entry['financial_metadata'] = fin_data
+                                if fin_data['suspicious_transactions']:
+                                    entry['flagged'] = True
+                                    entry['flags'] = entry.get('flags', []) + ["SUSPICIOUS_FINANCIAL"]
+                            except Exception as fin_e:
+                                print(f"Financial Parse Fault: {fin_e}")
+                        
+                        # Witness Statement & Affidavit Tagging
+                        witness_keywords = ['affidavit', 'oath', 'sworn', 'declarant', 'witness statement', 'statutory declaration']
+                        wit_tags = [k for k in witness_keywords if k in text.lower()]
+                        if wit_tags:
+                            entry['domainTags'] = list(set((entry.get('domainTags', []) + wit_tags)))
+                            entry['domain'] = 'Witness'
+                            try:
+                                import witness_parser
+                                wit_data = witness_parser.parse_affidavit(text)
+                                entry['witness_metadata'] = wit_data
+                                if wit_data['declarant'] != 'Unknown':
+                                    entry['participant'] = wit_data['declarant']
+                            except Exception as wit_e:
+                                print(f"Witness Parse Fault: {wit_e}")
+
+                        if not fin_tags and not domain_tags and not wit_tags:
+                            entry['domain'] = 'Family Law'
+
                         # Identity Resolution
                         for identity in identities:
                             for identifier in identity.get('identifiers', []):

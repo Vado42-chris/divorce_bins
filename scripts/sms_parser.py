@@ -1,52 +1,59 @@
 import xml.etree.ElementTree as ET
-import os
 import json
+import os
+from flight_recorder import log_event
 from datetime import datetime
 
-def parse_sms_backup(xml_file, output_dir, source_id="unknown"):
-    print(f"Parsing SMS backup: {xml_file} (Source: {source_id})")
-    tree = ET.parse(xml_file)
+XML_FILE = "/media/chrishallberg/Storage 22/002_Personal/divorce_bins/evidence/raw/test_sms.xml"
+EXPORT_DIR = "/media/chrishallberg/Storage 22/002_Personal/divorce_bins/evidence/processed/sms"
+
+def parse_sms_backup(xml_path=XML_FILE, out_dir=EXPORT_DIR):
+    log_event("INFO", "SMS_Parser", f"Parsing SMS Archive: {xml_path}")
+    if not os.path.exists(xml_path):
+        log_event("ERROR", "SMS_Parser", f"File Not Found: {xml_path}")
+        return
+        
+    os.makedirs(out_dir, exist_ok=True)
+    tree = ET.parse(xml_path)
     root = tree.getroot()
 
-    os.makedirs(output_dir, exist_ok=True)
-    
-    sms_count = 0
+    count = 0
     for sms in root.findall('sms'):
+        # Android Timestamp Extraction (ms to s)
+        ms_date = int(sms.get('date')) / 1000.0
+        dt = datetime.fromtimestamp(ms_date)
+        formatted_date = dt.strftime('%Y-%m-%d %H:%M:%S')
+
         address = sms.get('address')
-        date_ms = int(sms.get('date'))
+        name = sms.get('contact_name') or sms.get('name') or address
         body = sms.get('body')
-        type_code = sms.get('type') # 1 = received, 2 = sent
-        
-        dt = datetime.fromtimestamp(date_ms / 1000.0)
-        timestamp = dt.strftime('%Y-%m-%d %H:%M:%S')
-        filename = f"{source_id}_" + dt.strftime('%Y-%m-%d_%H%M%S') + f"_{address}.md"
-        
-        direction = "RECEIVED" if type_code == "1" else "SENT"
-        
-        md_content = f"""---
-timestamp: {timestamp}
-sender: {address}
-type: sms
-direction: {direction}
-source: {source_id}
----
+        msg_type = sms.get('type') # '1' = received, '2' = sent
 
-# SMS from {address}
-**Time:** {timestamp}
-**Direction:** {direction}
-**Source:** {source_id}
+        direction = "Received (Inbound)" if str(msg_type) == '1' else "Sent (Outbound)"
 
-{body}
-"""
-        with open(os.path.join(output_dir, filename), 'w') as f:
-            f.write(md_content)
-        sms_count += 1
+        filename = f"sms_{address}_{dt.strftime('%Y%m%d%H%M%S')}.md"
+        filepath = os.path.join(out_dir, filename)
 
-    print(f"Completed! Processed {sms_count} messages into {output_dir}")
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write("---\n")
+            f.write(f"timestamp: {formatted_date}\n")
+            f.write(f"sender: {name}\n")
+            f.write(f"subject: Text Message ({direction})\n")
+            f.write("type: sms\n")
+            f.write(f"source: Android Backup\n")
+            f.write("---\n\n")
+            f.write(f"# Text Message: {direction}\n\n")
+            f.write(f"**Contact:** {name} ({address})\n")
+            f.write(f"**Date:** {formatted_date}\n")
+            f.write(f"**Type:** {direction}\n\n")
+            f.write("---\n\n")
+            f.write(body.strip() if body else "[Attached Media/MMS]")
 
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) < 4:
-        print("Usage: python3 sms_parser.py <xml_file> <output_dir> <source_id>")
-    else:
-        parse_sms_backup(sys.argv[1], sys.argv[2], sys.argv[3])
+        count += 1
+        print(f" [+] Extracted Thread Node: {filename}")
+
+    print(f"\n--- SMS Pipeline Extraction Complete. Mapped {count} Android Records natively. ---")
+
+if __name__ == '__main__':
+    print("Initiating Mobile Exfiltration Engine...")
+    parse_sms_backup()
