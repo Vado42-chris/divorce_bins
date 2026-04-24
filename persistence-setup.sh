@@ -6,7 +6,7 @@
 if ! command -v pm2 &> /dev/null
 then
     echo "PM2 not found. Installing via npm..."
-    sudo npm install -g pm2
+    npm install -g pm2
 fi
 
 # Start the server with pm2

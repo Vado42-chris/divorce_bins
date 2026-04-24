@@ -6,7 +6,8 @@
     "type": "media",
     "source": "legal_email",
     "status": "vault",
-    "path": "1000006202.png"
+    "path": "1000006202.png",
+    "domain": "Family Law"
   },
   {
     "id": "1000006332.jpg_976941",
@@ -15,7 +16,8 @@
     "type": "media",
     "source": "legal_email",
     "status": "vault",
-    "path": "1000006332.jpg"
+    "path": "1000006332.jpg",
+    "domain": "Family Law"
   },
   {
     "id": "1000006334.jpg_976988",
@@ -24,7 +26,8 @@
     "type": "media",
     "source": "legal_email",
     "status": "vault",
-    "path": "1000006334.jpg"
+    "path": "1000006334.jpg",
+    "domain": "Family Law"
   },
   {
     "id": "2025-10-03 Chris Hallberg LT.pdf_977081",
@@ -33,7 +36,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2025-10-03 Chris Hallberg LT.pdf"
+    "path": "2025-10-03 Chris Hallberg LT.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "2026-02-20 Chris Hallberg LT_1.pdf_977182",
@@ -42,7 +46,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2026-02-20 Chris Hallberg LT_1.pdf"
+    "path": "2026-02-20 Chris Hallberg LT_1.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "Fw_ Katherine Andersen & Yourself_1.eml_977642",
@@ -51,7 +56,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Fw_ Katherine Andersen & Yourself_1.eml"
+    "path": "Fw_ Katherine Andersen & Yourself_1.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Fw_ Katherine Andersen & Yourself_2.eml_977686",
@@ -60,7 +66,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Fw_ Katherine Andersen & Yourself_2.eml"
+    "path": "Fw_ Katherine Andersen & Yourself_2.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Fw_ Katherine Andersen & Yourself_3.eml_977733",
@@ -69,7 +76,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Fw_ Katherine Andersen & Yourself_3.eml"
+    "path": "Fw_ Katherine Andersen & Yourself_3.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Fw_ Katherine Andersen & Yourself_4.eml_977779",
@@ -78,7 +86,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Fw_ Katherine Andersen & Yourself_4.eml"
+    "path": "Fw_ Katherine Andersen & Yourself_4.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Fw_ Katherine Andersen & Yourself.eml_978330",
@@ -87,7 +96,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Fw_ Katherine Andersen & Yourself.eml"
+    "path": "Re_ Fw_ Katherine Andersen & Yourself.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine Andersen & Yourself.eml_978471",
@@ -96,7 +106,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself.eml"
+    "path": "Re_ Katherine Andersen & Yourself.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine Andersen & Yourself_1.eml_978516",
@@ -105,7 +116,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_1.eml"
+    "path": "Re_ Katherine Andersen & Yourself_1.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine Andersen & Yourself_10.eml_978559",
@@ -114,7 +126,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_10.eml"
+    "path": "Re_ Katherine Andersen & Yourself_10.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine Andersen & Yourself_11.eml_978604",
@@ -123,7 +136,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_11.eml"
+    "path": "Re_ Katherine Andersen & Yourself_11.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine Andersen & Yourself_12.eml_978648",
@@ -132,7 +146,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_12.eml"
+    "path": "Re_ Katherine Andersen & Yourself_12.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine Andersen & Yourself_2.eml_978693",
@@ -141,7 +156,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_2.eml"
+    "path": "Re_ Katherine Andersen & Yourself_2.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine Andersen & Yourself_3.eml_978738",
@@ -150,7 +166,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_3.eml"
+    "path": "Re_ Katherine Andersen & Yourself_3.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Fwd_ Katherine Andersen & Yourself.eml_979243",
@@ -159,7 +176,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Fwd_ Katherine Andersen & Yourself.eml"
+    "path": "Fwd_ Katherine Andersen & Yourself.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Fwd_ Katherine Andersen & Yourself_1.eml_979288",
@@ -168,7 +186,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Fwd_ Katherine Andersen & Yourself_1.eml"
+    "path": "Fwd_ Katherine Andersen & Yourself_1.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine Andersen & Yourself_5.eml_979334",
@@ -177,7 +196,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_5.eml"
+    "path": "Re_ Katherine Andersen & Yourself_5.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine Andersen & Yourself_6.eml_979379",
@@ -186,7 +206,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_6.eml"
+    "path": "Re_ Katherine Andersen & Yourself_6.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine Andersen & Yourself_7.eml_979424",
@@ -195,7 +216,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_7.eml"
+    "path": "Re_ Katherine Andersen & Yourself_7.eml",
+    "domain": "Family Law"
   },
   {
     "id": "RE_ Katherine Andersen & Yourself_8.eml_979470",
@@ -204,7 +226,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "RE_ Katherine Andersen & Yourself_8.eml"
+    "path": "RE_ Katherine Andersen & Yourself_8.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine Andersen & Yourself_9.eml_979517",
@@ -213,7 +236,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_9.eml"
+    "path": "Re_ Katherine Andersen & Yourself_9.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine- law.eml_979563",
@@ -222,7 +246,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine- law.eml"
+    "path": "Re_ Katherine- law.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Screenshot_20251008_122415_Chrome.jpg_979989",
@@ -231,7 +256,8 @@
     "type": "media",
     "source": "legal_email",
     "status": "vault",
-    "path": "Screenshot_20251008_122415_Chrome.jpg"
+    "path": "Screenshot_20251008_122415_Chrome.jpg",
+    "domain": "Family Law"
   },
   {
     "id": "Screenshot_20251008_122431_Chrome.jpg_980038",
@@ -240,7 +266,8 @@
     "type": "media",
     "source": "legal_email",
     "status": "vault",
-    "path": "Screenshot_20251008_122431_Chrome.jpg"
+    "path": "Screenshot_20251008_122431_Chrome.jpg",
+    "domain": "Family Law"
   },
   {
     "id": "Katherine Andersen & Yourself.eml_980291",
@@ -249,7 +276,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Katherine Andersen & Yourself.eml"
+    "path": "Katherine Andersen & Yourself.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Katherine Andersen & Yourself_4.eml_980387",
@@ -258,7 +286,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_4.eml"
+    "path": "Re_ Katherine Andersen & Yourself_4.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Katherine Andersen & Yourself_1.eml_980435",
@@ -267,7 +296,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Katherine Andersen & Yourself_1.eml"
+    "path": "Katherine Andersen & Yourself_1.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Katherine Andersen & Yourself_2.eml_980482",
@@ -276,7 +306,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Katherine Andersen & Yourself_2.eml"
+    "path": "Katherine Andersen & Yourself_2.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Katherine Andersen & Yourself_3.eml_980530",
@@ -285,7 +316,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Katherine Andersen & Yourself_3.eml"
+    "path": "Katherine Andersen & Yourself_3.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Katherine Andersen & Yourself_4.eml_980575",
@@ -294,7 +326,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Katherine Andersen & Yourself_4.eml"
+    "path": "Katherine Andersen & Yourself_4.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Katherine Andersen & Yourself_5.eml_980619",
@@ -303,7 +336,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Katherine Andersen & Yourself_5.eml"
+    "path": "Katherine Andersen & Yourself_5.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Katherine Andersen & Yourself_6.eml_980664",
@@ -312,7 +346,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Katherine Andersen & Yourself_6.eml"
+    "path": "Katherine Andersen & Yourself_6.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Katherine Andersen & Yourself_7.eml_980707",
@@ -321,7 +356,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Katherine Andersen & Yourself_7.eml"
+    "path": "Katherine Andersen & Yourself_7.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Katherine- law.eml_980752",
@@ -330,7 +366,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Katherine- law.eml"
+    "path": "Katherine- law.eml",
+    "domain": "Family Law"
   },
   {
     "id": "New bill arrival. Katherine Andersen-Hallberg vs Chris Hallberg.eml_980845",
@@ -339,7 +376,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "New bill arrival. Katherine Andersen-Hallberg vs Chris Hallberg.eml"
+    "path": "New bill arrival. Katherine Andersen-Hallberg vs Chris Hallberg.eml",
+    "domain": "Family Law"
   },
   {
     "id": ".~lock.jan_10_2026_katherine-v-chris_served.odt#_976798",
@@ -348,7 +386,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": ".~lock.jan_10_2026_katherine-v-chris_served.odt#"
+    "path": ".~lock.jan_10_2026_katherine-v-chris_served.odt#",
+    "domain": "Family Law"
   },
   {
     "id": "1000007151.png_977034",
@@ -357,7 +396,8 @@
     "type": "media",
     "source": "legal_email",
     "status": "vault",
-    "path": "1000007151.png"
+    "path": "1000007151.png",
+    "domain": "Family Law"
   },
   {
     "id": "2026-03-09.01 Tim Turple LT.pdf_977228",
@@ -366,7 +406,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2026-03-09.01 Tim Turple LT.pdf"
+    "path": "2026-03-09.01 Tim Turple LT.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "FW_ Katherine Andersen and Chris Hallberg.eml_977825",
@@ -375,7 +416,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "FW_ Katherine Andersen and Chris Hallberg.eml"
+    "path": "FW_ Katherine Andersen and Chris Hallberg.eml",
+    "domain": "Family Law"
   },
   {
     "id": "INSTRUCTIONS_ Demand for Complete Correspondence File from Opposing Counsel & Case Index.eml_978049",
@@ -384,7 +426,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "INSTRUCTIONS_ Demand for Complete Correspondence File from Opposing Counsel & Case Index.eml"
+    "path": "INSTRUCTIONS_ Demand for Complete Correspondence File from Opposing Counsel & Case Index.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Answer and Counter-Petition_ Andersen v Hallberg_.eml_978095",
@@ -393,7 +436,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Answer and Counter-Petition_ Andersen v Hallberg_.eml"
+    "path": "Re_ Answer and Counter-Petition_ Andersen v Hallberg_.eml",
+    "domain": "Family Law"
   },
   {
     "id": "re_ Answer and Counter-Petition_ Andersen v Hallberg__1.eml_978145",
@@ -402,7 +446,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "re_ Answer and Counter-Petition_ Andersen v Hallberg__1.eml"
+    "path": "re_ Answer and Counter-Petition_ Andersen v Hallberg__1.eml",
+    "domain": "Family Law"
   },
   {
     "id": "re_ DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml_978190",
@@ -411,7 +456,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "re_ DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml"
+    "path": "re_ DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Hallberg v Anderson.eml_978381",
@@ -420,7 +466,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Hallberg v Anderson.eml"
+    "path": "Re_ Hallberg v Anderson.eml",
+    "domain": "Family Law"
   },
   {
     "id": "20260119_133615-1.PDF_978828",
@@ -429,7 +476,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "20260119_133615-1.PDF"
+    "path": "20260119_133615-1.PDF",
+    "domain": "Family Law"
   },
   {
     "id": "2449 Eastview - Saskatoon.pdf_978873",
@@ -438,7 +486,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2449 Eastview - Saskatoon.pdf"
+    "path": "2449 Eastview - Saskatoon.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "Answer and Counter Petitioner Mar 12, 2026.pdf_978970",
@@ -447,7 +496,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "Answer and Counter Petitioner Mar 12, 2026.pdf"
+    "path": "Answer and Counter Petitioner Mar 12, 2026.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "Answer and Counter Petitioner Mar 12, 2026_1.pdf_979015",
@@ -456,7 +506,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "Answer and Counter Petitioner Mar 12, 2026_1.pdf"
+    "path": "Answer and Counter Petitioner Mar 12, 2026_1.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "Answer and Counter Petitioner Mar 23, 2026.pdf_979059",
@@ -465,7 +516,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "Answer and Counter Petitioner Mar 23, 2026.pdf"
+    "path": "Answer and Counter Petitioner Mar 23, 2026.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml_979152",
@@ -474,7 +526,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml"
+    "path": "DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Retainer Agreement.eml_979618",
@@ -483,7 +536,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Retainer Agreement.eml"
+    "path": "Re_ Retainer Agreement.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Retainer Agreement_1.eml_979672",
@@ -492,7 +546,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Retainer Agreement_1.eml"
+    "path": "Re_ Retainer Agreement_1.eml",
+    "domain": "Family Law"
   },
   {
     "id": "RE_ Retainer Agreement_2.eml_979720",
@@ -501,7 +556,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "RE_ Retainer Agreement_2.eml"
+    "path": "RE_ Retainer Agreement_2.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Retainer Agreement_3.eml_979766",
@@ -510,7 +566,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Retainer Agreement_3.eml"
+    "path": "Re_ Retainer Agreement_3.eml",
+    "domain": "Family Law"
   },
   {
     "id": "re_ Retainer Agreement_4.eml_979809",
@@ -519,7 +576,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "re_ Retainer Agreement_4.eml"
+    "path": "re_ Retainer Agreement_4.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Tim from Merchant Law.eml_980137",
@@ -528,7 +586,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Tim from Merchant Law.eml"
+    "path": "Tim from Merchant Law.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Letter to Valerie Watson - Mar 23, 2026.pdf_980799",
@@ -537,7 +596,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "Letter to Valerie Watson - Mar 23, 2026.pdf"
+    "path": "Letter to Valerie Watson - Mar 23, 2026.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "Retainer Agreement - Dec 22, 2025.pdf_980890",
@@ -546,7 +606,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "Retainer Agreement - Dec 22, 2025.pdf"
+    "path": "Retainer Agreement - Dec 22, 2025.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "re_ Andersen v Hallberg_ Letter to Valerie Watson.eml_980938",
@@ -555,7 +616,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "re_ Andersen v Hallberg_ Letter to Valerie Watson.eml"
+    "path": "re_ Andersen v Hallberg_ Letter to Valerie Watson.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Annual Income_ Andersen v Hallberg.eml_980988",
@@ -564,7 +626,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Annual Income_ Andersen v Hallberg.eml"
+    "path": "Re_ Annual Income_ Andersen v Hallberg.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Annual Income_ Andersen v Hallberg_1.eml_981034",
@@ -573,7 +636,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Annual Income_ Andersen v Hallberg_1.eml"
+    "path": "Re_ Annual Income_ Andersen v Hallberg_1.eml",
+    "domain": "Family Law"
   },
   {
     "id": "RE_ Annual Income_ Andersen v Hallberg_2.eml_981080",
@@ -582,7 +646,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "RE_ Annual Income_ Andersen v Hallberg_2.eml"
+    "path": "RE_ Annual Income_ Andersen v Hallberg_2.eml",
+    "domain": "Family Law"
   },
   {
     "id": "2026-02-20 Chris Hallberg LT.pdf_977135",
@@ -591,7 +656,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2026-02-20 Chris Hallberg LT.pdf"
+    "path": "2026-02-20 Chris Hallberg LT.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "2026-04-01 DRAFT Order - JCC.pdf_977275",
@@ -600,7 +666,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2026-04-01 DRAFT Order - JCC.pdf"
+    "path": "2026-04-01 DRAFT Order - JCC.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "2026-04-01 DRAFT Order - JCC_1.pdf_977321",
@@ -609,7 +676,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2026-04-01 DRAFT Order - JCC_1.pdf"
+    "path": "2026-04-01 DRAFT Order - JCC_1.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "2026-04-01 DRAFT Order - JCC_2.pdf_977368",
@@ -618,7 +686,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2026-04-01 DRAFT Order - JCC_2.pdf"
+    "path": "2026-04-01 DRAFT Order - JCC_2.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "2026-04-01 DRAFT Order - JCC_3.pdf_977414",
@@ -627,7 +696,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2026-04-01 DRAFT Order - JCC_3.pdf"
+    "path": "2026-04-01 DRAFT Order - JCC_3.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "2026-04-01 Request for JCC.pdf_977459",
@@ -636,7 +706,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2026-04-01 Request for JCC.pdf"
+    "path": "2026-04-01 Request for JCC.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "2026-04-01 Request for JCC_1.pdf_977504",
@@ -645,7 +716,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2026-04-01 Request for JCC_1.pdf"
+    "path": "2026-04-01 Request for JCC_1.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml_977550",
@@ -654,7 +726,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml"
+    "path": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Fw_ Katherine Andersen & Yourself.eml_977596",
@@ -663,7 +736,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Fw_ Katherine Andersen & Yourself.eml"
+    "path": "Fw_ Katherine Andersen & Yourself.eml",
+    "domain": "Family Law"
   },
   {
     "id": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml_977871",
@@ -672,7 +746,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml"
+    "path": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml",
+    "domain": "Family Law"
   },
   {
     "id": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml_977916",
@@ -681,7 +756,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml"
+    "path": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml",
+    "domain": "Family Law"
   },
   {
     "id": "image001.jpg_977960",
@@ -690,7 +766,8 @@
     "type": "media",
     "source": "legal_email",
     "status": "vault",
-    "path": "image001.jpg"
+    "path": "image001.jpg",
+    "domain": "Family Law"
   },
   {
     "id": "image001_1.jpg_978006",
@@ -699,7 +776,8 @@
     "type": "media",
     "source": "legal_email",
     "status": "vault",
-    "path": "image001_1.jpg"
+    "path": "image001_1.jpg",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Financial Statement_ Andersen v Hallberg.eml_978238",
@@ -708,7 +786,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Financial Statement_ Andersen v Hallberg.eml"
+    "path": "Re_ Financial Statement_ Andersen v Hallberg.eml",
+    "domain": "Family Law"
   },
   {
     "id": "re_ Financial Statement_ Andersen v Hallberg_1.eml_978284",
@@ -717,7 +796,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "re_ Financial Statement_ Andersen v Hallberg_1.eml"
+    "path": "re_ Financial Statement_ Andersen v Hallberg_1.eml",
+    "domain": "Family Law"
   },
   {
     "id": "re_ Income Tax Statements.eml_978426",
@@ -726,7 +806,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "re_ Income Tax Statements.eml"
+    "path": "re_ Income Tax Statements.eml",
+    "domain": "Family Law"
   },
   {
     "id": "2026-04-01 Request for JCC_3.pdf_978783",
@@ -735,7 +816,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2026-04-01 Request for JCC_3.pdf"
+    "path": "2026-04-01 Request for JCC_3.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "Answer and Counter Petition - Revision - Mar 24, 2026.pdf_978922",
@@ -744,7 +826,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "Answer and Counter Petition - Revision - Mar 24, 2026.pdf"
+    "path": "Answer and Counter Petition - Revision - Mar 24, 2026.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "April 1st surgery, cancellation.eml_979107",
@@ -753,7 +836,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "April 1st surgery, cancellation.eml"
+    "path": "April 1st surgery, cancellation.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Financial Statement - Client - Apr 8, 2026.pdf_979198",
@@ -762,7 +846,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "Financial Statement - Client - Apr 8, 2026.pdf"
+    "path": "Financial Statement - Client - Apr 8, 2026.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml_979853",
@@ -771,7 +856,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml"
+    "path": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_1.eml_979899",
@@ -780,7 +866,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_1.eml"
+    "path": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_1.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_2.eml_979945",
@@ -789,7 +876,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_2.eml"
+    "path": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_2.eml",
+    "domain": "Family Law"
   },
   {
     "id": "Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml_980084",
@@ -798,7 +886,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml"
+    "path": "Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml",
+    "domain": "Family Law"
   },
   {
     "id": "2026-04-01 Request for JCC_2.pdf_980186",
@@ -807,7 +896,8 @@
     "type": "document",
     "source": "legal_email",
     "status": "vault",
-    "path": "2026-04-01 Request for JCC_2.pdf"
+    "path": "2026-04-01 Request for JCC_2.pdf",
+    "domain": "Family Law"
   },
   {
     "id": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml_980234",
@@ -816,7 +906,8 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml"
+    "path": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml",
+    "domain": "Family Law"
   },
   {
     "id": "re_ Answer and Counter Petition_ Andersen v Hallberg_DIV-SA-05-2026.eml_980339",
@@ -825,7 +916,46 @@
     "type": "generic",
     "source": "legal_email",
     "status": "vault",
-    "path": "re_ Answer and Counter Petition_ Andersen v Hallberg_DIV-SA-05-2026.eml"
+    "path": "re_ Answer and Counter Petition_ Andersen v Hallberg_DIV-SA-05-2026.eml",
+    "domain": "Family Law"
+  },
+  {
+    "id": "mock_sgi_assessment.md_679672",
+    "title": "Initial Injury Assessment",
+    "timestamp": "2026-01-15 10:00:00",
+    "type": "Document",
+    "source": "local",
+    "status": "discovery",
+    "path": "mock_sgi_assessment.md",
+    "flagged": true,
+    "flags": [
+      "collision"
+    ],
+    "domainTags": [
+      "sgi",
+      "injury",
+      "claim",
+      "collision",
+      "physiotherapy",
+      "impairment",
+      "prescribed",
+      "rehabilitation",
+      "saskatchewan government insurance",
+      "medical",
+      "hospital"
+    ],
+    "domain": "SGI/Medical",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": "16-892471",
+      "dateOfLoss": "2025-11-20",
+      "adjuster": "Robert Henderson\n\nPatient Assessment",
+      "icd_codes": [
+        "S13.4",
+        "S42.0"
+      ],
+      "injurySeverity": "High/Severe"
+    }
   },
   {
     "id": "pixel8_2024-04-19_202640_5551234.md_638628",
@@ -838,7 +968,18 @@
     "flagged": true,
     "flags": [
       "divorce"
-    ]
+    ],
+    "domain": "Family Law"
+  },
+  {
+    "id": "sms_5551234_20240419202640.md_661976",
+    "title": "Text Message (Received (Inbound))",
+    "timestamp": "2024-04-19 20:26:40",
+    "type": "sms",
+    "source": "Android Backup",
+    "status": "discovery",
+    "path": "sms/sms_5551234_20240419202640.md",
+    "domain": "Family Law"
   },
   {
     "id": "old_laptop_test.md_637895",
@@ -851,6 +992,7 @@
     "flagged": true,
     "flags": [
       "lawyer@firm.com"
-    ]
+    ],
+    "domain": "Family Law"
   }
 ]

@@ -46,13 +46,17 @@ function App() {
     const [isReconciling, setIsReconciling] = useState(false)
     const [pulseData, setPulseData] = useState({})
 
+    const [searchTerm, setSearchTerm] = useState('')
+    const [custodianFilter, setCustodianFilter] = useState('all')
+    const [evidenceTypeFilter, setEvidenceTypeFilter] = useState('all')
+
     useEffect(() => {
         checkHealth()
         fetchAnalytics()
         fetchArguments()
         fetchVelocity()
 
-        // Real-time Flight Recorder Stream (SSE)
+        // Real-time Forensic Stream
         const eventSource = new EventSource('/api/stream/events');
 
         eventSource.onmessage = (event) => {
@@ -66,7 +70,7 @@ function App() {
                     setHealth(prev => ({ ...prev, backend: 'online' }));
                 }
             } catch (e) {
-                console.error("SSE Parse Error", e);
+                console.error("Forensic Stream Parse Error", e);
             }
         };
 
@@ -435,18 +439,18 @@ function App() {
                                     <span className="system-status-pill">FLIGHT RECORDER ACTIVE</span>
                                     <h2>Forensic Intelligence Dashboard</h2>
                                 </div>
-                                <div className="header-stats-v3">
-                                    <div className="stat-v3">
-                                        <label>Nodes</label>
-                                        <span className="stat-value">{evidence.length}</span>
+                                <div className="dash-hero-stats">
+                                    <div className="dash-hero-stat">
+                                        <span className="stat-value">{analytics.totalNodes || 0}</span>
+                                        <span className="stat-label">TOTAL DOCUMENTS</span>
                                     </div>
-                                    <div className="stat-v3 alert">
-                                        <label>Alerts</label>
-                                        <span className="stat-value">{evidence.filter(e => e.flagged).length}</span>
+                                    <div className="dash-hero-stat highlight">
+                                        <span className="stat-value">{analytics.totalAlerts || 0}</span>
+                                        <span className="stat-label">DISCOVERY ALERTS</span>
                                     </div>
-                                    <div className="stat-v3">
-                                        <label>Stratagems</label>
+                                    <div className="dash-hero-stat">
                                         <span className="stat-value">{argumentsList.length}</span>
+                                        <span className="stat-label">STRATEGIC CLAIMS</span>
                                     </div>
                                 </div>
                             </div>
@@ -484,7 +488,7 @@ function App() {
                                         </div>
                                         <div className="pulse-container-v3">
                                             <div className="pulse-grid">
-                                                {Object.keys(pulseData).slice(-7).map(day => (
+                                                {Object.keys(pulseData).length > 0 ? Object.keys(pulseData).slice(-7).map(day => (
                                                     <div key={day} className="pulse-row">
                                                         <span className="pulse-label">{day.split('-').slice(1).join('/')}</span>
                                                         <div className="pulse-hours">
@@ -496,25 +500,31 @@ function App() {
                                                             ))}
                                                         </div>
                                                     </div>
-                                                ))}
+                                                )) : (
+                                                    <div className="empty-state">
+                                                        <p>Waiting for forensic activity telemetry...</p>
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="premium-panel flight-recorder">
                                         <div className="panel-header">
-                                            <h3>Mission Flight Recorder</h3>
-                                            <span className="live-tag">LIVE SSE</span>
+                                            <h3>Tactical Mission Log</h3>
+                                            <span className="live-tag">REAL-TIME FLOW</span>
                                         </div>
-                                        <div className="flight-log-stream">
-                                            {flightLog.length === 0 && <div className="log-empty">Waiting for telemetry heartbeat...</div>}
-                                            {flightLog.map((log, i) => (
-                                                <div key={i} className={`log-entry ${log.level || 'info'}`}>
-                                                    <span className="log-time">{new Date(log.timestamp).toLocaleTimeString()}</span>
+                                        <div className="flight-recorder-scroll">
+                                            {flightLog.length > 0 ? flightLog.map((log, i) => (
+                                                <div key={i} className="log-line">
+                                                    <span className="log-time">{new Date(log.time).toLocaleTimeString()}</span>
                                                     <span className="log-msg">{log.message}</span>
-                                                    {log.details && <span className="log-extra">{log.details}</span>}
                                                 </div>
-                                            ))}
+                                            )) : (
+                                                <div className="empty-state">
+                                                    <p>Awaiting Live Updates...</p>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
@@ -533,6 +543,21 @@ function App() {
                                                         <span className="alert-rank">G-LEVEL-1</span>
                                                         <span className="alert-date">{alert.timestamp}</span>
                                                     </div>
+                                                    <div className="status-dot-group">
+                                                        <div className="health-item">
+                                                            <div className={`dot ${health.backend}`}></div>
+                                                            <span>Mission Controller</span>
+                                                        </div>
+                                                        <div className="health-item">
+                                                            <div className={`dot ${health.device}`}></div>
+                                                            <span>Phone Link</span>
+                                                        </div>
+                                                        <div className="health-item">
+                                                            <div className={`dot ${health.ollama}`}></div>
+                                                            <span>AI Engine</span>
+                                                            <button className="reboot-btn" onClick={() => fetch('/api/system/reboot')}>RESET</button>
+                                                        </div>
+                                                    </div>
                                                     <h4>{alert.title}</h4>
                                                     <div className="tag-row">
                                                         {alert.flags?.map((f, i) => <span key={i} className="evidence-tag">{f}</span>)}
@@ -543,8 +568,8 @@ function App() {
                                     </div>
                                     <div className="premium-panel live-vault">
                                         <div className="panel-header">
-                                            <h3>Vault Feed</h3>
-                                            <button className="text-btn" onClick={() => setView('timeline')}>View All</button>
+                                            <h3>Discovery Index</h3>
+                                            <button className="text-btn" onClick={() => setView('timeline')}>Expand Full Vault</button>
                                         </div>
                                         <div className="feed-v3">
                                             {evidence.slice(0, 8).map(item => (
@@ -625,15 +650,15 @@ function App() {
                         <section className="governance-view-v2">
                             <div className="view-header">
                                 <div className="title-area">
-                                    <h2>People & Alerts</h2>
-                                    <p>Configure automated discovery triggers for priority entities and keywords.</p>
+                                    <h2>People & Priority Alerts</h2>
+                                    <p>Configure automated discovery triggers for priority individuals and critical events.</p>
                                 </div>
                             </div>
 
                             <div className="gov-controls-grid">
                                 <div className="gov-control-card">
                                     <div className="card-header">
-                                        <h3>Keyword Monitoring</h3>
+                                        <h3>Discovery Triggers (Keywords)</h3>
                                         <span className="count">{governance.keywords?.length || 0} Active</span>
                                     </div>
                                     <div className="gov-tags">
@@ -662,7 +687,7 @@ function App() {
 
                                 <div className="gov-control-card">
                                     <div className="card-header">
-                                        <h3>Entity Priority List</h3>
+                                        <h3>Priority Individuals (Entities)</h3>
                                         <span className="count">{governance.entities?.length || 0} Tracking</span>
                                     </div>
                                     <div className="gov-tags">
@@ -692,8 +717,8 @@ function App() {
 
                                 <div className="gov-control-card">
                                     <div className="card-header">
-                                        <h3>Identity Resolution</h3>
-                                        <span className="count">{identities.length} Personas</span>
+                                        <h3>Personas (Identity Resolution)</h3>
+                                        <span className="count">{identities.length} Resolved</span>
                                     </div>
                                     <div className="identity-list">
                                         {identities.map((id, i) => (
@@ -760,33 +785,75 @@ function App() {
 
 
                     {view === 'timeline' && (
-                        <section className="timeline">
+                        <section className="timeline-view-v3">
                             <div className="view-header">
-                                <h2>Secure Vault</h2>
+                                <div className="title-area">
+                                    <h2>Discovery Index / Vault</h2>
+                                    <p>Search and filter through all verified evidence. Use Custodian and Type facets to narrow discovery.</p>
+                                </div>
                             </div>
-                            <div className="timeline-items">
-                                {evidence.filter(item => item.status === 'vault').map((item, index) => (
-                                    <div key={index} className="timeline-item" onClick={() => fetchContent(item)}>
-                                        <div className="time">{item.timestamp}</div>
-                                        <div className="item-card">
-                                            <div className="item-details">
-                                                <strong>{item.title}</strong>
-                                                <span className={`type-tag ${item.type}`}>{item.type}</span>
-                                                {item.identity && <span className="identity-badge" style={{ color: item.identityColor, border: `1px solid ${item.identityColor}` }}>{item.identity}</span>}
-                                                {intelligence[item.id] && (
-                                                    <div className="intelligence-summary-box">
-                                                        <span className="intel-label">AI Summary</span>
-                                                        <p className="intel-text">{intelligence[item.id].summary}</p>
-                                                    </div>
-                                                )}
+
+                            <div className="discovery-controls">
+                                <div className="search-main">
+                                    <input
+                                        type="text"
+                                        placeholder="Search by keyword, name, or metadata..."
+                                        value={searchTerm}
+                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                    />
+                                </div>
+                                <div className="facet-row">
+                                    <div className="facet-group">
+                                        <label>Custodian</label>
+                                        <select value={custodianFilter} onChange={(e) => setCustodianFilter(e.target.value)}>
+                                            <option value="all">All Custodians</option>
+                                            {sources.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
+                                        </select>
+                                    </div>
+                                    <div className="facet-group">
+                                        <label>Evidence Type</label>
+                                        <select value={evidenceTypeFilter} onChange={(e) => setEvidenceTypeFilter(e.target.value)}>
+                                            <option value="all">All Types</option>
+                                            <option value="email">Emails / Communication</option>
+                                            <option value="media">Image / Video</option>
+                                            <option value="document">PDF / Documents</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="vault-records-list">
+                                {evidence.filter(item => {
+                                    const matchSearch = searchTerm === '' ||
+                                        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                        item.source.toLowerCase().includes(searchTerm.toLowerCase());
+                                    const matchCustodian = custodianFilter === 'all' || item.sourceId === custodianFilter;
+                                    const matchType = evidenceTypeFilter === 'all' || item.type === evidenceTypeFilter;
+                                    return matchSearch && matchCustodian && matchType;
+                                }).map(item => (
+                                    <div key={item.id} className="vault-item-v3" onClick={() => fetchContent(item)}>
+                                        <div className="item-main-info">
+                                            <div className="item-title-row">
+                                                <span className="legal-badge">{item.type.toUpperCase()}</span>
+                                                <h4>{item.title}</h4>
                                             </div>
-                                            <div className="item-actions-v2" onClick={e => e.stopPropagation()}>
-                                                {analyzingIds.has(item.id) ? (
-                                                    <span className="analyzing-spinner">Analyzing...</span>
-                                                ) : !intelligence[item.id] && (
-                                                    <button className="analyze-btn-xs" onClick={() => handleRunAnalysis(item)}>Analyze</button>
-                                                )}
+                                            <div className="item-sub-meta">
+                                                <span><strong>CUSTODIAN:</strong> {item.source}</span>
+                                                <span><strong>RECORDED:</strong> {item.timestamp}</span>
+                                                {item.bates && <span><strong>BATES:</strong> {item.bates}</span>}
                                             </div>
+                                            {intelligence[item.id] && (
+                                                <div className="intelligence-summary-box">
+                                                    <span className="intel-label">FORENSIC SUMMARY</span>
+                                                    <p className="intel-text">{intelligence[item.id].summary}</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className="item-actions-v3">
+                                            {!intelligence[item.id] && (
+                                                <button className="primary-btn-xs" onClick={(e) => { e.stopPropagation(); handleRunAnalysis(item); }}>Extract Intelligence</button>
+                                            )}
+                                            <a href={`/api/export/download/${item.path}`} className="secondary-btn-xs" target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()}>Original</a>
                                         </div>
                                     </div>
                                 ))}

@@ -1,0 +1,24 @@
+[
+    {
+        "judge_id": "SK-JUDGE-001",
+        "name": "Justice A. Smith",
+        "region": "Saskatoon",
+        "tendencies": {
+            "maintenance": "Conservative (strict adherence to guidelines)",
+            "property": "Literal (focuses on black-and-white transaction logs)",
+            "custody": "Primary caregiver focus"
+        },
+        "notes": "Justice Smith values chronological clarity and documented financial contradictions over narrative emotional arguments."
+    },
+    {
+        "judge_id": "SK-JUDGE-002",
+        "name": "Justice B. Jones",
+        "region": "Regina",
+        "tendencies": {
+            "maintenance": "Equitable (frequently adjusts for cost-of-living)",
+            "property": "Holistic (considers non-monetary contributions)",
+            "custody": "50/50 starting presumption"
+        },
+        "notes": "Justice Jones is receptive to 'Bad Faith' arguments if backed by cross-domain contradiction analysis."
+    }
+]
