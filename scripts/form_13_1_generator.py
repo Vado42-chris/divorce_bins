@@ -7,7 +7,7 @@ from datetime import datetime
 try:
     from flight_recorder import logToFlightRecorder
 except ImportError:
-    def logToFlightRecorder(msg, level='INFO'): print(f"[{level}] {msg}")
+    def logToFlightRecorder(msg, level='INFO'): pass # Silenced for API compatibility
 
 VAULT_INDEX = "metadata/index.json"
 OUTPUT_DIR = "metadata/exports"

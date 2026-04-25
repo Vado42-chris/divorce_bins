@@ -1,0 +1,40 @@
+{
+    "legal_email_2025-10-23_062851_Fw Katherine Andersen  Yoursel.md_637c0b5d562b": {
+        "node_id": "legal_email_2025-10-23_062851_Fw Katherine Andersen  Yoursel.md_637c0b5d562b",
+        "title": "Unknown Node",
+        "adversarial_points": [
+            "SGI may argue the vehicle value was lower due to pre-existing conditions or high mileage.",
+            "Arbitration board may focus on the technical 'total loss' threshold (~80% of value)."
+        ],
+        "counter_narratives": [
+            "Refer to maintenance records and recent appraisal (if available) to prove premium condition prior to collision.",
+            "Emphasize the unique unavailability of replacement vehicles (market scarcity) to argue for replacement value over scrap value."
+        ],
+        "strategic_priority": "HIGH",
+        "last_analyzed": "2026-04-25T01:16:46.605200"
+    },
+    "legal_email_2026-03-12_065326_INSTRUCTIONS Demand for Comple.md_fe964260b965": {
+        "node_id": "legal_email_2026-03-12_065326_INSTRUCTIONS Demand for Comple.md_fe964260b965",
+        "title": "Unknown Node",
+        "adversarial_points": [
+            "Arbitration board may focus on the technical 'total loss' threshold (~80% of value)."
+        ],
+        "counter_narratives": [
+            "Emphasize the unique unavailability of replacement vehicles (market scarcity) to argue for replacement value over scrap value."
+        ],
+        "strategic_priority": "HIGH",
+        "last_analyzed": "2026-04-25T01:16:46.605218"
+    },
+    "mock_sgi_assessment_101010": {
+        "node_id": "mock_sgi_assessment_101010",
+        "title": "Unknown Node",
+        "adversarial_points": [
+            "SGI might claim shared liability if the police report is ambiguous."
+        ],
+        "counter_narratives": [
+            "Use witness statement (Cary Reid) and photo metadata to establish Katherine's exclusive control of the vehicle at the time of loss."
+        ],
+        "strategic_priority": "MEDIUM",
+        "last_analyzed": "2026-04-25T01:16:46.605224"
+    }
+}

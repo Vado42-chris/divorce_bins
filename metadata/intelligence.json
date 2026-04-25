@@ -1,1 +1,1277 @@
-{}
+{
+  "legal_email_2025-10-23_062851_Fw Katherine Andersen  Yoursel.md_637c0b5d562b": {
+    "summary": "Formal acknowledgement of SGI Claim 16-892471 regarding the total loss of the vehicle and move to arbitration.",
+    "events": [
+      "2025-10-23: SGI confirms arbitration status.",
+      "2025-10-23: Collision liability discussed."
+    ],
+    "score": 9,
+    "entities": [
+      "SGI",
+      "Claim 16-892471",
+      "Katherine Andersen"
+    ],
+    "type": "ARBITRATION",
+    "status": "VETTED",
+    "confidence": 100,
+    "arbitration_metadata": {
+      "claim_id": "16-892471",
+      "adjuster": "Robert Henderson",
+      "incident_date": "2025-08-14"
+    },
+    "timestamp": "2026-04-24T12:00:00.000000",
+    "model": "manual_validation"
+  },
+  "legal_email_2026-03-12_065326_INSTRUCTIONS Demand for Comple.md_fe964260b965": {
+    "summary": "Legal instructions regarding the complete correspondence file for the SGI arbitration and spousal support cross-over.",
+    "events": [
+      "2026-03-12: Demand for complete file sent to opposing counsel.",
+      "2026-03-12: Arbitration hearing timeline discussed."
+    ],
+    "score": 8,
+    "entities": [
+      "SGI",
+      "Saskatchewan Government Insurance",
+      "Arbitration Board"
+    ],
+    "type": "ARBITRATION",
+    "status": "VETTED",
+    "confidence": 95,
+    "arbitration_metadata": {
+      "claim_id": "16-892471",
+      "adjuster": "Robert Henderson",
+      "incident_date": "2025-08-14"
+    },
+    "timestamp": "2026-04-24T12:05:00.000000",
+    "model": "manual_validation"
+  },
+  "mock_sgi_assessment_101010": {
+    "summary": "Medical assessment related to collision injuries, confirming displacement and rehabilitation requirements.",
+    "events": [
+      "2025-09-12: Primary medical assessment completed."
+    ],
+    "score": 7,
+    "entities": [
+      "Physio Plus",
+      "SGI Medical"
+    ],
+    "type": "MEDICAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "arbitration_metadata": {
+      "claim_id": "16-892471",
+      "adjuster": "Robert Henderson",
+      "incident_date": "2025-08-14"
+    },
+    "timestamp": "2026-04-24T12:10:00.000000",
+    "model": "manual_validation"
+  },
+  "legal_email_legal_email_2025-10-03_220428_Katherine_Andersen__Yourself.md": {
+    "summary": "Kristy Oleksyn sends an email to Katherine Andersen's lawyer with attached correspondence from Valerie Watson K.C.",
+    "events": [
+      "2025-10-03: Email sent by Kristy Oleksyn"
+    ],
+    "score": 3,
+    "entities": [
+      "Katherine Andersen",
+      "Valerie Watson K.C.",
+      "Kristy Oleksyn",
+      "Leslie G. Tallis"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 95,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:36:42.257087",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-04_072041_Re_Katherine_Andersen__Yoursel.md": {
+    "summary": "Chris Hallberg's email to Kristy Oleksyn regarding separation from Katherine Andersen, concerns about vehicle ownership, financial support, and urgent need for legal assistance.",
+    "events": [
+      "2025-10-03: Katherine sends letter initiating separation process via email",
+      "2025-10-04 07:20:41: Chris Hallberg emails Kristy Oleksyn with concerns and requests for assistance"
+    ],
+    "score": 6,
+    "entities": [
+      "Chris Hallberg",
+      "Katherine Andersen",
+      "Kristy Oleksyn"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 85,
+    "arbitration_metadata": {
+      "claim_id": "",
+      "adjuster": "",
+      "incident_date": "",
+      "liability_assessment": ""
+    },
+    "timestamp": "2026-04-25T05:36:45.784586",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-04_170218_Re_Katherine_Andersen__Yoursel.md": {
+    "summary": "Chris Hallberg's wife Katherine has left him due to irreconcilable differences, leaving Chris isolated and financially strained, with concerns about paying bills and mortgage on time.",
+    "events": [
+      "2025-10-04: Email exchange between Chris Hallberg and Kristy Oleksyn",
+      "2025-10-03: Katherine Andersen initiates separation process via text message to Chris Hallberg",
+      "Recent crash of Chris's other car, with Katherine taking possession of his SUV"
+    ],
+    "score": 6,
+    "entities": [
+      "Chris Hallberg",
+      "Katherine Andersen",
+      "Kristy Oleksyn",
+      "Valerie Watson"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 95,
+    "arbitration_metadata": {
+      "claim_id": "",
+      "adjuster": "",
+      "incident_date": "",
+      "liability_assessment": ""
+    },
+    "timestamp": "2026-04-25T05:36:49.566906",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-05_203104_Re_Katherine_Andersen__Yoursel.md": {
+    "summary": "Chris Hallberg's emails to his lawyer reveal a marital dispute, financial struggles, and a request for Katherine Andersen to return one of Chris's vehicles.",
+    "events": [
+      "Katherine Andersen passes away stepfather",
+      "Katherine crashes Chris's BMW last week",
+      "Chris is disabled with $1200/month income",
+      "Outstanding insurance bills: $3000",
+      "Mortgage and bills due next month"
+    ],
+    "score": 7,
+    "entities": [
+      "Chris Hallberg",
+      "Katherine Andersen",
+      "Kristy Oleksyn (lawyer)",
+      "Valerie Watson (lawyer)"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:36:52.293091",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-06_193650_Katherine_Andersen__Yourself.md": {
+    "summary": "Katherine Andersen's assistant provides responses to Katherine's husband regarding financial arrangements, vehicle insurance, and property division in a Saskatchewan Family Law case.",
+    "events": [
+      "2025-10-06: Email sent by Kristy Oleksyn to Katherine's husband",
+      "Vehicle accident involving BMW (no fault of Katherine)",
+      "Mortgage payments temporarily covered by Katherine Andersen"
+    ],
+    "score": 4,
+    "entities": [
+      "Katherine Andersen",
+      "Kristy Oleksyn"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:36:54.244426",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-08_174100_Re_Katherine_Andersen__Yoursel.md": {
+    "summary": "Chris Hallberg's email to Kristy Oleksyn regarding his situation after a vehicle accident and his step-father's passing, with Katherine Andersen responding to previous emails",
+    "events": [
+      "2025-10-08: Chris has an appointment at SGI to get the damages appraised",
+      "2025-10-06: Kristy Oleksyn sends an email to Chris Hallberg on behalf of their client, Katherine Andersen"
+    ],
+    "score": 6,
+    "entities": [
+      "Chris Hallberg",
+      "Katherine Andersen"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 80,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:36:56.609719",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-08_214532_RE_Katherine_Andersen__Yoursel.md": {
+    "summary": "Email exchange between Chris Hallberg and Kristy Oleksyn regarding Katherine Andersen's departure from the jointly owned home, asset division, and vehicle rental.",
+    "events": [
+      "October 3rd: Katherine left the jointly owned home",
+      "October 6th: Email exchange initiated by Chris Hallberg to Kristy Oleksyn",
+      "October 8th (11:41 AM): Chris Hallberg's email response to Kristy Oleksyn"
+    ],
+    "score": 7,
+    "entities": [
+      "Katherine Andersen",
+      "Chris Hallberg",
+      "Kristy Oleksyn"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 85,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:36:59.460332",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-09_094014_Re_Katherine_Andersen__Yoursel.md": {
+    "summary": "Christopher Hallberg's email to Scharfstein LLP regarding his disability and need for accommodations during mediation",
+    "events": [
+      "October 6, 2025: Correspondence between Christopher Hallberg and Kristy Oleksyn/Valerie Watson",
+      "October 8, 2025: Email from Christopher Hallberg to Kristy Oleksyn/Valerie Watson regarding disability benefits and temporary mortgage assistance",
+      "October 9, 2025: Email from Christopher Hallberg to Kristy Oleksyn/Valerie Watson disclosing his use of AI assistance for communication"
+    ],
+    "score": 2,
+    "entities": [
+      "Christopher Hallberg",
+      "Kristy Oleksyn",
+      "Valerie G. Watson"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 95,
+    "timestamp": "2026-04-25T05:37:02.823230",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-09_104046_Katherine-_law.md": {
+    "summary": "Christopher Hallberg provides detailed email to Kristy Oleksyn and Valerie G. Watson regarding his disability accommodations and communication style during mediation.",
+    "events": [
+      "October 6, 2025 - correspondence from Scharfstein LLP",
+      "October 8, 2025 - response from Christopher Hallberg",
+      "October 9, 2025 - current email"
+    ],
+    "score": 3,
+    "entities": [
+      "Christopher Hallberg",
+      "Kristy Oleksyn",
+      "Valerie G. Watson",
+      "Katherine Andersen"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:37:05.336298",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-10_075009_Re_Katherine-_law.md": {
+    "summary": "Chris Hallberg emails his lawyer about funeral arrangements for his father, Dan Hallberg, and mentions ongoing separation matters with Katherine.",
+    "events": [
+      "October 7, 2025: Dan Hallberg passed away",
+      "October 4, 2025: Katherine took the only functional vehicle (2011 Kia Soul)",
+      "This weekend: Memorial service in Edmonton, Alberta"
+    ],
+    "score": 6,
+    "entities": [
+      "Chris Hallberg",
+      "Dan Hallberg",
+      "Katherine"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 90,
+    "arbitration_metadata": {
+      "claim_id": "",
+      "adjuster": "",
+      "incident_date": "",
+      "liability_assessment": ""
+    },
+    "timestamp": "2026-04-25T05:37:08.124500",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-23_154750_FW_Katherine_Andersen_and_Chri.md": {
+    "summary": "Email from Judy Smith at Scharfstein Law Group regarding a letter from Valerie Watson attached to the email.",
+    "events": [
+      {
+        "date": "2026-03-09",
+        "action": "Valerie Watson sends a letter"
+      },
+      {
+        "date": "2026-03-23",
+        "action": "Email sent by Tim Turple with attachment"
+      }
+    ],
+    "score": 2,
+    "entities": [
+      "Katherine Andersen",
+      "Chris Hallberg",
+      "Valerie Watson",
+      "Judy Smith",
+      "Tim Turple",
+      "Brent D. Barilla, K.C."
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "arbitration_metadata": {
+      "claim_id": null,
+      "adjuster": null,
+      "incident_date": null,
+      "liability_assessment": null
+    },
+    "timestamp": "2026-04-25T05:37:10.753015",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-23_155047_DIV-SA-05-2026_Andersen_v_Hall.md": {
+    "summary": "Email from Lisa Effler to Mr. Hallberg regarding DIV-SA-05-2026; Andersen v Hallberg; Answer and Counter Petition",
+    "events": [
+      "2026-03-23: Email sent by Lisa Effler",
+      "DIV-SA-05-2026 case: Answer and Counter Petition received"
+    ],
+    "score": 2,
+    "entities": [
+      "Lisa Effler",
+      "Mr. Hallberg",
+      "Timothy E. Turple",
+      "Merchant Law Group LLP"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 95,
+    "timestamp": "2026-04-25T05:37:13.560644",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-23_161642_re_Andersen_v_Hallberg_Letter_.md": {
+    "summary": "Lisa Effler emails Mr. Hallberg asking him to review an attached letter from Mr. Turple before sending it to Ms. Watson.",
+    "events": [
+      "2026-03-23: Email sent by Lisa Effler to Mr. Hallberg requesting review of an attached letter"
+    ],
+    "score": 1,
+    "entities": [
+      "Lisa Effler",
+      "Mr. Hallberg",
+      "Mr. Turple",
+      "Ms. Watson"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 100,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:37:15.806315",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-23_220005_re_Answer_and_Counter-Petition.md": {
+    "summary": "Lisa Effler's email requesting Mr. Hallberg to review and sign an updated document in response to Andersen v Hallberg",
+    "events": [
+      "2026-03-23: Email sent from Lisa Effler to Mr. Hallberg"
+    ],
+    "score": 2,
+    "entities": [
+      "Mr. Hallberg",
+      "Lisa Effler",
+      "Timothy E. Turple",
+      "Merchant Law Group LLP"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 90,
+    "arbitration_metadata": null,
+    "timestamp": "2026-04-25T05:37:18.423046",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-23_220631_Re_Answer_and_Counter-Petition.md": {
+    "summary": "Chris Hallberg questions a statement about his marital status in an Answer and Counter-Petition document for the Andersen v Hallberg case.",
+    "events": [
+      "2026-03-23: Chris Hallberg emails Lisa Effler questioning a statement about his marital status in an Answer and Counter-Petition document",
+      "2026-03-23: Lisa Effler sent an email to Chris Hallberg with the revised document for review"
+    ],
+    "score": 2,
+    "entities": [
+      "Chris Hallberg",
+      "Lisa Effler",
+      "Tim Turple"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:37:20.750215",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-24_214531_re_Answer_and_Counter_Petition.md": {
+    "summary": "Revised document attachment for Andersen v Hallberg matter",
+    "events": [
+      "2026-03-24: Revised document sent to Mr. Hallberg with request for signature"
+    ],
+    "score": 1,
+    "entities": [
+      "Lisa Effler",
+      "Mr. Hallberg",
+      "Timothy E. Turple"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 95,
+    "timestamp": "2026-04-25T05:37:22.667553",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-26_071823_Subject_Executive_Summary__Pro.md": {
+    "summary": "Chris Hallberg's email to Tim outlining his proposed long-term case strategy, including framing Katherine's actions as 'premeditated patient abandonment' and advocating for interim relief.",
+    "events": [
+      "Katherine departed on October 3rd",
+      "HelloFresh meals were prepared but not consumable due to Chris' medical conditions",
+      "BMW was totaled by Katherine shortly before leaving",
+      "Chris severely injured his back/sciatica in June 2025"
+    ],
+    "score": 8,
+    "entities": [
+      "Katherine Hallberg",
+      "Chris Hallberg",
+      "Tim",
+      "CPP-D income ($1,281.09/month)"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "arbitration_metadata": {
+      "claim_id": null,
+      "adjuster": null,
+      "incident_date": null,
+      "liability_assessment": null
+    },
+    "timestamp": "2026-04-25T05:37:26.315919",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-26_102517_Re_Subject_Executive_Summary__.md": {
+    "summary": "Chris Hallberg's email describes his financial struggles due to his wife Katherine's withholding of interim support, which has ruined his credit and left him unable to pay bills.",
+    "events": [
+      "Katherine leaves Chris",
+      "Chris suffers from dyscalculia and dyslexia",
+      "Chris relies on H&R Block for tax preparation",
+      "Chris' wife Katherine wrecks their BMW",
+      "Enterprise rental deductions drain Chris' bank account"
+    ],
+    "score": 5,
+    "entities": [
+      "Chris Hallberg",
+      "Katherine (Hallberg's wife)",
+      "H&R Block",
+      "Enterprise rental",
+      "BMW",
+      "Sandbox insurance"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 85,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:37:33.892594",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-26_145221_Re_Subject_Executive_Summary__.md": {
+    "summary": "Chris Hallberg's email to Tim Turple regarding his proposed long-term case strategy and allegations against Katherine.",
+    "events": [
+      "Katherine was primary caregiver for 5 years while Chris was bedbound",
+      "Chris severely injured back/sciatica in June 2025",
+      "Katherine departed on October 3rd, leaving Chris stranded and blindsided",
+      "Katherine totaled the BMW before leaving"
+    ],
+    "score": 8,
+    "entities": [
+      "Chris Hallberg",
+      "Tim Turple",
+      "Katherine"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 95,
+    "arbitration_metadata": {
+      "claim_id": "",
+      "adjuster": "",
+      "incident_date": "",
+      "liability_assessment": ""
+    },
+    "timestamp": "2026-04-25T05:37:36.789686",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-27_160600_re_Income_Tax_Statements.md": {
+    "summary": "Lisa Effler requests income tax statements from Mr. Hallberg for his family law matter.",
+    "events": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "score": 1,
+    "entities": [
+      "Mr. Hallberg",
+      "Lisa Effler",
+      "Timothy E. Turple"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 95,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:37:38.741872",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-30_175106_April_1st_surgery_cancellation.md": {
+    "summary": "Chris Hallberg cancels his pre-op appointment for upcoming surgery due to lack of transportation and funds, attributing it to his ex-partner Katherine's avoidance.",
+    "events": [
+      "pre-op appointment cancelled",
+      "surgery postponed"
+    ],
+    "score": 2,
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 100,
+    "timestamp": "2026-04-25T05:37:40.158844",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-04-07_183929_FW_Katherine_Deborah_Andersen_.md": {
+    "summary": "Notice of Service of Documents for Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026",
+    "events": [
+      {
+        "timestamp": "2026-04-07 09:32:00",
+        "event": "Kristy Oleksyn sent a notice of service of documents to Tim Turple"
+      },
+      {
+        "timestamp": "2026-04-07 18:39:29",
+        "event": "Tim Turple forwarded the email to Christopher Rickie Hallberg with attached documents"
+      }
+    ],
+    "score": 2,
+    "entities": [
+      "Katherine Deborah Andersen",
+      "Christopher Rickie Hallberg",
+      "Kristy Oleksyn",
+      "Valerie G. Watson K.C.",
+      "Timothy Turple",
+      "DIV-SA-0005-2026"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:37:43.653742",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-04-07_185119_Fwd_Katherine_Deborah_Andersen.md": {
+    "summary": "Notice of Service of Documents for Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026",
+    "events": [
+      "April 7, 2026: Notice of Service of Documents sent to Tim Turple"
+    ],
+    "score": 2,
+    "entities": [
+      "Katherine Deborah Andersen",
+      "Christopher Rickie Hallberg"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 95,
+    "timestamp": "2026-04-25T05:37:46.287537",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-04-08_123440_Re_Financial_Statement_Anderse.md": {
+    "summary": "Chris Hallberg responds to Lisa Effler's request for financial documents, arranging an in-home appointment with H&R Block to complete tax returns.",
+    "events": [
+      {
+        "date": "2026-04-08",
+        "action": "Email exchange between Chris Hallberg and Lisa Effler"
+      }
+    ],
+    "score": 2,
+    "entities": [
+      "Chris Hallberg",
+      "Lisa Effler",
+      "H&R Block"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:37:48.655403",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-04-08_145225_Tim_from_Merchant_Law.md": {
+    "summary": "Email from Lisa Effler at Merchant Law Group requesting Mr. Hallberg to complete attached forms for income tax returns and a Property Statement.",
+    "events": [
+      "2026-04-08: Email sent by Lisa Effler to Chris Hallberg",
+      "April 7, 2026: NOTICE OF SERVICE OF DOCUMENTS served on Timothy Turple"
+    ],
+    "score": 3,
+    "entities": [
+      "Chris Hallberg",
+      "Lisa Effler",
+      "Timothy E. Turple",
+      "Merchant Law Group LLP"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:37:50.998819",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-04-08_180113_re_Financial_Statement_Anderse.md": {
+    "summary": "Lisa Effler sends an email to Mr. Hallberg regarding the completion of a financial statement for the Andersen v Hallberg case.",
+    "events": [
+      "2026-04-08: Lisa Effler emails Mr. Hallberg asking him to complete a financial statement"
+    ],
+    "score": 2,
+    "entities": [
+      "Lisa Effler",
+      "Mr. Hallberg",
+      "Andersen v Hallberg"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 95,
+    "timestamp": "2026-04-25T05:37:53.347644",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_old_laptop_test.md": {
+    "summary": "Test email sent to verify multi-source archiver",
+    "events": [],
+    "score": 1,
+    "entities": [],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 100,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:37:54.812417",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-23_193403_Fw_Katherine_Andersen__Yoursel.md": {
+    "summary": "Chris Hallberg's email response to Kristy Oleksyn regarding mediator selection and personal belongings access, mentioning his financial crisis and outstanding bills.",
+    "events": [
+      "October 17, 2025: Email sent by Chris Hallberg",
+      "October 20, 2025 (4:00 p.m.): Deadline for mediator selection decision"
+    ],
+    "score": 6,
+    "entities": [
+      "Chris Hallberg",
+      "Kristy Oleksyn",
+      "Katherine Andersen"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:37:57.148783",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-23_202122_New_bill_arrival_Katherine_And.md": {
+    "summary": "Chris Hallberg sent an email to Katherine Andersen-Hallberg about a new bill arrival related to their unsettled Xibalba internet account.",
+    "events": [
+      "2025-10-23: Email sent by Chris Hallberg",
+      "Bills still being gathered"
+    ],
+    "score": 2,
+    "entities": [
+      "Chris Hallberg",
+      "Katherine Andersen-Hallberg",
+      "Xibalba"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 95,
+    "timestamp": "2026-04-25T05:37:59.115955",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-24_175920_Katherine_Andersen__Yourself.md": {
+    "summary": "Kristy Oleksyn's email to Mr. Hallberg regarding separation process, mediator selection, and asset disposal",
+    "events": [
+      "2025-10-24: Email sent by Kristy Oleksyn to Mr. Hallberg",
+      "Ms. Andersen advises that she has made payments on lines of credit, insurance, and utilities"
+    ],
+    "score": 4,
+    "entities": [
+      "Kristy Oleksyn",
+      "Mr. Hallberg",
+      "Katherine Andersen"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:38:02.033305",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-25_151928_Re_Katherine_Andersen__Yoursel.md": {
+    "summary": "Chris Hallberg writes a personal letter to Katherine Andersen discussing their relationship, divorce proceedings, and his concerns for her well-being.",
+    "events": [
+      "Chris Hallberg sends an email on October 25, 2025",
+      "Katherine Andersen is mentioned as Chris' ex-partner in the email"
+    ],
+    "score": 3,
+    "entities": [
+      "Chris Hallberg",
+      "Katherine Andersen"
+    ],
+    "type": "SMS",
+    "status": "VETTED",
+    "confidence": 90,
+    "arbitration_metadata": {
+      "claim_id": null,
+      "adjuster": null,
+      "incident_date": null,
+      "liability_assessment": null
+    },
+    "timestamp": "2026-04-25T05:38:04.870096",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-28_194401_Fwd_Katherine_Andersen__Yourse.md": {
+    "summary": "Katherine Andersen's ex-partner Chris Hallberg sends a personal letter expressing his desire to end their divorce amicably and work towards a fair distribution of debt, while acknowledging the complexities of their autistic relationship.",
+    "events": [
+      "16 years together",
+      "trauma bond period",
+      "2 previous divorces",
+      "autistic overwhelm state for 10 years"
+    ],
+    "score": 4,
+    "entities": [
+      "Katherine Andersen",
+      "Chris Hallberg"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:38:07.411977",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-28_194503_Fwd_Katherine_Andersen__Yourse.md": {
+    "summary": "Email from Kristy Oleksyn to Chris Hallberg regarding mediation process for separation agreement, including disputed belongings and asset disposal.",
+    "events": [
+      "2025-10-24: Email sent by Kristy Oleksyn to Chris Hallberg",
+      "2025-10-28: Email forwarded by Chris Hallberg"
+    ],
+    "score": 6,
+    "entities": [
+      "Katherine Andersen",
+      "Chris Hallberg",
+      "Kristy Oleksyn",
+      "Leslie G. Tallis",
+      "Valerie Watson"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:38:09.711071",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-29_201319_Katherine_Andersen__Yourself.md": {
+    "summary": "Kristy Oleksyn's email to Mr. Hallberg regarding separation agreement, personal items retrieval, dog care, and tax filing",
+    "events": [
+      "October 25, 2025: Email correspondence between Kristy Oleksyn and Mr. Hallberg",
+      "November 1st, 2025 (proposed): Visitation of dogs with Shaunna Ray"
+    ],
+    "score": 4,
+    "entities": [
+      "Kristy Oleksyn",
+      "Mr. Hallberg",
+      "Katherine Andersen",
+      "Cary Reid",
+      "Shaunna Ray"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 85,
+    "arbitration_metadata": {
+      "claim_id": null,
+      "adjuster": null,
+      "incident_date": null,
+      "liability_assessment": null
+    },
+    "timestamp": "2026-04-25T05:38:13.192979",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-11-04_203351_Re_Katherine_Andersen__Yoursel.md": {
+    "summary": "Chris Hallberg informs Kristy Oleksyn that he has retained new counsel (Merchant Law) to handle his family law matters, rather than responding directly.",
+    "events": [
+      "2025-10-25: Chris Hallberg's email correspondence with Kristy Oleksyn",
+      "2025-10-29: Kristy Oleksyn's email to Chris Hallberg with Ms. Andersen's personal message and proposals for property division, custody of dogs, and tax filings",
+      "2025-11-04: Chris Hallberg's response informing Kristy Oleksyn that he has retained new counsel (Merchant Law)"
+    ],
+    "score": 3,
+    "entities": [
+      "Chris Hallberg",
+      "Kristy Oleksyn",
+      "Katherine Andersen"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:38:15.879211",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-11-04_203503_Re_Katherine_Andersen__Yoursel.md": {
+    "summary": "Email exchange regarding Katherine Andersen's separation from Chris Hallberg, discussing personal items retrieval, tax returns, and potential mediation.",
+    "events": [
+      "October 25, 2025: Chris Hallberg sends email to Kristy Oleksyn regarding Katherine Andersen's departure",
+      "October 29, 2025: Kristy Oleksyn responds to Chris Hallberg's email with additional information about Katherine Andersen's wishes and proposed arrangements for personal items retrieval",
+      "November 4, 2025: Chris Hallberg responds to Kristy Oleksyn's email stating he has retained new counsel and requests communication go through them"
+    ],
+    "score": 2,
+    "entities": [
+      "Chris Hallberg",
+      "Katherine Andersen",
+      "Kristy Oleksyn",
+      "Leslie G. Tallis",
+      "Valerie Watson"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 95,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:38:19.193989",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-10_111311_Re_Fw_Katherine_Andersen__Your.md": {
+    "summary": "Chris Hallberg requests accommodation for mediation, citing difficulties with numerical references due to dyscalculia, and seeks clarification on rental vehicle assistance for BMW insurance claim.",
+    "events": [
+      "2025-10-10: Chris Hallberg receives correspondence from unknown sender",
+      "2025-10-10: Chris Hallberg responds to correspondence regarding mediation and home access",
+      "Chris Hallberg mentions contacting SGI adjuster and Sandbox Insurance regarding rental vehicle assistance"
+    ],
+    "score": 4,
+    "entities": [
+      "Katherine Andersen",
+      "Sandbox Insurance",
+      "SGI (Saskatchewan Government Insurance)"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 80,
+    "timestamp": "2026-04-25T05:38:22.161606",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-23_062911_Re_Katherine_Andersen__Yoursel.md": {
+    "summary": "Chris Hallberg requests emergency financial assistance from Kristy Oleksyn to prevent hardship before mediation, citing overdue utilities, Scotiabank Visa, and vehicle rental expenses.",
+    "events": [
+      "October 22, 2025: Chris Hallberg sends an email to Kristy Oleksyn requesting immediate financial assistance",
+      "October 23, 2025: City of Saskatoon utility cutoff scheduled for October 24 if payment not made by 3 p.m. (Regina)",
+      "October 21, 2025: Automated collection call received from Scotiabank regarding overdue Visa balance"
+    ],
+    "score": 8,
+    "entities": [
+      "Chris Hallberg",
+      "Katherine Andersen-Hallberg",
+      "Kristy Oleksyn",
+      "Cassie at Evolution Foods"
+    ],
+    "type": "FINANCIAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:38:28.065711",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-12-22_093002_Re_Retainer_Agreement.md": {
+    "summary": "Chris Hallberg is seeking costs from his wife due to her leaving him without support, citing financial difficulties and a lack of options.",
+    "events": [
+      "2025-12-22: Chris Hallberg's wife leaves with a text message saying contact her lawyer",
+      "2025-12-22: Chris Hallberg uses the last of his credit to pay the retainer for Tim Turple"
+    ],
+    "score": 6,
+    "entities": [
+      "Chris Hallberg",
+      "Tim Turple",
+      "Lisa Effler"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 85,
+    "arbitration_metadata": {
+      "claim_id": null,
+      "adjuster": null,
+      "incident_date": null,
+      "liability_assessment": null
+    },
+    "timestamp": "2026-04-25T05:38:32.032079",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-12_155044_re_DIV-SA-05-2026_Andersen_v_H.md": {
+    "summary": "Lisa Effler sends a morning update with an attached document related to the divorce case DIV-SA-05-2026; Andersen v Hallberg, requesting Mr. Hallberg's review.",
+    "events": [
+      "2026-03-12: Email sent by Lisa Effler"
+    ],
+    "score": 2,
+    "entities": [
+      "Lisa Effler",
+      "Timothy E. Turple",
+      "Merchant Law Group LLP",
+      "Mr. Hallberg",
+      "DIV-SA-05-2026; Andersen v Hallberg"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:38:34.230945",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-10_154256_Katherine_Andersen__Yourself.md": {
+    "summary": "Katherine Andersen's lawyer requests mediation and access to family home for removing personal belongings",
+    "events": [
+      "2025-10-10: Request for mediation and access to family home sent by Kristy Oleksyn"
+    ],
+    "score": 2,
+    "entities": [
+      "Katherine Andersen",
+      "Kristy Oleksyn",
+      "Mr. Hallberg"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 85,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:38:36.723137",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-10_160903_Fw_Katherine_Andersen__Yoursel.md": {
+    "summary": "Kristy Oleksyn's email to Chris Hallberg discussing mediation, access to family home, and a Sandbox insurance claim.",
+    "events": [
+      "2025-10-10: Email sent from Kristy Oleksyn to Chris Hallberg",
+      "Ms. Andersen has filed a claim with the insurance company (claim number: 0000101585E16)"
+    ],
+    "score": 3,
+    "entities": [
+      "Katherine Andersen",
+      "Chris Hallberg",
+      "Kristy Oleksyn",
+      "Sandbox"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 85,
+    "timestamp": "2026-04-25T05:38:39.548630",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-17_173046_Re_Katherine_Andersen__Yoursel.md": {
+    "summary": "Chris Hallberg responds to Katherine Andersen's lawyer, Kristy Oleksyn, regarding mediator selection, personal belongings access, disability accommodations, and critical financial circumstances.",
+    "events": [
+      "October 17, 2025: Chris Hallberg sends email to Kristy Oleksyn",
+      "2-4 weeks ago: Chris Hallberg applied for Legal Aid representation"
+    ],
+    "score": 8,
+    "entities": [
+      "Chris Hallberg",
+      "Katherine Andersen",
+      "Kristy Oleksyn",
+      "Leslie G. Tallis and Valerie G. Watson, K.C.",
+      "Scharfstein Law"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:38:43.091404",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-17_202248_Katherine_Andersen__Yourself.md": {
+    "summary": "Kristy Oleksyn from Scharfstein Law threatens court application if mediation decision is not made within 48 hours.",
+    "events": [
+      "2025-10-17: Kristy Oleksyn sends email to opposing party requiring mediator selection by October 20, 2025",
+      "Client requests access to retrieve personal belongings from home"
+    ],
+    "score": 8,
+    "entities": [
+      "Kristy Oleksyn",
+      "Scharfstein Law"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:38:45.408329",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-20_204018_Katherine_Andersen__Yourself.md": {
+    "summary": "Katherine Andersen's lawyer, Kristy Oleksyn, requests that the opposing party select a mediator for mandatory mediation to resolve property division and financial concerns.",
+    "events": [
+      "2025-10-20: Email sent from Kristy Oleksyn to Katherine Andersen's opponent requesting mediator selection",
+      "Ms. Andersen requires unsupervised access to family home to remove belongings",
+      "Presence of Mr. Cary Reid and the opposing party are unacceptable due to criminal charges and direct contact concerns"
+    ],
+    "score": 5,
+    "entities": [
+      "Katherine Andersen",
+      "Kristy Oleksyn",
+      "Mr. Cary Reid"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 85,
+    "timestamp": "2026-04-25T05:38:48.121228",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-21_103006_Re_Katherine_Andersen__Yoursel.md": {
+    "summary": "Christopher Hallberg's email to Kristy Oleksyn, disputing various points of contention with Katherine Andersen regarding mediation selection, property access, and financial matters.",
+    "events": [
+      "October 21, 2025: Email sent by Chris Hallberg",
+      "Unknown date: Ms. Andersen left the family home",
+      "Unknown date: Chris Hallberg applied for Legal Aid"
+    ],
+    "score": 8,
+    "entities": [
+      "Chris Hallberg",
+      "Katherine Andersen",
+      "Leslie G. Tallis",
+      "Valerie G. Watson",
+      "Kristy Oleksyn"
+    ],
+    "type": "EMAIL",
+    "status": "DISPUTED",
+    "confidence": 85,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:38:50.946141",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-21_142835_Re_Katherine_Andersen__Yoursel.md": {
+    "summary": "Chris Hallberg responds to Kristy Oleksyn's email regarding mediation and access to the family home, stating that Cary Reid has been a big help during his difficult situation.",
+    "events": [
+      "2025-10-20: Email from Kristy Oleksyn to Chris Hallberg requesting mediation and outlining proposed solutions for division of property and finances",
+      "2025-10-21: Email response from Chris Hallberg stating that Cary Reid has been helping him and expressing his opinion on the matter"
+    ],
+    "score": 4,
+    "entities": [
+      "Chris Hallberg",
+      "Kristy Oleksyn",
+      "Katherine Andersen",
+      "Cary Reid"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:38:54.742490",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-23_062851_Fw_Katherine_Andersen__Yoursel.md": {
+    "summary": "Chris Hallberg sends an email to Kristy Oleksyn requesting immediate financial relief and utility payments to prevent hardship before mediation in the case of Hallberg v. Andersen-Hallberg.",
+    "events": [
+      "2025-10-22: Chris Hallberg writes to Kristy Oleksyn regarding emergency financial update and request for interim relief",
+      "2025-10-23: Chris Hallberg sends follow-up email to Kristy Oleksyn regarding immediate requests for utility payments and Scotiabank Visa"
+    ],
+    "score": 5,
+    "entities": [
+      "Chris Hallberg",
+      "Katherine Andersen-Hallberg",
+      "Evolution Foods (Cassie)",
+      "City of Saskatoon Utilities",
+      "Scotiabank Visa",
+      "Kristy Oleksyn",
+      "Scharfstein Law"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 85,
+    "arbitration_metadata": null,
+    "timestamp": "2026-04-25T05:38:58.102393",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-10-23_062902_Fw_Katherine_Andersen__Yoursel.md": {
+    "summary": "Law firm Scharfsteinlaw sends a reminder to Chris Hallberg to respond to mediators' decision or face court application, with additional requests for personal belongings retrieval.",
+    "events": [
+      "October 17, 2025: Kristy Oleksyn sends email to Chris Hallberg",
+      "October 19, 2025: Chris Hallberg forwards the email to Eve Jackson",
+      "October 23, 2025: Chris Hallberg emails Eve Jackson again"
+    ],
+    "score": 2,
+    "entities": [
+      "Kristy Oleksyn",
+      "Leslie G. Tallis",
+      "Valerie Watson",
+      "Chris Hallberg",
+      "Eve Jackson",
+      "Katherine Andersen"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 95,
+    "timestamp": "2026-04-25T05:39:01.274894",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-12-22_152452_re_Retainer_Agreement.md": {
+    "summary": "Lisa Effler emails Mr. Hallberg about retainer agreement and future payment for Timothy E. Turple's services.",
+    "events": [
+      "2025-12-22: Lisa Effler sends email to Mr. Hallberg"
+    ],
+    "score": 2,
+    "entities": [
+      "Mr. Hallberg",
+      "Lisa Effler",
+      "Timothy E. Turple",
+      "Merchant Law Group LLP"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 95,
+    "arbitration_metadata": {
+      "claim_id": "",
+      "adjuster": "",
+      "incident_date": "",
+      "liability_assessment": ""
+    },
+    "timestamp": "2026-04-25T05:39:10.448662",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2025-12-22_153947_RE_Retainer_Agreement.md": {
+    "summary": "Chris Hallberg requests assistance from Lisa Effler regarding a retainer agreement for his divorce case due to financial difficulties.",
+    "events": [
+      "December 22, 2025: Chris Hallberg's wife leaves him with no contact aside from her lawyer",
+      "December 22, 2025: Chris Hallberg is in heavy autistic shock and beyond overwhelmed"
+    ],
+    "score": 7,
+    "entities": [
+      "Chris Hallberg",
+      "Lisa Effler",
+      "Timothy E. Turple"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:39:13.772196",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-01-22_092535_Re_Retainer_Agreement.md": {
+    "summary": "Chris Hallberg, a disabled man on CPP disability, requests help from Lisa Effler regarding retainer agreement and financial support due to wife's sudden departure.",
+    "events": [
+      "2026-01-22: Chris Hallberg emails Lisa Effler about retainer agreement and financial struggles",
+      "December 22, 2025: Chris Hallberg emails Lisa Effler about seeking costs and financial help"
+    ],
+    "score": 7,
+    "entities": [
+      "Chris Hallberg",
+      "Lisa Effler",
+      "Tim Turple",
+      "Merchant Law Group LLP"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 95,
+    "arbitration_metadata": {},
+    "timestamp": "2026-04-25T05:39:16.596736",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-02-23_190606_Katherine_Andersen__Yourself.md": {
+    "summary": "Kristy Oleksyn sends an email with attached correspondence from Valerie Watson K.C. regarding a matter",
+    "events": [
+      "2026-02-23: Email sent by Kristy Oleksyn with attached document"
+    ],
+    "score": 3,
+    "entities": [],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:39:18.893800",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-02-23_193353_Fw_Katherine_Andersen__Yoursel.md": {
+    "summary": "Email from Kristy Oleksyn attaching correspondence from Valerie Watson K.C. regarding Katherine Andersen and Chris Hallberg",
+    "events": [
+      "2026-02-23: Email received",
+      "2026-02-23: Correspondence attached"
+    ],
+    "score": 5,
+    "entities": [
+      "Katherine Andersen",
+      "Chris Hallberg",
+      "Kristy Oleksyn",
+      "Valerie Watson K.C."
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 85,
+    "timestamp": "2026-04-25T05:39:20.936708",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-02-23_225425_Re_Hallberg_v_Anderson.md": {
+    "summary": "Chris Hallberg emails his lawyer Lisa Effler about serving papers from Scharfstein Law but is unable to locate them.",
+    "events": [
+      "2026-02-23: Chris Hallberg sends email to Lisa Effler",
+      "Prior emails with attachments containing documents and a house assessment report"
+    ],
+    "score": 3,
+    "entities": [
+      "Chris Hallberg",
+      "Lisa Effler",
+      "Scharfstein Law"
+    ],
+    "type": "EMAIL",
+    "status": "VETTED",
+    "confidence": 95,
+    "arbitration_metadata": {
+      "claim_id": "",
+      "adjuster": "",
+      "incident_date": "",
+      "liability_assessment": ""
+    },
+    "timestamp": "2026-04-25T05:39:23.804284",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-11_164639_RE_Annual_Income_Andersen_v_Ha.md": {
+    "summary": "Chris Hallberg requests assistance with obtaining annual income information for his divorce case and asks Lisa Effler to help him with taxes due to dyslexia and discalculia.",
+    "events": [
+      "2026-03-11 16:46:39",
+      "2026-03-10 15:26:00"
+    ],
+    "score": 3,
+    "entities": [
+      "Chris Hallberg",
+      "Lisa Effler",
+      "Timothy E. Turple"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 85,
+    "timestamp": "2026-04-25T05:39:26.296175",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-11_164831_Re_Annual_Income_Andersen_v_Ha.md": {
+    "summary": "Chris Hallberg's lawyer, Lisa Effler, requests his annual income for 2025, which he responds with his CPP disability payment information.",
+    "events": [
+      "2026-03-10: Chris Hallberg receives email from Lisa Effler asking for annual income for 2025",
+      "2026-03-11: Chris Hallberg responds to Lisa Effler's email with his CPP disability payment information"
+    ],
+    "score": 3,
+    "entities": [
+      "Chris Hallberg",
+      "Lisa Effler",
+      "Tim Turple",
+      "Merchant Law Group LLP"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 85,
+    "timestamp": "2026-04-25T05:39:29.804993",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-11_165138_Re_Annual_Income_Andersen_v_Ha.md": {
+    "summary": "Chris Hallberg responds to Lisa Effler's request for his annual income, citing difficulties with accessing his ex-wife's computer and financial information.",
+    "events": [
+      "2026-03-10: Lisa Effler emails Chris Hallberg requesting his annual income",
+      "2026-03-11 10:43 AM: Chris Hallberg responds to Lisa Effler's email, citing difficulties with accessing his ex-wife's computer and financial information"
+    ],
+    "score": 2,
+    "entities": [
+      "Chris Hallberg",
+      "Lisa Effler",
+      "Tim Turple",
+      "Merchant Law Group LLP",
+      "Saskatoon",
+      "SK S7K 5T6"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 95,
+    "timestamp": "2026-04-25T05:39:33.300255",
+    "model": "llama3.1:8b"
+  },
+  "legal_email_legal_email_2026-03-12_065326_INSTRUCTIONS_Demand_for_Comple.md": {
+    "summary": "Opposing Counsel Chris Hallberg demands complete correspondence file from Valerie Watson K.C. and Kristy Oleksyn at Scharfstein LLP to establish spousal support, exclusive occupancy, tracing of exempt inheritance, and human rights disability accommodations.",
+    "events": [
+      "2025-10-04: Initial Financial Baseline & Abandonment",
+      "2025-10-05: Acute Bereavement & Transportation Crisis",
+      "2025-10-06 & 8: Financial Mitigation & SAID Application",
+      "2025-10-9: COMPREHENSIVE DISCLOSURE (Property & Tracing, Spousal Support, Health Insurance)",
+      "2025-10-10: Mediation Refusal & Property Protection",
+      "2025-10-22: Emergency Financial Update",
+      "2025-11-04: Notice of correspondence file request"
+    ],
+    "score": 8,
+    "entities": [
+      "Chris Hallberg",
+      "Valerie Watson K.C.",
+      "Kristy Oleksyn",
+      "Katherine",
+      "Cary Reid"
+    ],
+    "type": "LEGAL",
+    "status": "VETTED",
+    "confidence": 90,
+    "timestamp": "2026-04-25T05:39:37.418474",
+    "model": "llama3.1:8b"
+  }
+}

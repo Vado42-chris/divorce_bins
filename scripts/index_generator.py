@@ -3,6 +3,7 @@ import json
 import re
 import sys
 from datetime import datetime
+import hashlib
 
 PROCESSED_DIR = "/media/chrishallberg/Storage 22/002_Personal/divorce_bins/evidence/processed"
 METADATA_FILE = "/media/chrishallberg/Storage 22/002_Personal/divorce_bins/metadata/index.json"
@@ -66,8 +67,10 @@ def generate_index(target_dir=None, source_name=None):
             if rel_path in existing_paths:
                 continue
 
+            # Deterministic stable ID based on path
+            path_hash = hashlib.sha1(rel_path.encode()).hexdigest()[:12]
             entry = {
-                "id": f"{file}_{datetime.now().strftime('%f')}", # Ensure unique IDs
+                "id": f"{file}_{path_hash}", 
                 "title": file,
                 "timestamp": datetime.fromtimestamp(os.path.getmtime(path)).strftime('%Y-%m-%d %H:%M:%S'),
                 "type": "generic",
@@ -156,9 +159,9 @@ def generate_index(target_dir=None, source_name=None):
                                 import financial_parser
                                 fin_data = financial_parser.parse_financial_statement(cased_text)
                                 entry['financial_metadata'] = fin_data
-                                if fin_data['suspicious_transactions']:
+                                if fin_data['forensic_flags']:
                                     entry['flagged'] = True
-                                    entry['flags'] = entry.get('flags', []) + ["SUSPICIOUS_FINANCIAL"]
+                                    entry['flags'] = entry.get('flags', []) + ["FORENSIC_ALERT"]
                             except Exception as fin_e:
                                 print(f"Financial Parse Fault: {fin_e}")
                         

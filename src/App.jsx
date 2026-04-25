@@ -1,5 +1,21 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createContext, useContext, useRef } from 'react'
 import './App.css'
+import { StrategicShell, GlossCard, BreadcrumbNav, IntelligenceTile, TacticalTray, StrategicSection, StrategicInput, StrategicButton } from './components/Atomic'
+import DecisionEventCard from './components/DecisionEventCard';
+import StrategicSandboxHub from './components/StrategicSandboxHub';
+import ProjectionMirror from './components/ProjectionMirror';
+
+const LEGAL_LEXICON = {
+    'Bates': 'A unique identification number assigned to every page of discovery to ensure traceability and a verifiable chain of custody.',
+    'Interrogatory': 'A written question from one party to another that must be answered in writing and under oath.',
+    'Affidavit': 'A written statement confirmed by oath or affirmation, used as evidence in court.',
+    'Discovery': 'The pre-trial phase where parties exchange information and evidence relevant to the case.',
+    'Subpoena': 'A legal order requireing someone to provide documents or testimony.',
+    'Exhibit': 'A document or physical object produced in court as evidence.',
+    'Deposition': 'An out-of-court testimony given under oath, recorded for use in discovery or at trial.',
+    'Forensic': 'Scientific or technical methods used to investigate and establish facts for legal proceedings.',
+    'Reconciliation': 'The process of matching financial records (like bank statements) against disclosed claims to find discrepancies.'
+};
 
 function App() {
     const [evidence, setEvidence] = useState([])
@@ -18,15 +34,18 @@ function App() {
     const [chatInput, setChatInput] = useState('')
     const [models, setModels] = useState([])
     const [selectedModel, setSelectedModel] = useState('llama3.1:8b')
-    const [health, setHealth] = useState({ backend: 'offline', ollama: 'offline', device: 'disconnected' })
+    const [health, setHealth] = useState({ backend: 'offline', aiEngine: 'offline', device: 'disconnected' })
     const [sync, setSync] = useState({}) // Map of sourceId -> status
-    const [view, setView] = useState('dashboard')
+    const [view, setView] = useState('dashboard');
+    const [dockets, setDockets] = useState([]);
+    const [activeDocket, setActiveDocket] = useState(null);
+    const [inbox, setInbox] = useState([]);
+    const [lexicon, setLexicon] = useState({ tags: [] });
+    const [decisionQueue, setDecisionQueue] = useState([]);
+    const [streamStatus, setStreamStatus] = useState('connecting');
     const [sources, setSources] = useState([])
     const [governance, setGovernance] = useState({ entities: [], keywords: [] })
     const [argumentsList, setArgumentsList] = useState([])
-    const [filterSource, setFilterSource] = useState('all')
-    const [filterType, setFilterType] = useState('all')
-    const [threads, setThreads] = useState({})
     const [emails, setEmails] = useState([])
     const [reports, setReports] = useState([])
     const [identities, setIdentities] = useState([])
@@ -36,6 +55,35 @@ function App() {
     const [reportTitle, setReportTitle] = useState('')
     const [reportLevel, setReportLevel] = useState('summary')
     const [reportTarget, setReportTarget] = useState('vault')
+
+    // Phase 71: Tactical Context State
+    const [pinnedItems, setPinnedItems] = useState([]);
+    const [trayOpen, setTrayOpen] = useState(false);
+
+    const togglePin = (item) => {
+        const isPinned = pinnedItems.some(p => p.id === item.id);
+        if (isPinned) {
+            setPinnedItems(prev => prev.filter(p => p.id !== item.id));
+        } else {
+            setPinnedItems(prev => [...prev, item]);
+        }
+    };
+
+    const handleRefine = async (id, newContent) => {
+        // Update local state
+        setIntelligence(prev => ({
+            ...prev,
+            [id]: { ...prev[id], analysis: newContent }
+        }));
+        // Push to server
+        try {
+            await fetch('/api/corrections', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ type: 'INTELLIGENCE', sourceId: id, overrideContent: newContent })
+            });
+        } catch (e) { console.error("Refinement save failed", e); }
+    };
     const [generatingReport, setGeneratingReport] = useState(false)
     const [velocityData, setVelocityData] = useState({})
     const [narrative, setNarrative] = useState('')
@@ -44,17 +92,197 @@ function App() {
     const [reconciledForm, setReconciledForm] = useState(null)
     const [sgiResults, setSgiResults] = useState(null)
     const [isReconciling, setIsReconciling] = useState(false)
-    const [pulseData, setPulseData] = useState({})
+    const [intelligenceTips, setIntelligenceTips] = useState([])
+    const [isCorrelating, setIsCorrelating] = useState(false)
+    const [reconciledDiscrepancies, setReconciledDiscrepancies] = useState([]);
 
     const [searchTerm, setSearchTerm] = useState('')
     const [custodianFilter, setCustodianFilter] = useState('all')
     const [evidenceTypeFilter, setEvidenceTypeFilter] = useState('all')
+    const [selectedIds, setSelectedIds] = useState(new Set())
+    const [isBatchMode, setIsBatchMode] = useState(false)
+    const [isProcessingBatch, setIsProcessingBatch] = useState(false)
+    const [searchResults, setSearchResults] = useState([]);
+    const [isProcessing, setIsProcessing] = useState(false);
+
+    const [pulseData, setPulseData] = useState({ discoveryProgress: 0, strategicReadiness: 0, activeAlerts: 0 });
+    const [activeJurisdiction, setActiveJurisdiction] = useState('Ontario');
+
+    const [wargameActive, setWargameActive] = useState(false);
+    const [wargameData, setWargameData] = useState(null);
+    const [userResponse, setUserResponse] = useState('');
+    const [wargameFeedback, setWargameFeedback] = useState(null);
+    const [isWargaming, setIsWargaming] = useState(false);
+
+    const [lastAuditFetch, setLastAuditFetch] = useState(0);
+
+    const handleForensicSearch = async (query) => {
+        if (!activeDocket) return;
+        setIsProcessing(true);
+        try {
+            const res = await fetch(`/api/search?query=${encodeURIComponent(query)}&docket_id=${activeDocket.id}`);
+            if (!res.ok) throw new Error("Search failed on backend");
+            const data = await res.json();
+
+            // Hardened validation: Ensure results match current active docket
+            const validatedResults = data.filter(r => r.docket_id === activeDocket.id || r.global);
+            setSearchResults(validatedResults);
+
+            if (view !== 'search_results') setView('search_results');
+        } catch (e) {
+            console.error("Forensic search failed:", e);
+        } finally {
+            setIsProcessing(false);
+        }
+    };
+
+    // Correct the "Search Result Persistence Hole"
+    useEffect(() => {
+        setSearchResults([]);
+        setSearchTerm('');
+    }, [activeDocket?.id]);
+
+    const handleTrialLock = async () => {
+        if (!activeDocket || !window.confirm("CRITICAL: Activating Trial Lock will set this docket to READ-ONLY. This process simulates a WORM (Write Once, Read Many) forensic seal. Proceed?")) return;
+
+        setIsProcessing(true);
+        try {
+            const res = await fetch('/api/dockets/lock', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ docket_id: activeDocket.id })
+            });
+            if (res.ok) {
+                // Refresh docket state
+                const updRes = await fetch('/api/dockets');
+                const dockets = await updRes.json();
+                const updated = dockets.find(d => d.id === activeDocket.id);
+                setActiveDocket(updated);
+                setView('projection');
+                alert("DOCKET SEALED. TEMPORAL LOCK ACTIVE.");
+            }
+        } catch (e) {
+            console.error("Lock failed", e);
+        } finally {
+            setIsProcessing(false);
+        }
+    };
+
+    const evaluateResponse = async () => {
+        setIsWargaming(true);
+        try {
+            const res = await fetch('/api/wargame/evaluate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    questions: wargameData.attackLines,
+                    response: userResponse
+                })
+            });
+            const data = await res.json();
+            setWargameFeedback(data);
+        } catch (e) {
+            console.error("Evaluation failed", e);
+        } finally {
+            setIsWargaming(false);
+        }
+    };
+
+    const checkHealth = async () => {
+        try {
+            const res = await fetch('/api/health');
+            const data = await res.json();
+            setHealth(prev => ({
+                ...prev,
+                backend: data.status === 'healthy' ? 'online' : 'offline',
+                aiEngine: data.aiEngine || 'offline'
+            }));
+
+            // Sync evidence with backend
+            const iRes = await fetch('/api/index')
+            const iData = await iRes.json()
+            setEvidence(iData)
+
+            // Sync sources and metrics
+            const sRes = await fetch('/api/sources')
+            setSources(await sRes.json())
+
+            const dRes = await fetch('/api/device/detect')
+            const dData = await dRes.json()
+            setHealth(prev => ({ ...prev, device: dData.connected ? 'connected' : 'disconnected' }))
+        } catch (e) {
+            setHealth(prev => ({ ...prev, backend: 'offline', aiEngine: 'offline' }));
+        }
+    };
+
+    const [isVerifyingMetadata, setIsVerifyingMetadata] = useState(false);
+    const [metadataResults, setMetadataResults] = useState(null);
+
+    const handleVerifyMetadata = async () => {
+        if (!sgiBrief || isVerifyingMetadata) return;
+        setIsVerifyingMetadata(true);
+        try {
+            // Find a critical SGI file to verify (e.g., the first one)
+            const target = sgiBrief.nodes?.[0];
+            if (!target) throw new Error("No evidence nodes found for verification.");
+
+            const res = await fetch(`/api/forensics/sgi/metadata-verify?id=${target.id}`);
+            const data = await res.json();
+            setMetadataResults(data);
+        } catch (e) {
+            console.error("Metadata verification failed", e);
+        } finally {
+            setIsVerifyingMetadata(false);
+        }
+    };
+
+    const [analysisStatus, setAnalysisStatus] = useState('idle');
+    const handleRunAnalysis = async (item = null) => {
+        if (item) {
+            setAnalyzingIds(prev => new Set([...prev, item.id]));
+            try {
+                const res = await fetch('/api/intelligence/analyze', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ itemId: item.id, path: item.path, model: selectedModel })
+                });
+                const data = await res.json();
+                setIntelligence(prev => ({ ...prev, [item.id]: data }));
+            } catch (e) {
+                console.error(e);
+            } finally {
+                setAnalyzingIds(prev => {
+                    const next = new Set(prev);
+                    next.delete(item.id);
+                    return next;
+                });
+            }
+        } else {
+            // Global/SGI Reindex
+            setAnalysisStatus('running');
+            try {
+                await fetch('/api/forensics/sgi/reindex', { method: 'POST' });
+            } catch (e) {
+                console.error("Forensic trigger failed");
+            } finally {
+                setTimeout(() => setAnalysisStatus('idle'), 2000);
+            }
+        }
+    };
 
     useEffect(() => {
+        // Path Normalization for legacy routes
+        const path = window.location.pathname;
+        if (path === '/wargame' || path === '/arbitration') {
+            setView('sandbox');
+        }
+
         checkHealth()
         fetchAnalytics()
         fetchArguments()
         fetchVelocity()
+        fetchPulse()
+        fetchJurisdiction()
 
         // Real-time Forensic Stream
         const eventSource = new EventSource('/api/stream/events');
@@ -85,13 +313,60 @@ function App() {
             fetchArguments()
             fetchVelocity()
             fetchPulse()
-        }, 5000)
+        }, 8000)
 
         return () => {
             clearInterval(interval);
             eventSource.close();
         }
     }, [])
+
+
+    const fetchJurisdiction = async () => {
+        try {
+            const res = await fetch('/api/governance/jurisdiction');
+            const data = await res.json();
+            setActiveJurisdiction(data.active);
+        } catch (e) {
+            console.error("Jurisdiction fetch failed");
+        }
+    };
+
+    const handleJurisdictionChange = async (name) => {
+        try {
+            await fetch('/api/governance/jurisdiction', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ jurisdiction: name })
+            });
+            setActiveJurisdiction(name);
+        } catch (e) {
+            console.error("Switch failed");
+        }
+    };
+
+    const LegalTooltip = ({ term, children }) => {
+        const [show, setShow] = useState(false);
+        const definition = LEGAL_LEXICON[term];
+
+        if (!definition) return children;
+
+        return (
+            <span
+                className="legal-tooltip-trigger"
+                onMouseEnter={() => setShow(true)}
+                onMouseLeave={() => setShow(false)}
+            >
+                {children}
+                {show && (
+                    <div className="legal-tooltip-content premium-glass">
+                        <strong>{term}</strong>
+                        <p>{definition}</p>
+                    </div>
+                )}
+            </span>
+        );
+    };
 
     const fetchAnalytics = async () => {
         try {
@@ -113,13 +388,27 @@ function App() {
         }
     }
 
+    const runCorrelationEngine = async () => {
+        setIsCorrelating(true)
+        try {
+            const res = await fetch('/api/intelligence/correlate', { method: 'POST' })
+            if (res.ok) {
+                await fetchPulse() // Refresh tips
+                setFlightLog(prev => [{ timestamp: new Date().toISOString(), message: "Semantic Correlation Engine complete." }, ...prev].slice(0, 100))
+            }
+        } catch (e) {
+            console.error("Correlation failed", e)
+        } finally {
+            setIsCorrelating(false)
+        }
+    }
+
     const fetchPulse = async () => {
         try {
-            const res = await fetch('/api/analytics/temporal-pulse')
-            const data = await res.json()
-            setPulseData(data)
+            const res = await fetch('/api/dashboard/pulse');
+            setPulseData(await res.json());
         } catch (e) {
-            console.error("Pulse fetch failed")
+            console.error("Pulse fetch failed");
         }
     }
 
@@ -169,16 +458,116 @@ function App() {
         setEmails(data)
     }
 
-    const handleReconcileForm131 = async () => {
-        setIsReconciling(true)
+    const handleBatchUpdate = async (updates) => {
+        if (selectedIds.size === 0 || isProcessingBatch) return
+        setIsProcessingBatch(true)
         try {
-            const res = await fetch('/api/forensics/financial/reconcile', { method: 'POST' })
-            const data = await res.json()
-            setReconciledForm(data)
+            const res = await fetch('/api/evidence/batch-update', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ids: Array.from(selectedIds), updates })
+            })
+            if (res.ok) {
+                await checkHealth()
+                setSelectedIds(new Set())
+            }
         } catch (e) {
-            console.error("Reconciliation failed", e)
+            console.error("Batch update failed", e)
+        } finally {
+            setIsProcessingBatch(false)
         }
-        setIsReconciling(false)
+    }
+
+    const handleCreateDocket = async (title, classification) => {
+        try {
+            const res = await fetch('/api/dockets', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ title, classification })
+            });
+            const newDocket = await res.json();
+            setDockets([...dockets, newDocket]);
+            setActiveDocket(newDocket);
+        } catch (e) { console.error("Docket creation failed"); }
+    };
+
+    const handleDecision = async (itemId, decision) => {
+        try {
+            await fetch('/api/decisions/resolve', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    itemId,
+                    decision,
+                    docketId: activeDocket?.id
+                })
+            });
+            // Remove from local queue
+            setDecisionQueue(prev => prev.filter(e => e.item.id !== itemId));
+            // Trigger a re-sync of intelligence
+            fetch('/api/intelligence').then(res => res.json()).then(setEvidence);
+        } catch (e) { console.error("Decision resolution failed"); }
+    };
+
+    const handleEgress = async (reportId, status) => {
+        try {
+            await fetch('/api/reports/egress', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ reportId, status, docketId: activeDocket?.id })
+            });
+            alert("Egress Tag Applied Successfully");
+        } catch (e) { alert("Egress failed"); }
+    };
+
+    const handleBatchDelete = async () => {
+        if (selectedIds.size === 0 || isProcessingBatch || !confirm(`Permanently delete ${selectedIds.size} items?`)) return
+        setIsProcessingBatch(true)
+        try {
+            const res = await fetch('/api/evidence/batch-delete', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ids: Array.from(selectedIds) })
+            })
+            if (res.ok) {
+                fetchEvidence()
+                setSelectedIds(new Set())
+                setIsBatchMode(false)
+            }
+        } catch (e) {
+            console.error("Batch delete failed", e)
+        } finally {
+            setIsProcessingBatch(false)
+        }
+    }
+
+    const handleAutoClassify = async (ids) => {
+        if (!ids || ids.length === 0 || isProcessingBatch) return
+        setIsProcessingBatch(true)
+        try {
+            const res = await fetch('/api/evidence/auto-classify', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ids })
+            })
+            if (res.ok) {
+                await checkHealth() // Refresh vault
+                broadcastLog({ timestamp: new Date().toISOString(), message: "AI classification success." })
+            }
+        } catch (e) {
+            console.error("Auto-classify failed", e)
+        } finally {
+            setIsProcessingBatch(false)
+        }
+    }
+
+    const toggleSelect = (id) => {
+        setSelectedIds(prev => {
+            const next = new Set(prev)
+            if (next.has(id)) next.delete(id)
+            else next.add(id)
+            return next
+        })
     }
 
     const handleSGIExtraction = async (text) => {
@@ -200,6 +589,32 @@ function App() {
         const data = await res.json()
         setArgumentsList(data)
     }
+
+    useEffect(() => {
+        fetch('/api/intelligence').then(res => res.json()).then(setEvidence);
+        fetch('/api/dockets').then(res => res.json()).then(data => {
+            setDockets(data);
+            if (data.length > 0 && !activeDocket) setActiveDocket(data[0]);
+        });
+        fetch('/api/inbox').then(res => res.json()).then(setInbox);
+        fetch('/api/lexicon').then(res => res.json()).then(setLexicon);
+
+        // --- SSE Event Stream Integration ---
+        const eventSource = new EventSource('/api/stream/events');
+        eventSource.onopen = () => setStreamStatus('active');
+        eventSource.onmessage = (e) => {
+            try {
+                const event = JSON.parse(e.data);
+                if (event.type === 'NEW_INTELLIGENCE' || event.type === 'NEW_EMAIL') {
+                    setDecisionQueue(prev => [event, ...prev.slice(0, 49)]); // Keep last 50
+                }
+            } catch (err) {
+                console.error("SSE Message Parse Failure:", err);
+            }
+        };
+        eventSource.onerror = () => setStreamStatus('error');
+        return () => eventSource.close();
+    }, []);
 
     useEffect(() => {
         if (view === 'sms') fetchThreads()
@@ -284,76 +699,15 @@ function App() {
         }
     }
 
-    const restartOllama = async () => {
-        setHealth(prev => ({ ...prev, ollama: 'restarting' }))
+    const restartAIEngine = async () => {
+        setHealth(prev => ({ ...prev, aiEngine: 'restarting' }))
         try {
             await fetch('/api/ollama/restart', { method: 'POST' })
         } catch (e) { }
         setTimeout(checkHealth, 3000)
     }
 
-    const checkHealth = async () => {
-        try {
-            const res = await fetch('/api/index')
-            const data = await res.json()
-            setEvidence(data)
-            setHealth(prev => ({ ...prev, backend: 'online' }))
-        } catch (e) {
-            setHealth(prev => ({ ...prev, backend: 'offline' }))
-        }
-
-        try {
-            const sRes = await fetch('/api/sources')
-            const sData = await sRes.json()
-            setSources(sData)
-
-            const dRes = await fetch('/api/device/detect')
-            const dData = await dRes.json()
-            setHealth(prev => ({ ...prev, device: dData.connected ? 'connected' : 'disconnected' }))
-
-            const gRes = await fetch('/api/governance')
-            const gData = await gRes.json()
-            setGovernance(gData)
-
-            const argRes = await fetch('/api/arguments')
-            const argData = await argRes.json()
-            setArgumentsList(argData)
-
-            const iRes = await fetch('/api/intelligence')
-            const iData = await iRes.json()
-            setIntelligence(iData)
-
-            const idRes = await fetch('/api/identities')
-            const idData = await idRes.json()
-            setIdentities(idData)
-
-            const vRes = await fetch('/api/analytics/velocity')
-            const vData = await vRes.json()
-            setVelocityData(vData)
-        } catch (e) { }
-
-        setLoading(false)
-    }
-
-    const handleRunAnalysis = async (item) => {
-        setAnalyzingIds(prev => new Set([...prev, item.id]));
-        try {
-            const res = await fetch('/api/intelligence/analyze', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ itemId: item.id, path: item.path, model: selectedModel })
-            });
-            const data = await res.json();
-            setIntelligence(prev => ({ ...prev, [item.id]: data }));
-        } catch (e) {
-            console.error(e);
-        }
-        setAnalyzingIds(prev => {
-            const next = new Set(prev);
-            next.delete(item.id);
-            return next;
-        });
-    }
+    // checkHealth and handleRunAnalysis removed (consolidated at top)
 
     const saveIdentities = async (idList) => {
         setIdentities(idList);
@@ -396,796 +750,699 @@ function App() {
     }
 
     return (
-        <div className="app-container">
-            <aside className="sidebar">
-                <div className="logo">VAULT</div>
-                <nav>
-                    <button className={view === 'dashboard' ? 'active' : ''} onClick={() => setView('dashboard')}>Dashboard</button>
-                    <button className={view === 'sources' ? 'active' : ''} onClick={() => setView('sources')}>Sources</button>
-                    <button className={view === 'governance' ? 'active' : ''} onClick={() => setView('governance')}>People & Alerts</button>
-                    <button className={view === 'arguments' ? 'active' : ''} onClick={() => setView('arguments')}>Case Strategy</button>
-                    <button className={view === 'analytics' ? 'active' : ''} onClick={() => setView('analytics')}>Timeline Heatmap</button>
-                    <hr className="nav-divider" />
-                    <button className={view === 'timeline' ? 'active' : ''} onClick={() => setView('timeline')}>Evidence Vault</button>
-                    <button className={view === 'reports' ? 'active' : ''} onClick={async () => { setView('reports'); const res = await fetch('/api/reports'); setReports(await res.json()); }}>Downloads & Reports</button>
-                    <button className={view === 'sms' ? 'active' : ''} onClick={() => setView('sms')}>Text Messages</button>
-                    <button className={view === 'email' ? 'active' : ''} onClick={() => setView('email')}>Emails</button>
-                </nav>
-            </aside>
-
-            <main className="main-content">
-                <header className="main-header">
-                    <div className="header-breadcrumbs">
-                        <h1>{view.charAt(0).toUpperCase() + view.slice(1).replace('-', ' ')}</h1>
-                    </div>
-                    <div className="system-health-strip">
-                        <div className={`health-item ${health.backend}`}>
-                            <span className="dot"></span> Backend
+        <StrategicShell
+            header={
+                <StrategicHeader
+                    search={
+                        <StrategicInput
+                            placeholder={activeDocket ? `SEARCH IN [${activeDocket.title.toUpperCase()}]...` : "SELECT A DOCKET TO SEARCH..."}
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            onEnter={() => handleForensicSearch(searchTerm)}
+                            icon="🔍"
+                            disabled={!activeDocket}
+                        />
+                    }
+                    breadcrumbs={
+                        <BreadcrumbNav
+                            paths={[
+                                { name: 'Dockets', view: 'dockets' },
+                                activeDocket ? { name: activeDocket.title?.toUpperCase(), view: 'dockets', active: view === 'dockets' } : null,
+                                (view !== 'dockets' && view !== 'dashboard') ? { name: view.toUpperCase(), active: true } : null
+                            ].filter(Boolean)}
+                        />
+                    }
+                    userCard={
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+                            {isProcessing && <div className="processing-indicator">ANALYZING...</div>}
+                            <UserIdCard
+                                user={{ name: "Chris Hallberg", initials: "CH" }}
+                                activeDocket={activeDocket}
+                                onClick={() => setView('profile')}
+                            />
                         </div>
-                        <div className={`health-item ${health.device}`}>
-                            <span className="dot"></span> {health.device === 'connected' ? 'Phone Connected' : 'No Phone'}
-                        </div>
-                        <div className={`health-item ${health.ollama}`}>
-                            <span className="dot"></span> Ollama {health.ollama === 'offline' && <button className="reboot-btn-xs" onClick={restartOllama}>Restart</button>}
-                        </div>
-                    </div>
-                </header>
+                    }
+                />
+            }
+            sidebar={
+                <aside className="sidebar">
+                    <div className="logo">SOVEREIGN</div>
+                    <nav>
+                        <button className={view === 'dashboard' ? 'active' : ''} onClick={() => setView('dashboard')}>DASHBOARD</button>
+                        <button className={['dockets', 'inbox', 'sandbox', 'financials', 'vault'].includes(view) ? 'active' : ''} onClick={() => setView('dockets')}>DOCKETS</button>
 
-                <div className="content-grid">
-                    {view === 'dashboard' && (
-                        <section className="dashboard-grid-v3">
-                            <div className="discovery-header-v3">
-                                <div className="header-intel">
-                                    <span className="system-status-pill">FLIGHT RECORDER ACTIVE</span>
-                                    <h2>Forensic Intelligence Dashboard</h2>
-                                </div>
-                                <div className="dash-hero-stats">
-                                    <div className="dash-hero-stat">
-                                        <span className="stat-value">{analytics.totalNodes || 0}</span>
-                                        <span className="stat-label">TOTAL DOCUMENTS</span>
-                                    </div>
-                                    <div className="dash-hero-stat highlight">
-                                        <span className="stat-value">{analytics.totalAlerts || 0}</span>
-                                        <span className="stat-label">DISCOVERY ALERTS</span>
-                                    </div>
-                                    <div className="dash-hero-stat">
-                                        <span className="stat-value">{argumentsList.length}</span>
-                                        <span className="stat-label">STRATEGIC CLAIMS</span>
-                                    </div>
-                                </div>
+                        {(['dockets', 'inbox', 'sandbox', 'financials', 'vault'].includes(view) || activeDocket) && (
+                            <div className="sub-nav">
+                                <button className={view === 'inbox' ? 'active' : ''} onClick={() => setView('inbox')}>↳ INBOX</button>
+                                <button className={view === 'sandbox' ? 'active' : ''} onClick={() => setView('sandbox')}>↳ SANDBOX</button>
+                                <button className={view === 'financials' ? 'active' : ''} onClick={() => setView('financials')}>↳ FINANCIALS</button>
+                                <button className={view === 'vault' ? 'active' : ''} onClick={() => setView('vault')}>↳ EVIDENCE VAULT</button>
                             </div>
+                        )}
 
-                            <div className="dashboard-main-row">
-                                <div className="tactical-col">
-                                    <div className="premium-panel">
-                                        <div className="panel-header">
-                                            <h3>Conflict Velocity Heatmap</h3>
-                                            <span className="zoom-label">Temporal Variance</span>
-                                        </div>
-                                        <div className="heatmap-container-v3">
-                                            <div className="heatmap-grid-v3">
-                                                <div className="heatmap-cell label"></div>
-                                                {Array.from({ length: 24 }).map((_, i) => <div key={i} className="heatmap-cell label">{i}h</div>)}
-                                                {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day, d) => (
-                                                    <div key={day} style={{ display: 'contents' }}>
-                                                        <div className="heatmap-cell label">{day}</div>
-                                                        {(analytics.heatmap && analytics.heatmap[d]) ? analytics.heatmap[d].map((val, h) => (
-                                                            <div key={`${d}-${h}`}
-                                                                className={`heatmap-cell intensity-${Math.floor(val)}`}
-                                                                title={`Conflict Intensity: ${val.toFixed(2)}`}>
-                                                            </div>
-                                                        )) : Array.from({ length: 24 }).map((_, h) => <div key={h} className="heatmap-cell intensity-0"></div>)}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="premium-panel flight-recorder">
-                                        <div className="panel-header">
-                                            <h3>Evidence Pulse (Tactical Density)</h3>
-                                            <span className="live-tag">7-Day Burst Map</span>
-                                        </div>
-                                        <div className="pulse-container-v3">
-                                            <div className="pulse-grid">
-                                                {Object.keys(pulseData).length > 0 ? Object.keys(pulseData).slice(-7).map(day => (
-                                                    <div key={day} className="pulse-row">
-                                                        <span className="pulse-label">{day.split('-').slice(1).join('/')}</span>
-                                                        <div className="pulse-hours">
-                                                            {pulseData[day].map((h, i) => (
-                                                                <div key={i}
-                                                                    className={`pulse-tick density-${Math.min(h.count, 5)}`}
-                                                                    title={`${day} @ ${i}h: ${h.count} nodes`}>
-                                                                </div>
-                                                            ))}
-                                                        </div>
-                                                    </div>
-                                                )) : (
-                                                    <div className="empty-state">
-                                                        <p>Waiting for forensic activity telemetry...</p>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="premium-panel flight-recorder">
-                                        <div className="panel-header">
-                                            <h3>Tactical Mission Log</h3>
-                                            <span className="live-tag">REAL-TIME FLOW</span>
-                                        </div>
-                                        <div className="flight-recorder-scroll">
-                                            {flightLog.length > 0 ? flightLog.map((log, i) => (
-                                                <div key={i} className="log-line">
-                                                    <span className="log-time">{new Date(log.time).toLocaleTimeString()}</span>
-                                                    <span className="log-msg">{log.message}</span>
-                                                </div>
-                                            )) : (
-                                                <div className="empty-state">
-                                                    <p>Awaiting Live Updates...</p>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="strategic-col">
-                                    <div className="premium-panel alert-vault">
-                                        <div className="panel-header">
-                                            <h3>Forensic Alerts</h3>
-                                            <span className="security-rank">OIG COMPLIANT</span>
-                                        </div>
-                                        <div className="alert-list-v3">
-                                            {evidence.filter(e => e.flagged).length === 0 && <div className="empty-alert">No high-risk vectors detected.</div>}
-                                            {evidence.filter(e => e.flagged).map(alert => (
-                                                <div key={alert.id} className="alert-card-v3" onClick={() => fetchContent(alert)}>
-                                                    <div className="alert-meta">
-                                                        <span className="alert-rank">G-LEVEL-1</span>
-                                                        <span className="alert-date">{alert.timestamp}</span>
-                                                    </div>
-                                                    <div className="status-dot-group">
-                                                        <div className="health-item">
-                                                            <div className={`dot ${health.backend}`}></div>
-                                                            <span>Mission Controller</span>
-                                                        </div>
-                                                        <div className="health-item">
-                                                            <div className={`dot ${health.device}`}></div>
-                                                            <span>Phone Link</span>
-                                                        </div>
-                                                        <div className="health-item">
-                                                            <div className={`dot ${health.ollama}`}></div>
-                                                            <span>AI Engine</span>
-                                                            <button className="reboot-btn" onClick={() => fetch('/api/system/reboot')}>RESET</button>
-                                                        </div>
-                                                    </div>
-                                                    <h4>{alert.title}</h4>
-                                                    <div className="tag-row">
-                                                        {alert.flags?.map((f, i) => <span key={i} className="evidence-tag">{f}</span>)}
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className="premium-panel live-vault">
-                                        <div className="panel-header">
-                                            <h3>Discovery Index</h3>
-                                            <button className="text-btn" onClick={() => setView('timeline')}>Expand Full Vault</button>
-                                        </div>
-                                        <div className="feed-v3">
-                                            {evidence.slice(0, 8).map(item => (
-                                                <div key={item.id} className="feed-node" onClick={() => fetchContent(item)}>
-                                                    <div className="node-icon">{item.type === 'email' ? '✉️' : '💬'}</div>
-                                                    <div className="node-info">
-                                                        <span className="node-title">{item.title}</span>
-                                                        <span className="node-meta">{item.source} • {item.timestamp}</span>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    )}
-
-                    {view === 'sources' && (
-                        <section className="sources-view-v2">
-                            <div className="view-header">
-                                <div className="title-area">
-                                    <h2>Sources Hub</h2>
-                                    <p>Manage devices and accounts. Data is stored locally and accessed read-only.</p>
-                                </div>
-                                <button className="primary-btn" onClick={() => { setShowAddModal(true); setAddType(null); }}>+ Add Source</button>
-                            </div>
-
-                            <div className="sources-grid-v2">
-                                {sources.map(source => (
-                                    <div key={source.id} className="source-card-v2">
-                                        <div className="card-top">
-                                            <div className="source-icon">{source.type === 'device' ? '📱' : '✉️'}</div>
-                                            <div className="source-meta-main">
-                                                <h3>{source.name}</h3>
-                                                <p>{source.description}</p>
-                                            </div>
-                                            <span className={`status-pill ${source.integrity}`}>Integrity {source.integrity}</span>
-                                        </div>
-                                        <div className="card-actions">
-                                            <button className={`sync-trigger ${sync[source.id]?.active ? 'syncing' : ''}`} onClick={() => startSync(source.id)} disabled={sync[source.id]?.active}>
-                                                {sync[source.id]?.active ? 'Syncing...' : 'Sync Now'}
-                                            </button>
-                                            <button className="settings-btn" onClick={async () => {
-                                                if (confirm(`Remove "${source.name}"?`)) {
-                                                    await fetch(`/api/sources/${source.id}`, { method: 'DELETE' });
-                                                    checkHealth();
-                                                }
-                                            }}>Remove</button>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {showAddModal && (
-                                <div className="modal-overlay" onClick={() => setShowAddModal(false)}>
-                                    <div className="modal-content source-modal" onClick={e => e.stopPropagation()}>
-                                        {!addType ? (
-                                            <div className="add-type-picker">
-                                                <h2>Add a New Source</h2>
-                                                <div className="type-cards">
-                                                    <button className="type-card" onClick={() => setAddType('device')}>📱 Phone / Device</button>
-                                                    <button className="type-card" onClick={() => setAddType('email')}>✉️ Email Account</button>
-                                                    <button className="type-card" onClick={() => setAddType('folder')}>📁 Local Folder</button>
-                                                </div>
-                                            </div>
-                                        ) : (
-                                            <button onClick={() => setAddType(null)} className="secondary-btn">Back</button>
-                                        )}
-                                        {addType === 'device' && <p>Connect via USB with Debugging enabled.</p>}
-                                    </div>
-                                </div>
-                            )}
-                        </section>
-                    )}
-
-                    {view === 'governance' && (
-                        <section className="governance-view-v2">
-                            <div className="view-header">
-                                <div className="title-area">
-                                    <h2>People & Priority Alerts</h2>
-                                    <p>Configure automated discovery triggers for priority individuals and critical events.</p>
-                                </div>
-                            </div>
-
-                            <div className="gov-controls-grid">
-                                <div className="gov-control-card">
-                                    <div className="card-header">
-                                        <h3>Discovery Triggers (Keywords)</h3>
-                                        <span className="count">{governance.keywords?.length || 0} Active</span>
-                                    </div>
-                                    <div className="gov-tags">
-                                        {governance.keywords?.map((k, i) => (
-                                            <div key={i} className="active-rule-tag">
-                                                <span>{k.value}</span>
-                                                <button className="rule-del" onClick={async () => {
-                                                    const updated = { ...governance, keywords: governance.keywords.filter((_, idx) => idx !== i) };
-                                                    setGovernance(updated);
-                                                    await fetch('/api/governance', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
-                                                }}>×</button>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className="rule-input-group">
-                                        <input type="text" placeholder="Add keyword (hit enter)..." onKeyDown={async (e) => {
-                                            if (e.key === 'Enter' && e.target.value) {
-                                                const updated = { ...governance, keywords: [...governance.keywords, { value: e.target.value, priority: true }] };
-                                                setGovernance(updated);
-                                                e.target.value = "";
-                                                await fetch('/api/governance', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
-                                            }
-                                        }} />
-                                    </div>
-                                </div>
-
-                                <div className="gov-control-card">
-                                    <div className="card-header">
-                                        <h3>Priority Individuals (Entities)</h3>
-                                        <span className="count">{governance.entities?.length || 0} Tracking</span>
-                                    </div>
-                                    <div className="gov-tags">
-                                        {governance.entities?.map((e, i) => (
-                                            <div key={i} className="active-rule-tag entity">
-                                                <span><strong>{e.label}</strong>: {e.value}</span>
-                                                <button className="rule-del" onClick={async () => {
-                                                    const updated = { ...governance, entities: governance.entities.filter((_, idx) => idx !== i) };
-                                                    setGovernance(updated);
-                                                    await fetch('/api/governance', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
-                                                }}>×</button>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className="rule-input-group">
-                                        <input type="text" placeholder="Name: Value..." onKeyDown={async (ev) => {
-                                            if (ev.key === 'Enter' && ev.target.value.includes(':')) {
-                                                const [label, value] = ev.target.value.split(':');
-                                                const updated = { ...governance, entities: [...governance.entities, { label: label.trim(), value: value.trim(), priority: true }] };
-                                                setGovernance(updated);
-                                                ev.target.value = "";
-                                                await fetch('/api/governance', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updated) });
-                                            }
-                                        }} />
-                                    </div>
-                                </div>
-
-                                <div className="gov-control-card">
-                                    <div className="card-header">
-                                        <h3>Personas (Identity Resolution)</h3>
-                                        <span className="count">{identities.length} Resolved</span>
-                                    </div>
-                                    <div className="identity-list">
-                                        {identities.map((id, i) => (
-                                            <div key={i} className="identity-id-card" style={{ borderLeftColor: id.color }}>
-                                                <div className="id-meta">
-                                                    <strong>{id.name}</strong>
-                                                    <div className="id-identifiers">
-                                                        {id.identifiers.map((ident, idx) => <span key={idx} className="ident-pill">{ident}</span>)}
-                                                    </div>
-                                                </div>
-                                                <button className="rule-del" onClick={() => saveIdentities(identities.filter((_, idx) => idx !== i))}>×</button>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className="rule-input-group">
-                                        <input type="text" placeholder="Name: ID1, ID2, ID3..." onKeyDown={async (e) => {
-                                            if (e.key === 'Enter' && e.target.value.includes(':')) {
-                                                const [name, ids] = e.target.value.split(':');
-                                                const identifiers = ids.split(',').map(i => i.trim());
-                                                const colors = ['#ff4444', '#44ff44', '#4444ff', '#ffff44', '#ff44ff'];
-                                                const newId = { name: name.trim(), identifiers, color: colors[identities.length % colors.length] };
-                                                saveIdentities([...identities, newId]);
-                                                e.target.value = "";
-                                            }
-                                        }} />
-                                    </div>
-                                </div>
-
-                                <div className="gov-control-card full-row">
-                                    <div className="card-header">
-                                        <h3>Identity Interaction Analysis</h3>
-                                        <span className="count">Relationship Matrix</span>
-                                    </div>
-                                    <div className="relationship-matrix">
-                                        <table className="matrix-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Persona</th>
-                                                    <th>Discovery Count</th>
-                                                    <th>Sentiment Avg</th>
-                                                    <th>Risk Profile</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                {identities.map(id => {
-                                                    const interactionCount = analytics.interactions[id.name] || 0;
-                                                    const intensity = interactionCount > 50 ? 'high' : interactionCount > 10 ? 'med' : 'low';
-                                                    return (
-                                                        <tr key={id.name}>
-                                                            <td><strong style={{ color: id.color }}>{id.name}</strong></td>
-                                                            <td>{interactionCount} nodes</td>
-                                                            <td>{intensity === 'high' ? '6.8' : intensity === 'med' ? '4.2' : '2.1'}</td>
-                                                            <td className={`matrix-intensity-${intensity}`}>{intensity.toUpperCase()}</td>
-                                                        </tr>
-                                                    );
-                                                })}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    )}
-
-
-                    {view === 'timeline' && (
-                        <section className="timeline-view-v3">
-                            <div className="view-header">
-                                <div className="title-area">
-                                    <h2>Discovery Index / Vault</h2>
-                                    <p>Search and filter through all verified evidence. Use Custodian and Type facets to narrow discovery.</p>
-                                </div>
-                            </div>
-
-                            <div className="discovery-controls">
-                                <div className="search-main">
-                                    <input
-                                        type="text"
-                                        placeholder="Search by keyword, name, or metadata..."
-                                        value={searchTerm}
-                                        onChange={(e) => setSearchTerm(e.target.value)}
-                                    />
-                                </div>
-                                <div className="facet-row">
-                                    <div className="facet-group">
-                                        <label>Custodian</label>
-                                        <select value={custodianFilter} onChange={(e) => setCustodianFilter(e.target.value)}>
-                                            <option value="all">All Custodians</option>
-                                            {sources.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
-                                        </select>
-                                    </div>
-                                    <div className="facet-group">
-                                        <label>Evidence Type</label>
-                                        <select value={evidenceTypeFilter} onChange={(e) => setEvidenceTypeFilter(e.target.value)}>
-                                            <option value="all">All Types</option>
-                                            <option value="email">Emails / Communication</option>
-                                            <option value="media">Image / Video</option>
-                                            <option value="document">PDF / Documents</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="vault-records-list">
-                                {evidence.filter(item => {
-                                    const matchSearch = searchTerm === '' ||
-                                        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                                        item.source.toLowerCase().includes(searchTerm.toLowerCase());
-                                    const matchCustodian = custodianFilter === 'all' || item.sourceId === custodianFilter;
-                                    const matchType = evidenceTypeFilter === 'all' || item.type === evidenceTypeFilter;
-                                    return matchSearch && matchCustodian && matchType;
-                                }).map(item => (
-                                    <div key={item.id} className="vault-item-v3" onClick={() => fetchContent(item)}>
-                                        <div className="item-main-info">
-                                            <div className="item-title-row">
-                                                <span className="legal-badge">{item.type.toUpperCase()}</span>
-                                                <h4>{item.title}</h4>
-                                            </div>
-                                            <div className="item-sub-meta">
-                                                <span><strong>CUSTODIAN:</strong> {item.source}</span>
-                                                <span><strong>RECORDED:</strong> {item.timestamp}</span>
-                                                {item.bates && <span><strong>BATES:</strong> {item.bates}</span>}
-                                            </div>
-                                            {intelligence[item.id] && (
-                                                <div className="intelligence-summary-box">
-                                                    <span className="intel-label">FORENSIC SUMMARY</span>
-                                                    <p className="intel-text">{intelligence[item.id].summary}</p>
-                                                </div>
-                                            )}
-                                        </div>
-                                        <div className="item-actions-v3">
-                                            {!intelligence[item.id] && (
-                                                <button className="primary-btn-xs" onClick={(e) => { e.stopPropagation(); handleRunAnalysis(item); }}>Extract Intelligence</button>
-                                            )}
-                                            <a href={`/api/export/download/${item.path}`} className="secondary-btn-xs" target="_blank" rel="noreferrer" onClick={e => e.stopPropagation()}>Original</a>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-                    )}
-
-                    {view === 'arguments' && (
-                        <section className="strategy-view">
-                            <div className="view-header">
-                                <div className="section-header">
-                                    <h2>Case Strategy</h2>
-                                    <p>Group evidence into arguments to build your case.</p>
-                                </div>
-                                <button className="primary-btn" onClick={() => {
-                                    const title = prompt("Argument Title:");
-                                    if (title) {
-                                        const newArg = { id: `arg_${Date.now()}`, title, description: '', items: [], legalMemo: '' };
-                                        const newList = [...argumentsList, newArg];
-                                        setArgumentsList(newList);
-                                        fetch('/api/arguments', {
-                                            method: 'POST',
-                                            headers: { 'Content-Type': 'application/json' },
-                                            body: JSON.stringify(newList)
-                                        });
-                                    }
-                                }}>+ New Argument</button>
-                            </div>
-
-                            <div className="arguments-grid">
-                                {argumentsList.length === 0 && <p className="empty-msg">No strategic arguments defined yet.</p>}
-                                {argumentsList.map(arg => (
-                                    <div key={arg.id} className="argument-card">
-                                        <div className="arg-header">
-                                            <h3>{arg.title}</h3>
-                                            <span className="node-count">{(arg.items || []).length} nodes</span>
-                                        </div>
-                                        <div className="arg-actions">
-                                            <button className="secondary-btn" onClick={() => {
-                                                const vaultItems = evidence.filter(e => e.status === 'vault').map(e => e.id);
-                                                const newList = argumentsList.map(a => a.id === arg.id ? { ...a, items: vaultItems } : a);
-                                                setArgumentsList(newList);
-                                                fetch('/api/arguments', {
-                                                    method: 'POST',
-                                                    headers: { 'Content-Type': 'application/json' },
-                                                    body: JSON.stringify(newList)
-                                                });
-                                                alert(`Linked ${vaultItems.length} nodes to ${arg.title}`);
-                                            }}>Link Vaulted Items</button>
-
-                                            <button className="primary-btn-xs" onClick={async () => {
-                                                setAnalyzingIds(prev => new Set(prev).add(arg.id));
-                                                const items = evidence.filter(e => (arg.items || []).includes(e.id));
-                                                const res = await fetch('/api/arguments/analyze', {
-                                                    method: 'POST',
-                                                    headers: { 'Content-Type': 'application/json' },
-                                                    body: JSON.stringify({ argumentId: arg.id, items, model: selectedModel })
-                                                });
-                                                const data = await res.json();
-                                                fetchArguments();
-                                                setAnalyzingIds(prev => { const n = new Set(prev); n.delete(arg.id); return n; });
-                                                setSelectedItem({ title: `Strategy Memo: ${arg.title}`, content: data.memo, type: 'memo' });
-                                            }} disabled={analyzingIds.has(arg.id) || !(arg.items && arg.items.length > 0)}>
-                                                {analyzingIds.has(arg.id) ? 'Synthesizing...' : 'Generate Strategic Memo'}
-                                            </button>
-
-                                            <button className="secondary-btn-xs" onClick={() => handleExportBundle(arg)}>
-                                                Bundle & Export
-                                            </button>
-                                        </div>
-
-                                        {arg.legalMemo && (
-                                            <div className="memo-preview" onClick={() => setSelectedItem({ title: `Strategy Memo: ${arg.title}`, content: arg.legalMemo, type: 'memo' })}>
-                                                <h4>Strategic Memo Available</h4>
-                                                <p>{arg.legalMemo.substring(0, 150)}...</p>
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-                    )}
-                    {view === 'reports' && (
-                        <section className="reports-view">
-                            <div className="view-header">
-                                <div className="title-area">
-                                    <h2>Reports & Strategy Synthesis</h2>
-                                    <p>Legally-defensible exports for legal counsel and court submissions.</p>
-                                </div>
-                            </div>
-
-                            <div className="report-wizard">
-                                <h3>Generate Thematic Report</h3>
-                                <div className="wizard-form">
-                                    <div className="wizard-options">
-                                        <div className="option-group">
-                                            <label>Report Title</label>
-                                            <input type="text" placeholder="e.g., Financial Irregularities Q3"
-                                                value={reportTitle} onChange={e => setReportTitle(e.target.value)} />
-                                        </div>
-                                        <div className="option-group">
-                                            <label>Analysis Depth</label>
-                                            <select value={reportLevel} onChange={e => setReportLevel(e.target.value)}>
-                                                <option value="summary">Summary (Metadata Only)</option>
-                                                <option value="comprehensive">Comprehensive (Includes Content & AI Synthesis)</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="wizard-actions">
-                                        <button className="primary-btn" onClick={async () => {
-                                            if (!reportTitle) return alert("Title required");
-                                            setGeneratingReport(true);
-                                            const items = reportTarget === 'vault' ? evidence.filter(e => e.status === 'vault') : evidence;
-                                            const res = await fetch('/api/reports/generate', {
-                                                method: 'POST',
-                                                headers: { 'Content-Type': 'application/json' },
-                                                body: JSON.stringify({ title: reportTitle, items, detailLevel: reportLevel, model: selectedModel })
-                                            });
-                                            await res.json();
-                                            const rRes = await fetch('/api/reports');
-                                            setReports(await rRes.json());
-                                            setReportTitle('');
-                                            setGeneratingReport(false);
-                                        }} disabled={generatingReport}>
-                                            {generatingReport ? 'Generating Briefing...' : 'Assemble Report'}
-                                        </button>
-                                        <button className="secondary-btn" onClick={handleReconcileForm131} disabled={isReconciling}>
-                                            {isReconciling ? 'Reconciling Ledger...' : 'Reconcile Form 13.1'}
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {reconciledForm && (
-                                <div className="forensic-workspace-v3 pro-section">
-                                    <div className="section-header">
-                                        <h3>Form 13.1 Financial Reconciliation</h3>
-                                        <span className="status-pill verified">INTERNAL DRAFT READY</span>
-                                    </div>
-                                    <div className="reconciliation-grid">
-                                        <div className="recon-summary">
-                                            <div className="recon-stat">
-                                                <label>Net Flow</label>
-                                                <span className={reconciledForm.summary.net_flow >= 0 ? "value-pos" : "value-neg"}>
-                                                    ${reconciledForm.summary.net_flow.toLocaleString()}
-                                                </span>
-                                            </div>
-                                            <div className="recon-stat">
-                                                <label>Forensic Flags</label>
-                                                <span className="value-alert">{reconciledForm.evidence_anchors.length} Anchors</span>
-                                            </div>
-                                        </div>
-                                        <div className="recon-audit-trail">
-                                            <h4>Evidence Anchors</h4>
-                                            <ul>
-                                                {reconciledForm.evidence_anchors.map((a, i) => (
-                                                    <li key={i}>{a.title} ({a.status})</li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-
-                            <div className="discovery-audit-center pro-section">
-                                <div className="section-header">
-                                    <h3>Exported Discovery Bundles</h3>
-                                    <button className="secondary-btn-xs" onClick={fetchExportHistory}>Refresh History</button>
-                                </div>
-                                <div className="history-table-container">
-                                    <table className="pro-table">
-                                        <thead>
-                                            <tr>
-                                                <th>Bundle Name</th>
-                                                <th>Generated</th>
-                                                <th>Size</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {exportHistory.length === 0 && <tr><td colSpan="4" className="empty-msg">No exports generated yet.</td></tr>}
-                                            {exportHistory.map((h, i) => (
-                                                <tr key={i}>
-                                                    <td>{h.name}</td>
-                                                    <td>{new Date(h.date).toLocaleString()}</td>
-                                                    <td>{(h.size / 1024 / 1024).toFixed(2)} MB</td>
-                                                    <td>
-                                                        <a href={`/api/export/download/${h.name}`} className="link-btn" target="_blank" rel="noreferrer">Download</a>
-                                                    </td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div className="reports-grid">
-                                {reports.length === 0 && <p className="empty-msg">No reports generated yet.</p>}
-                                {reports.map(report => (
-                                    <div key={report.id} className="report-card">
-                                        <div className="report-meta">
-                                            <h3>{report.title}</h3>
-                                            <p>{new Date(report.timestamp).toLocaleString()}</p>
-                                        </div>
-                                        <div className="report-actions">
-                                            <button className="secondary-btn" onClick={async () => {
-                                                const res = await fetch(`/api/reports/view/${report.id}`);
-                                                const data = await res.json();
-                                                setSelectedItem({ ...report, type: 'report', content: data.content });
-                                            }}>View Report</button>
-                                            <button className="secondary-btn" onClick={() => window.print()}>Print / Export PDF</button>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-                    )}
-                    {view === 'analytics' && (
-                        <section className="analytics-view">
-                            <div className="analytics-grid">
-                                <div className="velocity-card card-v2">
-                                    <h3>Temporal Activity (Weekly Velocity)</h3>
-                                    <div className="velocity-chart">
-                                        {Object.entries(velocityData).sort().map(([week, data]) => (
-                                            <div key={week} className="velocity-bar-group">
-                                                <div className="bar-stack">
-                                                    <div
-                                                        className="bar-total"
-                                                        style={{ height: `${Math.min(data.total * 5, 200)}px` }}
-                                                        title={`${week}: ${data.total} items`}
-                                                    ></div>
-                                                </div>
-                                                <span className="bar-label">{week.split('-')[1]}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                <div className="narrative-card card-v2">
-                                    <div className="card-header-flex">
-                                        <h3>Case Narrative Synthesis</h3>
-                                        <button
-                                            className="primary-btn"
-                                            onClick={generateNarrative}
-                                            disabled={generatingNarrative}
-                                        >
-                                            {generatingNarrative ? 'Synthesizing Story...' : 'Generate Chronological Narrative'}
-                                        </button>
-                                    </div>
-                                    <div className="narrative-content">
-                                        {narrative ? (
-                                            <pre className="markdown-pre">{narrative}</pre>
-                                        ) : (
-                                            <div className="narrative-placeholder">
-                                                <p>Trigger the Narrative Engine to synthesize the case history into a readable chronological story.</p>
-                                                <p className="hint">This uses Ollama to analyze the top chronological evidence nodes.</p>
-                                            </div>
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    )}
-                    {(view === 'sms' || view === 'email') && (
-                        <section className="discovery-inbox">
-                            <div className="view-header">
-                                <h2>Discovery: {view.toUpperCase()}</h2>
-                            </div>
-                        </section>
-                    )}
+                        <button className={view === 'reports' ? 'active' : ''} onClick={() => setView('reports')}>REPORTS</button>
+                        <button className={view === 'arguments' ? 'active' : ''} onClick={() => setView('arguments')}>ARGUMENTS</button>
+                        <hr className="nav-divider" />
+                        {activeDocket && !activeDocket.temporal_lock && (
+                            <button className="trial-lock-btn nav-alt" onClick={handleTrialLock}>🔒 TRIAL LOCK</button>
+                        )}
+                        {activeDocket?.temporal_lock && (
+                            <button className="projection-mode-btn nav-alt" onClick={() => setView('projection')}>📺 PROJECTION MODE</button>
+                        )}
+                        <button className={view === 'help' ? 'active' : ''} onClick={() => setView('help')}>HELP & KB</button>
+                    </nav>
+                </aside>
+            }
+            main={
+                <div className="main-content">
+                    {(() => {
+                        try {
+                            switch (view) {
+                                case 'dashboard': return <StrategicDashboard metrics={pulseData} />;
+                                case 'dockets': return <DocketsHub dockets={dockets} active={activeDocket} onSelect={setActiveDocket} onAdd={() => setShowAddModal(true)} />;
+                                case 'inbox': return <SovereignInbox emails={emails} activeDocket={activeDocket} lexicon={lexicon} />;
+                                case 'sandbox':
+                                    return <StrategicSandboxHub
+                                        onReindex={() => handleRunAnalysis()}
+                                        analysisStatus={analysisStatus}
+                                        pinnedItems={pinnedItems}
+                                        togglePin={togglePin}
+                                        handleRefine={handleRefine}
+                                        activeDocket={activeDocket}
+                                    />;
+                                case 'vault':
+                                case 'sources':
+                                    return <ActiveEvidenceHub
+                                        evidence={evidence}
+                                        categories={[]}
+                                        selectedIds={selectedIds}
+                                        toggleSelect={toggleSelect}
+                                        pinnedItems={pinnedItems}
+                                        togglePin={togglePin}
+                                        handleRefine={handleRefine}
+                                        activeDocket={activeDocket}
+                                        lastFetch={lastAuditFetch}
+                                        setLastFetch={setLastAuditFetch}
+                                    />;
+                                case 'financials': return <FinancialForensics reconciledDiscrepancies={reconciledDiscrepancies} activeDocket={activeDocket} />;
+                                case 'reports': return <ReportCenter reports={reports} activeDocket={activeDocket} onEgress={handleEgress} />;
+                                case 'projection': return <ProjectionMirror activeDocket={activeDocket} onExit={() => setView('evidence')} />;
+                                case 'strategy':
+                                case 'arguments': return <ArgumentCompass argumentsList={argumentsList} activeDocket={activeDocket} />;
+                                case 'help': return <HelpHub />;
+                                default: return <StrategicDashboard metrics={pulseData} />;
+                            }
+                        } catch (err) {
+                            console.error("UI Render Failure:", err);
+                            return <div className="render-error">RECOVERY MODE: UI RENDER FAILURE</div>;
+                        }
+                    })()}
                 </div>
-            </main>
-
-            {selectedItem && (
-                <div className="modal-overlay" onClick={() => setSelectedItem(null)}>
-                    <div className="modal-content item-viewer-modal" onClick={e => e.stopPropagation()}>
-                        <header className="modal-header">
-                            <div className="header-text">
-                                <h2>{selectedItem.title}</h2>
-                                <span className="item-meta">{selectedItem.source} • {selectedItem.timestamp}</span>
-                            </div>
-                            <div className="header-actions">
-                                {selectedItem.title.match(/sgi|accident|medical/i) && (
-                                    <button className="secondary-btn-xs" onClick={() => handleSGIExtraction(itemContent)}>
-                                        Extract SGI Insights
-                                    </button>
-                                )}
-                                <button className="close-btn" onClick={() => setSelectedItem(null)}>&times;</button>
-                            </div>
-                        </header>
-                        <div className="modal-body">
-                            {sgiResults && (
-                                <div className="sgi-tactical-panel">
-                                    <div className="sgi-stat">
-                                        <label>Claim #</label>
-                                        <span>{sgiResults.claimNumber || 'N/A'}</span>
-                                    </div>
-                                    <div className="sgi-stat">
-                                        <label>Severity</label>
-                                        <span className={`severity-${sgiResults.injurySeverity.toLowerCase().replace('/', '-')}`}>
-                                            {sgiResults.injurySeverity}
-                                        </span>
-                                    </div>
-                                    <div className="sgi-stat">
-                                        <label>ICD Codes</label>
-                                        <div className="icd-tags">
-                                            {sgiResults.icd_codes.map(c => <span key={c} className="icd-tag">{c}</span>)}
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-                            {selectedItem.type === 'report' ? (
-                                <div className="report-viewer-content">
-                                    <pre className="report-markdown">{selectedItem.content}</pre>
-                                </div>
-                            ) : selectedItem.type === 'media' || (selectedItem.path && selectedItem.path.match(/\.(jpg|png|webp|mp4)$/i)) ? (
-                                <div className="media-viewer-container">
-                                    {selectedItem.path.match(/\.mp4$/i) ? (
-                                        <video src={`/media/${selectedItem.source}/${selectedItem.path}`} controls />
-                                    ) : (
-                                        <img src={`/media/${selectedItem.source}/${selectedItem.path}`} alt="Evidence Preview" />
-                                    )}
-                                </div>
-                            ) : (
-                                <pre>{itemContent}</pre>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            )}
-        </div>
+            }
+            trayOpen={trayOpen}
+        />
     );
 }
+
+const DocketsHub = ({ dockets, active, onSelect, onAdd }) => (
+    <div className="sandbox-main-flow">
+        <StrategicSection
+            title="DOCKET MANAGEMENT"
+            actions={<StrategicButton onClick={onAdd}>+ NEW CASE</StrategicButton>}
+        >
+            <div className="dockets-grid">
+                {dockets.map(d => (
+                    <GlossCard
+                        key={d.id}
+                        selected={active?.id === d.id}
+                        onClick={() => onSelect(d)}
+                        className="docket-card"
+                    >
+                        <h3>{d.title}</h3>
+                        <div className="docket-meta">
+                            <span>ID: {d.id}</span>
+                            <span>STATUS: {d.status || 'ACTIVE'}</span>
+                        </div>
+                    </GlossCard>
+                ))}
+            </div>
+        </StrategicSection>
+    </div>
+);
+
+const HelpHub = () => (
+    <div className="sandbox-main-flow">
+        <StrategicSection title="HELP & KNOWLEDGE BASE">
+            <div className="help-grid">
+                <GlossCard className="help-article">
+                    <h4>What is a Docket?</h4>
+                    <p>A Docket is a forensic container for all documents, emails, and financial records related to a specific legal matter.</p>
+                </GlossCard>
+                <GlossCard className="help-article">
+                    <h4>Bates Stamping Rules</h4>
+                    <p>Every item in the Evidence Vault is assigned a unique Bates number to ensure a verifiable chain of custody for discovery.</p>
+                </GlossCard>
+                <GlossCard className="help-article">
+                    <h4>Forensic Reconciliation</h4>
+                    <p>Use the Financials tab to match disclosed assets against bank records and identify discrepancies for Form 13.1.</p>
+                </GlossCard>
+            </div>
+        </StrategicSection>
+    </div>
+);
+
+const StrategicSandboxHub = ({ onReindex, analysisStatus, pinnedItems, togglePin, handleRefine, activeDocket }) => {
+    const [wargame, setWargame] = useState({});
+    const [settlement, setSettlement] = useState({});
+    const [exporting, setExporting] = useState(false);
+
+    const [probeInput, setProbeInput] = useState("");
+    const [probeResult, setProbeResult] = useState(null);
+    const [isProbing, setIsProbing] = useState(false);
+    const [modifiers, setModifiers] = useState({ lifestyle: false, pain: false, psychological: false, mobility: false });
+    const [selectedWargames, setSelectedWargames] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const wRes = await fetch('/api/wargame');
+                setWargame(await wRes.json());
+                const sRes = await fetch('/api/settlement');
+                setSettlement(await sRes.json());
+            } catch (e) { console.error("Strategic data fetch failed"); }
+        };
+        fetchData();
+    }, []);
+
+    const handleProbe = async () => {
+        if (!probeInput) return;
+        setIsProbing(true);
+        try {
+            const res = await fetch('/api/wargame/probe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ scenario: probeInput })
+            });
+            setProbeResult(await res.json());
+        } catch (e) { console.error("Probe failed"); }
+        finally { setIsProbing(false); }
+    };
+
+    const toggleModifier = async (key) => {
+        const newMods = { ...modifiers, [key]: !modifiers[key] };
+        setModifiers(newMods);
+        try {
+            const res = await fetch('/api/settlement/simulate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ modifiers: newMods })
+            });
+            setSettlement(await res.json());
+        } catch (e) { console.error("Simulation failed"); }
+    };
+
+    const handleExport = async () => {
+        setExporting(true);
+        try {
+            const res = await fetch('/api/export/tactical-brief', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ selectedWargames, simulationData: settlement })
+            });
+            const data = await res.json();
+            if (data.success) alert(`Tactical Brief Exported: ${data.path}`);
+        } catch (e) { alert("Export failed"); }
+        finally { setExporting(false); }
+    };
+
+    return (
+        <StrategicShell
+            header={
+                <div className="hub-breadcrumb-header">
+                    <BreadcrumbNav paths={['Vault', 'Strategy Sandbox']} />
+                    <div className="header-actions">
+                        <StrategicButton onClick={handleExport} loading={exporting} variant="primary">
+                            GENERATE BRIEF
+                        </StrategicButton>
+                    </div>
+                </div>
+            }
+            main={
+                <div className="sandbox-main-flow">
+                    <StrategicSection title="WAR ROOM PROBE">
+                        <div className="probe-grid">
+                            <StrategicInput
+                                placeholder="Input Scenario / Counter-Argument to probe..."
+                                value={probeInput}
+                                onChange={(e) => setProbeInput(e.target.value)}
+                                onKeyPress={(e) => e.key === 'Enter' && handleProbe()}
+                                icon="🛡️"
+                            />
+                            <StrategicButton onClick={handleProbe} loading={isProbing}>
+                                PROBE DEFENSE
+                            </StrategicButton>
+                        </div>
+
+                        {probeResult && (
+                            <div className="probe-result-animate">
+                                <IntelligenceTile
+                                    title="LIVE SCENARIO ANALYSIS"
+                                    content={probeResult.adversarial_points.join("; ")}
+                                    meta={`Secondary Defense: ${probeResult.counter_narratives[0]}`}
+                                    onPin={() => togglePin({ id: 'probe_' + Date.now(), title: "Probe Result", content: probeResult.adversarial_points[0] })}
+                                    isPinned={false}
+                                    onRefine={(c) => console.log("Can't refine live analysis yet")}
+                                />
+                            </div>
+                        )}
+                    </StrategicSection>
+
+                    <StrategicSection title="ACTIVE WARGAMES">
+                        <div className="wargame-feed">
+                            {wargame && typeof wargame === 'object' && Object.values(wargame).length > 0 ? (
+                                Object.values(wargame).map((w, i) => (
+                                    <IntelligenceTile
+                                        key={i}
+                                        title={w?.title || "Untitled Wargame"}
+                                        content={Array.isArray(w?.adversarial_points) ? w.adversarial_points.join("\n") : "No points available."}
+                                        meta={Array.isArray(w?.counter_narratives) ? `Defense: ${w.counter_narratives[0]}` : "No defense defined."}
+                                        onPin={() => togglePin({ id: w?.title, title: w?.title, content: w?.adversarial_points?.[0] })}
+                                        isPinned={pinnedItems.some(p => p.id === w?.title)}
+                                        onRefine={(c) => handleRefine(w?.title, c)}
+                                    />
+                                ))
+                            ) : (
+                                <div className="empty-state">NO ACTIVE WARGAMES DETECTED.</div>
+                            )}
+                        </div>
+                    </StrategicSection>
+                </div>
+            }
+            sidebar={
+                <div className="sandbox-sidebar-container">
+                    <StrategicSection
+                        title="LIVE DECISION QUEUE"
+                        meta={<span className={`stream-status ${streamStatus || 'offline'}`}>{(streamStatus || 'offline').toUpperCase()}</span>}
+                    >
+                        <div className="decision-queue-stream">
+                            {decisionQueue.length > 0 ? (
+                                decisionQueue.map((event, idx) => (
+                                    <DecisionEventCard
+                                        key={idx}
+                                        event={event}
+                                        onResolve={handleDecision}
+                                        onChat={(item) => setSelectedItem(item)}
+                                    />
+                                ))
+                            ) : (
+                                <div className="stream-empty premium-glass">
+                                    <p>Awaiting new legal signals...</p>
+                                </div>
+                            )}
+                        </div>
+                    </StrategicSection>
+
+                    <StrategicSection title="VALUATION TUNING">
+                        <div className="modifier-grid">
+                            {Object.keys(modifiers).map(m => (
+                                <button
+                                    key={m}
+                                    className={`modifier-btn ${modifiers[m] ? 'active' : ''}`}
+                                    onClick={() => toggleModifier(m)}
+                                >
+                                    {m.toUpperCase()}
+                                </button>
+                            ))}
+                        </div>
+                    </StrategicSection>
+
+                    {settlement.projections && (
+                        <StrategicSection title="SETTLEMENT PROJECTION">
+                            <div className="projection-projection premium-glass inner highlighting-box">
+                                <span className="label">ESTIMATED RANGE</span>
+                                <span className="value highlighting">
+                                    ${settlement.projections.non_pecuniary_min.toLocaleString()} - ${settlement.projections.non_pecuniary_max.toLocaleString()}
+                                </span>
+                                <p className="projection-note">{settlement.projections.note}</p>
+                            </div>
+                        </StrategicSection>
+                    )}
+                </div>
+            }
+        />
+    );
+};
+
+const StrategicDashboard = () => (
+    <div className="sandbox-main-flow">
+        <StrategicSection title="SYSTEM OVERVIEW">
+            <div className="dashboard-grid">
+                <div className="metric-card premium-glass">
+                    <h3>DISCOVERY VELOCITY</h3>
+                    <div className="velocity-stat">12.4 Nodes/Day</div>
+                </div>
+                <div className="metric-card premium-glass">
+                    <h3>STRATEGIC READINESS</h3>
+                    <div className="readiness-gauge">
+                        <div className="gauge-fill" style={{ width: '84%' }}></div>
+                        <span className="gauge-label">84.2%</span>
+                    </div>
+                </div>
+                <div className="metric-card premium-glass alert">
+                    <h3>ACTIVE JURISDICTION</h3>
+                    <div className="jurisdiction-text">Saskatchewan (SK)</div>
+                </div>
+            </div>
+        </StrategicSection>
+    </div>
+);
+
+const TimelineView = () => <div className="placeholder-hub">Timeline View Content</div>;
+const SovereignInbox = ({ emails, activeDocket, lexicon }) => {
+    // Group emails by account (H2) and then by folder/tag (H3)
+    const grouped = (emails || []).reduce((acc, email) => {
+        if (!email) return acc;
+        const account = email.account || 'Historical Archives';
+        if (!acc[account]) acc[account] = {};
+        const folder = email.folder || 'Inbox';
+        if (!acc[account][folder]) acc[account][folder] = [];
+        acc[account][folder].push(email);
+        return acc;
+    }, {});
+
+    const [syncing, setSyncing] = useState(false);
+
+    const handleSyncEmails = async () => {
+        setSyncing(true);
+        try {
+            const res = await fetch('/api/emails/ingress', { method: 'POST' });
+            const data = await res.json();
+            if (data.success) {
+                console.log(`Synced ${data.count} signals.`);
+            }
+        } catch (e) {
+            console.error("Sync failed", e);
+        } finally {
+            setSyncing(false);
+        }
+    };
+
+    return (
+        <StrategicShell
+            header={
+                <div className="hub-breadcrumb-header">
+                    <BreadcrumbNav paths={['Communication', 'Legal Inbox']} />
+                    <div className="header-actions">
+                        <StrategicButton onClick={handleSyncEmails} loading={syncing} variant="secondary">
+                            SYNC ACCOUNTS
+                        </StrategicButton>
+                    </div>
+                </div>
+            }
+            main={
+                <div className="sandbox-main-flow">
+                    <StrategicSection title={`SOVEREIGN INBOX: ${activeDocket?.title || "GLOBAL"}`}>
+                        <div className="inbox-account-list">
+                            {Object.keys(grouped).map(account => (
+                                <div key={account} className="inbox-account-group">
+                                    <h2 className="premium-heading-h2">{account.toUpperCase()}</h2>
+                                    {Object.keys(grouped[account]).map(folder => (
+                                        <div key={folder} className="inbox-folder-group">
+                                            <h3 className="premium-heading-h3">{folder}</h3>
+                                            <div className="inbox-message-grid">
+                                                {grouped[account][folder].map((email, idx) => (
+                                                    <IntelligenceTile
+                                                        key={idx}
+                                                        title={email.subject || "No Subject"}
+                                                        content={email.analysis || "Categorized as legal intelligence."}
+                                                        meta={`From: ${email.from} | Date: ${email.date}`}
+                                                        onPin={() => { }}
+                                                        isPinned={false}
+                                                        onRefine={() => { }}
+                                                        actions={[
+                                                            { label: 'FLAG FOR ARBITRATION', variant: 'primary' },
+                                                            { label: 'LINK TO DOCKET', variant: 'secondary' }
+                                                        ]}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+                    </StrategicSection>
+                </div>
+            }
+        />
+    );
+};
+
+const ActiveEvidenceHub = ({ evidence, categories, selectedIds, toggleSelect, onSelectItem, pinnedItems, togglePin, handleRefine, activeDocket, lastFetch, setLastFetch }) => {
+    const [auditLogs, setAuditLogs] = useState([]);
+    const [loadingAudit, setLoadingAudit] = useState(false);
+
+    useEffect(() => {
+        const now = Date.now();
+        // Correct the "Frequency Trap" - 30s throttle
+        if (now - lastFetch < 30000) return;
+
+        const fetchAudit = async () => {
+            setLoadingAudit(true);
+            try {
+                const res = await fetch('/api/audit');
+                if (res.ok) {
+                    const data = await res.json();
+                    setAuditLogs(data);
+                    setLastFetch(now);
+                }
+            } catch (e) {
+                console.error("Failed to fetch audit logs", e);
+            } finally {
+                setLoadingAudit(false);
+            }
+        };
+        fetchAudit();
+    }, [activeDocket?.id]);
+
+    const stats = {
+        total: evidence.length,
+        types: [...new Set(evidence.map(e => e.type))].length,
+        sources: [...new Set(evidence.map(e => e.source))].length
+    };
+
+    const filteredEvidence = activeDocket
+        ? evidence.filter(e => e.docket_id === activeDocket.id || e.global === true)
+        : evidence;
+
+    return (
+        <StrategicShell
+            header={
+                <div className="hub-breadcrumb-header">
+                    <BreadcrumbNav paths={['Vault', 'Evidence Explorer']} />
+                    <div className="header-actions">
+                        <span className="selection-count">{selectedIds.size} ITEMS SELECTED</span>
+                        <StrategicButton variant="secondary">ADD SOURCE</StrategicButton>
+                    </div>
+                </div>
+            }
+            main={
+                <div className="sandbox-main-flow">
+                    <div className="vault-top-grid">
+                        <StrategicSection title={`INTELLIGENCE VAULT: ${activeDocket?.title || "UNSORTED"}`}>
+                            <div className="evidence-grid">
+                                {filteredEvidence.length > 0 ? (
+                                    filteredEvidence.map((item, i) => (
+                                        <IntelligenceTile
+                                            key={item.id || i}
+                                            title={item.title || "Untitled Fragment"}
+                                            content={item.analysis || "No intelligence analysis available."}
+                                            meta={`Source: ${item.source} | Date: ${item.timestamp}`}
+                                            onPin={() => togglePin({ id: item.id, title: item.title, content: item.analysis })}
+                                            isPinned={pinnedItems.some(p => p.id === item.id)}
+                                            onRefine={(c) => handleRefine(item.id, c)}
+                                        />
+                                    ))
+                                ) : (
+                                    <div className="empty-state">NO EVIDENCE FOR THIS DOCKET. INGEST DATA TO BEGIN.</div>
+                                )}
+                            </div>
+                        </StrategicSection>
+
+                        <StrategicSection title="FORENSIC AUDIT TRAIL">
+                            <div className="audit-trail-list">
+                                {loadingAudit ? (
+                                    <div className="loading-pulse">FETCHING CHAIN OF CUSTODY...</div>
+                                ) : auditLogs.length > 0 ? (
+                                    auditLogs.map((log, i) => (
+                                        <div key={i} className="audit-log-item">
+                                            <span className="audit-time">{new Date(log.timestamp).toLocaleTimeString()}</span>
+                                            <span className={`audit-action ${log.level.toLowerCase()}`}>{log.message}</span>
+                                        </div>
+                                    ))
+                                ) : (
+                                    <div className="empty-state">NO AUDIT ENTRIES RECORDED.</div>
+                                )}
+                            </div>
+                        </StrategicSection>
+                    </div>
+                </div>
+            }
+            sidebar={
+                <div className="evidence-stats-sidebar">
+                    <StrategicSection title="VAULT TELEMETRY">
+                        <div className="stat-row">
+                            <span className="stat-label">TOTAL ARTIFACTS</span>
+                            <span className="stat-value">{stats.total}</span>
+                        </div>
+                        <div className="stat-row">
+                            <span className="stat-label">ACTIVE SOURCES</span>
+                            <span className="stat-value">{stats.sources}</span>
+                        </div>
+                        <div className="stat-row">
+                            <span className="stat-label">DIVERSITY INDEX</span>
+                            <span className="stat-value">{stats.types}</span>
+                        </div>
+                    </StrategicSection>
+                </div>
+            }
+        />
+    );
+};
+const GovernanceHub = ({ governance }) => (
+    <StrategicShell
+        header={
+            <div className="hub-breadcrumb-header">
+                <BreadcrumbNav paths={['System', 'Governance & Controls']} />
+                <div className="header-actions">
+                    <StrategicButton variant="secondary">EXPORT COMPLIANCE LOG</StrategicButton>
+                </div>
+            </div>
+        }
+        main={
+            <div className="sandbox-main-flow">
+                <StrategicSection title="ADMINISTRATIVE CONTROLS">
+                    <div className="governance-grid">
+                        <GlossCard className="governance-card">
+                            <h4>ENTITY IDENTITIES</h4>
+                            <div className="entity-list">
+                                {governance?.entities?.map((e, i) => (
+                                    <div key={i} className="entity-item">{e}</div>
+                                )) || "No entities defined."}
+                            </div>
+                        </GlossCard>
+                        <GlossCard className="governance-card">
+                            <h4>KEYWORD SENSITIVITY</h4>
+                            <div className="keyword-tags">
+                                {governance?.keywords?.map((k, i) => (
+                                    <span key={i} className="keyword-tag">{k}</span>
+                                )) || "No keywords flagged."}
+                            </div>
+                        </GlossCard>
+                    </div>
+                </StrategicSection>
+            </div>
+        }
+    />
+);
+
+const ArgumentCompass = ({ argumentsList }) => (
+    <StrategicShell
+        header={
+            <div className="hub-breadcrumb-header">
+                <BreadcrumbNav paths={['Strategy', 'Argument Compass']} />
+            </div>
+        }
+        main={
+            <div className="sandbox-main-flow">
+                <StrategicSection title="STRATEGIC ARGUMENTS">
+                    <div className="arguments-feed">
+                        {argumentsList?.length > 0 ? (
+                            argumentsList.map((arg, i) => (
+                                <IntelligenceTile
+                                    key={i}
+                                    title={arg.title}
+                                    content={arg.summary}
+                                    meta={`Strength: ${arg.strength}% | Stability: ${arg.stability}%`}
+                                    onPin={() => { }}
+                                    onRefine={() => { }}
+                                />
+                            ))
+                        ) : (
+                            <div className="empty-state">NO ARGUMENTS CONSTRUCTED.</div>
+                        )}
+                    </div>
+                </StrategicSection>
+            </div>
+        }
+    />
+);
+
+const FinancialForensics = ({ reconciledDiscrepancies }) => (
+    <StrategicShell
+        header={
+            <div className="hub-breadcrumb-header">
+                <BreadcrumbNav paths={['Finance', 'Forensic Reconciliation']} />
+            </div>
+        }
+        main={
+            <div className="sandbox-main-flow">
+                <StrategicSection title="DISCREPANCY OVERVIEW">
+                    <div className="discrepancy-list">
+                        {reconciledDiscrepancies?.length > 0 ? (
+                            reconciledDiscrepancies.map((d, i) => (
+                                <GlossCard key={i} className="discrepancy-card">
+                                    <div className="discrepancy-header">
+                                        <span className="severity-pin">!</span>
+                                        <h4>{d.item}</h4>
+                                    </div>
+                                    <div className="discrepancy-body">
+                                        <div className="val">REPORTED: {d.reported}</div>
+                                        <div className="val">ACTUAL: {d.actual}</div>
+                                        <div className="delta">DELTA: {d.delta}</div>
+                                    </div>
+                                </GlossCard>
+                            ))
+                        ) : (
+                            <div className="empty-state">NO DISCREPANCIES DETECTED IN LAST RUN.</div>
+                        )}
+                    </div>
+                </StrategicSection>
+            </div>
+        }
+    />
+);
+
+const ReportCenter = ({ reports }) => (
+    <StrategicShell
+        header={
+            <div className="hub-breadcrumb-header">
+                <BreadcrumbNav paths={['System', 'Reports Archive']} />
+            </div>
+        }
+        main={
+            <div className="sandbox-main-flow">
+                <StrategicSection title="TACTICAL REPORTS">
+                    <div className="reports-grid">
+                        {reports?.length > 0 ? (
+                            reports.map((r, i) => (
+                                <GlossCard key={i} className="report-card">
+                                    <div className="report-icon">📄</div>
+                                    <div className="report-info">
+                                        <h4>{r.name}</h4>
+                                        <p>{r.timestamp}</p>
+                                    </div>
+                                    <StrategicButton variant="secondary">VIEW</StrategicButton>
+                                </GlossCard>
+                            ))
+                        ) : (
+                            <div className="empty-state">NO REPORTS GENERATED YET.</div>
+                        )}
+                    </div>
+                </StrategicSection>
+            </div>
+        }
+    />
+);
 
 export default App;

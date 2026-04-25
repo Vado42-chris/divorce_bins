@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "type": "INTELLIGENCE",
+    "sourceId": "test_verification_id",
+    "overrideContent": "Verified Phase 71 Refinement Success"
+  }
+]

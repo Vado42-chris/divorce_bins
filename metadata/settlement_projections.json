@@ -1,0 +1,14 @@
+{
+    "case_id": "SGI-ARB-2026",
+    "primary_claim": "16-892471",
+    "aggregate_severity": "Unknown",
+    "icd_diagnostic_weight": 0,
+    "total_loss_incident": true,
+    "projections": {
+        "non_pecuniary_min": 0.0,
+        "non_pecuniary_max": 5500.0,
+        "currency": "CAD"
+    },
+    "disclaimer": "Heuristic projection only. Based on typical Saskatchewan case law patterns for identified severity levels.",
+    "generated_at": "2026-04-25T01:16:46.625051"
+}

@@ -7,7 +7,7 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "start": "node server.js & npm run preview -- --host 0.0.0.0 --port 5174"
+        "start": "node server.cjs & npm run preview -- --host 0.0.0.0 --port 5174"
     },
     "dependencies": {
         "adm-zip": "^0.5.17",

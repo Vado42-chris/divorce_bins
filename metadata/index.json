@@ -1,936 +1,864 @@
 [
   {
-    "id": "1000006202.png_976888",
-    "title": "Image: 1000006202.png",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "media",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "1000006202.png",
-    "domain": "Family Law"
-  },
-  {
-    "id": "1000006332.jpg_976941",
-    "title": "Image: 1000006332.jpg",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "media",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "1000006332.jpg",
-    "domain": "Family Law"
-  },
-  {
-    "id": "1000006334.jpg_976988",
-    "title": "Image: 1000006334.jpg",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "media",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "1000006334.jpg",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2025-10-03 Chris Hallberg LT.pdf_977081",
-    "title": "Document: 2025-10-03 Chris Hallberg LT.pdf",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2025-10-03 Chris Hallberg LT.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2026-02-20 Chris Hallberg LT_1.pdf_977182",
-    "title": "Document: 2026-02-20 Chris Hallberg LT_1.pdf",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2026-02-20 Chris Hallberg LT_1.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Fw_ Katherine Andersen & Yourself_1.eml_977642",
-    "title": "Fw_ Katherine Andersen & Yourself_1.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Fw_ Katherine Andersen & Yourself_1.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Fw_ Katherine Andersen & Yourself_2.eml_977686",
-    "title": "Fw_ Katherine Andersen & Yourself_2.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Fw_ Katherine Andersen & Yourself_2.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Fw_ Katherine Andersen & Yourself_3.eml_977733",
-    "title": "Fw_ Katherine Andersen & Yourself_3.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Fw_ Katherine Andersen & Yourself_3.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Fw_ Katherine Andersen & Yourself_4.eml_977779",
-    "title": "Fw_ Katherine Andersen & Yourself_4.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Fw_ Katherine Andersen & Yourself_4.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Fw_ Katherine Andersen & Yourself.eml_978330",
-    "title": "Re_ Fw_ Katherine Andersen & Yourself.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Fw_ Katherine Andersen & Yourself.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine Andersen & Yourself.eml_978471",
-    "title": "Re_ Katherine Andersen & Yourself.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine Andersen & Yourself_1.eml_978516",
-    "title": "Re_ Katherine Andersen & Yourself_1.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_1.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine Andersen & Yourself_10.eml_978559",
-    "title": "Re_ Katherine Andersen & Yourself_10.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_10.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine Andersen & Yourself_11.eml_978604",
-    "title": "Re_ Katherine Andersen & Yourself_11.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_11.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine Andersen & Yourself_12.eml_978648",
-    "title": "Re_ Katherine Andersen & Yourself_12.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_12.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine Andersen & Yourself_2.eml_978693",
-    "title": "Re_ Katherine Andersen & Yourself_2.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_2.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine Andersen & Yourself_3.eml_978738",
-    "title": "Re_ Katherine Andersen & Yourself_3.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_3.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Fwd_ Katherine Andersen & Yourself.eml_979243",
-    "title": "Fwd_ Katherine Andersen & Yourself.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Fwd_ Katherine Andersen & Yourself.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Fwd_ Katherine Andersen & Yourself_1.eml_979288",
-    "title": "Fwd_ Katherine Andersen & Yourself_1.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Fwd_ Katherine Andersen & Yourself_1.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine Andersen & Yourself_5.eml_979334",
-    "title": "Re_ Katherine Andersen & Yourself_5.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_5.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine Andersen & Yourself_6.eml_979379",
-    "title": "Re_ Katherine Andersen & Yourself_6.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_6.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine Andersen & Yourself_7.eml_979424",
-    "title": "Re_ Katherine Andersen & Yourself_7.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_7.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "RE_ Katherine Andersen & Yourself_8.eml_979470",
-    "title": "RE_ Katherine Andersen & Yourself_8.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "RE_ Katherine Andersen & Yourself_8.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine Andersen & Yourself_9.eml_979517",
-    "title": "Re_ Katherine Andersen & Yourself_9.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_9.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine- law.eml_979563",
-    "title": "Re_ Katherine- law.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine- law.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Screenshot_20251008_122415_Chrome.jpg_979989",
-    "title": "Image: Screenshot_20251008_122415_Chrome.jpg",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "media",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Screenshot_20251008_122415_Chrome.jpg",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Screenshot_20251008_122431_Chrome.jpg_980038",
-    "title": "Image: Screenshot_20251008_122431_Chrome.jpg",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "media",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Screenshot_20251008_122431_Chrome.jpg",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Katherine Andersen & Yourself.eml_980291",
-    "title": "Katherine Andersen & Yourself.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Katherine Andersen & Yourself.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Katherine Andersen & Yourself_4.eml_980387",
-    "title": "Re_ Katherine Andersen & Yourself_4.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Katherine Andersen & Yourself_4.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Katherine Andersen & Yourself_1.eml_980435",
-    "title": "Katherine Andersen & Yourself_1.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Katherine Andersen & Yourself_1.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Katherine Andersen & Yourself_2.eml_980482",
-    "title": "Katherine Andersen & Yourself_2.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Katherine Andersen & Yourself_2.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Katherine Andersen & Yourself_3.eml_980530",
-    "title": "Katherine Andersen & Yourself_3.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Katherine Andersen & Yourself_3.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Katherine Andersen & Yourself_4.eml_980575",
-    "title": "Katherine Andersen & Yourself_4.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Katherine Andersen & Yourself_4.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Katherine Andersen & Yourself_5.eml_980619",
-    "title": "Katherine Andersen & Yourself_5.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Katherine Andersen & Yourself_5.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Katherine Andersen & Yourself_6.eml_980664",
-    "title": "Katherine Andersen & Yourself_6.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Katherine Andersen & Yourself_6.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Katherine Andersen & Yourself_7.eml_980707",
-    "title": "Katherine Andersen & Yourself_7.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Katherine Andersen & Yourself_7.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Katherine- law.eml_980752",
-    "title": "Katherine- law.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Katherine- law.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "New bill arrival. Katherine Andersen-Hallberg vs Chris Hallberg.eml_980845",
-    "title": "New bill arrival. Katherine Andersen-Hallberg vs Chris Hallberg.eml",
-    "timestamp": "2026-04-20 04:40:34",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "New bill arrival. Katherine Andersen-Hallberg vs Chris Hallberg.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": ".~lock.jan_10_2026_katherine-v-chris_served.odt#_976798",
-    "title": ".~lock.jan_10_2026_katherine-v-chris_served.odt#",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": ".~lock.jan_10_2026_katherine-v-chris_served.odt#",
-    "domain": "Family Law"
-  },
-  {
-    "id": "1000007151.png_977034",
-    "title": "Image: 1000007151.png",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "media",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "1000007151.png",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2026-03-09.01 Tim Turple LT.pdf_977228",
-    "title": "Document: 2026-03-09.01 Tim Turple LT.pdf",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2026-03-09.01 Tim Turple LT.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "FW_ Katherine Andersen and Chris Hallberg.eml_977825",
-    "title": "FW_ Katherine Andersen and Chris Hallberg.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "FW_ Katherine Andersen and Chris Hallberg.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "INSTRUCTIONS_ Demand for Complete Correspondence File from Opposing Counsel & Case Index.eml_978049",
-    "title": "INSTRUCTIONS_ Demand for Complete Correspondence File from Opposing Counsel & Case Index.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "INSTRUCTIONS_ Demand for Complete Correspondence File from Opposing Counsel & Case Index.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Answer and Counter-Petition_ Andersen v Hallberg_.eml_978095",
-    "title": "Re_ Answer and Counter-Petition_ Andersen v Hallberg_.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Answer and Counter-Petition_ Andersen v Hallberg_.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "re_ Answer and Counter-Petition_ Andersen v Hallberg__1.eml_978145",
-    "title": "re_ Answer and Counter-Petition_ Andersen v Hallberg__1.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "re_ Answer and Counter-Petition_ Andersen v Hallberg__1.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "re_ DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml_978190",
-    "title": "re_ DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "re_ DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Hallberg v Anderson.eml_978381",
-    "title": "Re_ Hallberg v Anderson.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Hallberg v Anderson.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "20260119_133615-1.PDF_978828",
-    "title": "Document: 20260119_133615-1.PDF",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "20260119_133615-1.PDF",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2449 Eastview - Saskatoon.pdf_978873",
-    "title": "Document: 2449 Eastview - Saskatoon.pdf",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2449 Eastview - Saskatoon.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Answer and Counter Petitioner Mar 12, 2026.pdf_978970",
-    "title": "Document: Answer and Counter Petitioner Mar 12, 2026.pdf",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Answer and Counter Petitioner Mar 12, 2026.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Answer and Counter Petitioner Mar 12, 2026_1.pdf_979015",
-    "title": "Document: Answer and Counter Petitioner Mar 12, 2026_1.pdf",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Answer and Counter Petitioner Mar 12, 2026_1.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Answer and Counter Petitioner Mar 23, 2026.pdf_979059",
-    "title": "Document: Answer and Counter Petitioner Mar 23, 2026.pdf",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Answer and Counter Petitioner Mar 23, 2026.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml_979152",
-    "title": "DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "DIV-SA-05-2026_ Andersen v Hallberg_ Answer and Counter Petition.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Retainer Agreement.eml_979618",
-    "title": "Re_ Retainer Agreement.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Retainer Agreement.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Retainer Agreement_1.eml_979672",
-    "title": "Re_ Retainer Agreement_1.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Retainer Agreement_1.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "RE_ Retainer Agreement_2.eml_979720",
-    "title": "RE_ Retainer Agreement_2.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "RE_ Retainer Agreement_2.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Retainer Agreement_3.eml_979766",
-    "title": "Re_ Retainer Agreement_3.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Retainer Agreement_3.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "re_ Retainer Agreement_4.eml_979809",
-    "title": "re_ Retainer Agreement_4.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "re_ Retainer Agreement_4.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Tim from Merchant Law.eml_980137",
-    "title": "Tim from Merchant Law.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Tim from Merchant Law.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Letter to Valerie Watson - Mar 23, 2026.pdf_980799",
-    "title": "Document: Letter to Valerie Watson - Mar 23, 2026.pdf",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Letter to Valerie Watson - Mar 23, 2026.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Retainer Agreement - Dec 22, 2025.pdf_980890",
-    "title": "Document: Retainer Agreement - Dec 22, 2025.pdf",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Retainer Agreement - Dec 22, 2025.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "re_ Andersen v Hallberg_ Letter to Valerie Watson.eml_980938",
-    "title": "re_ Andersen v Hallberg_ Letter to Valerie Watson.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "re_ Andersen v Hallberg_ Letter to Valerie Watson.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Annual Income_ Andersen v Hallberg.eml_980988",
-    "title": "Re_ Annual Income_ Andersen v Hallberg.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Annual Income_ Andersen v Hallberg.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Annual Income_ Andersen v Hallberg_1.eml_981034",
-    "title": "Re_ Annual Income_ Andersen v Hallberg_1.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Annual Income_ Andersen v Hallberg_1.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "RE_ Annual Income_ Andersen v Hallberg_2.eml_981080",
-    "title": "RE_ Annual Income_ Andersen v Hallberg_2.eml",
-    "timestamp": "2026-04-20 04:40:32",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "RE_ Annual Income_ Andersen v Hallberg_2.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2026-02-20 Chris Hallberg LT.pdf_977135",
-    "title": "Document: 2026-02-20 Chris Hallberg LT.pdf",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2026-02-20 Chris Hallberg LT.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2026-04-01 DRAFT Order - JCC.pdf_977275",
-    "title": "Document: 2026-04-01 DRAFT Order - JCC.pdf",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2026-04-01 DRAFT Order - JCC.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2026-04-01 DRAFT Order - JCC_1.pdf_977321",
-    "title": "Document: 2026-04-01 DRAFT Order - JCC_1.pdf",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2026-04-01 DRAFT Order - JCC_1.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2026-04-01 DRAFT Order - JCC_2.pdf_977368",
-    "title": "Document: 2026-04-01 DRAFT Order - JCC_2.pdf",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2026-04-01 DRAFT Order - JCC_2.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2026-04-01 DRAFT Order - JCC_3.pdf_977414",
-    "title": "Document: 2026-04-01 DRAFT Order - JCC_3.pdf",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2026-04-01 DRAFT Order - JCC_3.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2026-04-01 Request for JCC.pdf_977459",
-    "title": "Document: 2026-04-01 Request for JCC.pdf",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2026-04-01 Request for JCC.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2026-04-01 Request for JCC_1.pdf_977504",
-    "title": "Document: 2026-04-01 Request for JCC_1.pdf",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2026-04-01 Request for JCC_1.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml_977550",
-    "title": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Fw_ Katherine Andersen & Yourself.eml_977596",
-    "title": "Fw_ Katherine Andersen & Yourself.eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Fw_ Katherine Andersen & Yourself.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml_977871",
-    "title": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml_977916",
-    "title": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "FW_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026_1.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "image001.jpg_977960",
-    "title": "Image: image001.jpg",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "media",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "image001.jpg",
-    "domain": "Family Law"
-  },
-  {
-    "id": "image001_1.jpg_978006",
-    "title": "Image: image001_1.jpg",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "media",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "image001_1.jpg",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Financial Statement_ Andersen v Hallberg.eml_978238",
-    "title": "Re_ Financial Statement_ Andersen v Hallberg.eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Financial Statement_ Andersen v Hallberg.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "re_ Financial Statement_ Andersen v Hallberg_1.eml_978284",
-    "title": "re_ Financial Statement_ Andersen v Hallberg_1.eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "re_ Financial Statement_ Andersen v Hallberg_1.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "re_ Income Tax Statements.eml_978426",
-    "title": "re_ Income Tax Statements.eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "re_ Income Tax Statements.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2026-04-01 Request for JCC_3.pdf_978783",
-    "title": "Document: 2026-04-01 Request for JCC_3.pdf",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2026-04-01 Request for JCC_3.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Answer and Counter Petition - Revision - Mar 24, 2026.pdf_978922",
-    "title": "Document: Answer and Counter Petition - Revision - Mar 24, 2026.pdf",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Answer and Counter Petition - Revision - Mar 24, 2026.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "April 1st surgery, cancellation.eml_979107",
-    "title": "April 1st surgery, cancellation.eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "April 1st surgery, cancellation.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Financial Statement - Client - Apr 8, 2026.pdf_979198",
-    "title": "Document: Financial Statement - Client - Apr 8, 2026.pdf",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Financial Statement - Client - Apr 8, 2026.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml_979853",
-    "title": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_1.eml_979899",
-    "title": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_1.eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_1.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_2.eml_979945",
-    "title": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_2.eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Re_ Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review)_2.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml_980084",
-    "title": "Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Subject_ Executive Summary & Proposed Long-Term Case Strategy (For Review).eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "2026-04-01 Request for JCC_2.pdf_980186",
-    "title": "Document: 2026-04-01 Request for JCC_2.pdf",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "document",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "2026-04-01 Request for JCC_2.pdf",
-    "domain": "Family Law"
-  },
-  {
-    "id": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml_980234",
-    "title": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "Fwd_ Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "re_ Answer and Counter Petition_ Andersen v Hallberg_DIV-SA-05-2026.eml_980339",
-    "title": "re_ Answer and Counter Petition_ Andersen v Hallberg_DIV-SA-05-2026.eml",
-    "timestamp": "2026-04-20 04:40:30",
-    "type": "generic",
-    "source": "legal_email",
-    "status": "vault",
-    "path": "re_ Answer and Counter Petition_ Andersen v Hallberg_DIV-SA-05-2026.eml",
-    "domain": "Family Law"
-  },
-  {
-    "id": "mock_sgi_assessment.md_679672",
+    "id": "legal_email_2026-04-08_180113_re Financial Statement Anderse.md_a1df528844e8",
+    "title": "re: Financial Statement; Andersen v Hallberg",
+    "timestamp": "2026-04-08 18:01:13",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-04-08_180113_re Financial Statement Anderse.md",
+    "summary": "# Email: re: Financial Statement; Andersen v Hallberg **From:** Lisa Effler <leffler@merchantlaw.com> **Date:** 2026-04-08 18:01:13 **Source:** legal_...",
+    "domainTags": [
+      "statement"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    }
+  },
+  {
+    "id": "legal_email_2026-04-08_145225_Tim from Merchant Law.md_932f31ddd134",
+    "title": "Tim from Merchant Law",
+    "timestamp": "2026-04-08 14:52:25",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-04-08_145225_Tim from Merchant Law.md",
+    "summary": "# Email: Tim from Merchant Law **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2026-04-08 14:52:25 **Source:** legal_email  ---   I have b...",
+    "flagged": true,
+    "flags": [
+      "sgi claim",
+      "said application",
+      "spousal support",
+      "settlement"
+    ],
+    "flag_context": "... that rental vehicles were booked out due to SGI claim backlogs. Key Opposing Counsel Threat: On Oc... | ...months of exclusive home occupancy (while my SAID application processes), formalize the $2,000/month spous... | ...e-plate/insure it), secure emergency interim spousal support, and stop the >> utility cutoffs. >> Argumen... | ...esented spouse into an inequitable mediation settlement >> . >> The Tactic: They are leveraging my s...",
+    "domainTags": [
+      "statement",
+      "claim",
+      "transaction",
+      "credit card",
+      "medical",
+      "account",
+      "sworn",
+      "deposit",
+      "balance",
+      "sgi"
+    ],
+    "domain": "Witness",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": "backlogs",
+      "dateOfLoss": null,
+      "adjuster": "Kristy Oleksyn",
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Scotiabank",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 31.389999999999997,
+        "net_flow": -31.389999999999997
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": [
+          {
+            "date": "2026-04-25",
+            "description": "01DCAFE",
+            "amount": 6.11,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "306.65",
+            "amount": 3.28,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "306.65",
+            "amount": 2.47,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "ADVISORY GUIDELINES AND THE",
+            "amount": 5.85,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "01DCB14",
+            "amount": 4.56,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "01DCB14",
+            "amount": 4.56,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "01DCB14",
+            "amount": 4.56,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          }
+        ]
+      },
+      "forensic_flags": []
+    },
+    "witness_metadata": {
+      "declarant": "Unknown",
+      "sworn_date": "Unknown",
+      "paragraphs": [
+        "request for judicial case conference; and",
+        "draft interim order. we are transmitting 7 pages. the documents have been, or will be, filed with the court, which is located at 520 spadina crescent east, saskatoon, sk. if you are unable to open the attachments, do not receive all of the pages, or if you have received this transmission in error, please contact kristy at (306) 653-2838. yours truly, kristy oleksyn assistant to leslie g. tallis and valerie g. watson, k.c. email:  koleksyn@scharfsteinlaw.com<mailto:koleksyn@scharfsteinlaw.com> this e-mail is confidential and is solicitor-client privileged and may contain confidential information.  if you are not the intended recipient of this message, any dissemination, distribution or copying of this message is strictly prohibited.  if you have received this e-mail in error, please notify us immediately by return e-mail and delete this e-mail.  thank you. good afternoon, mr. hallberg: please review and retain the attached documents for your personal file. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 - 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. from: kristy oleksyn <koleksyn@scharfsteinlaw.com> sent: april 7, 2026 9:32 am to: tim turple <tturple@merchantlaw.com> cc: valerie watson <vwatson@scharfsteinlaw.com> subject: katherine deborah andersen v. christopher rickie hallberg - div-sa-0005-2026 notice of service of documents (part 12, rule 12-4) date:                           april 7, 2026 time:                            9:32 a.m. court file                div-sa-0005-2026 judicial centre of saskatoon katherine deborah andersen v. christopher rickie hallberg to:                                 name:              timothy turple law firm:      merchant law group email:             tturple@merchantlaw.com<mailto:tturple@merchantlaw.com> from:                           name:              valerie g. watson k.c. firm:                 scharfstein llp address:         200 princeton tower 123 - 2nd avenue south saskatoon, sk s7k 7e6 phone no:       (306) 653-2838 fax no:            (306) 652-4747 email:              vwatson@scharfsteinlaw.com<mailto:vwatson@scharfsteinlaw.com> take notice that the following documents are being served on you pursuant to part 12, rule 12-4 of the rules of the court of king\u2019s bench:",
+        "request for judicial case conference; and",
+        "draft interim order. we are transmitting 7 pages. the documents have been, or will be, filed with the court, which is located at 520 spadina crescent east, saskatoon, sk. if you are unable to open the attachments, do not receive all of the pages, or if you have received this transmission in error, please contact kristy at (306) 653-2838. yours truly, kristy oleksyn assistant to leslie g. tallis and valerie g. watson, k.c. email:  koleksyn@scharfsteinlaw.com<mailto:koleksyn@scharfsteinlaw.com> [cid:image001.jpg@01dcc671.6afea670] this e-mail is confidential and is solicitor-client privileged and may contain confidential information.  if you are not the intended recipient of this message, any dissemination, distribution or copying of this message is strictly prohibited.  if you have received this e-mail in error, please notify us immediately by return e-mail and delete this e-mail.  thank you. hi tim, i was unable to arrange a ride to my pre-op appointment for my surgery on april 1st. this is the second time i have had to cancel this surgery since katherine left in october, due to my lack of funds and or transportation, and now i am no longer eligible for this surgery window. it could be several years before i can get another spot, and that means several more years of suffering because of this. i don't know how much more damage katherine's avoidance can cause, but this is definitely another casualty of it. i won't be getting my surgery on april 1st due to this unfortunately. chris. good morning, mr. hallberg: i require income tax statements for 2022, 2023, 2024 and 2025 as i need to start the financial and property statements for your matter. if you could please send those along with the slips provided by disability that would greatly help. as soon as i receive the requested information, i will complete as much as i can of the financial and property statements and send them out for you to fill out the missing required information. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 - 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. transportation to and from getting my taxes done has also been an issue outside of the money. i am still struggling to find a reliable way to get me to and from my surgery on april 1st. i have been trapped in my house since she left aside from a few short weeks where i had the rental, and a few doctors appointments i managed to get someone to drive me to. i have only managed to leave the house once in the new year for a social event, and that was just to go to a friends house and play a board game. the way she left me, and my lack of funds and transportation has left me trapped in my house. c on thu, mar 26, 2026 at 10:16\u202fam chris hallberg <hallberg1974@gmail.com> wrote: > i have not been able to afford to do my taxes since she left, and i have > dyscalculia and dyslexia. i have never been able to reliably do them > myself. i get them done through h&r block each year. as soon as i have some > income from her, it is on my priority list of things to do, but until then > all i can do is tell you what i have made this year based on my income from > cpp. the only other money i have had come in was through either insurance > (there was a $750 check from sandbox insurance after the bmw writeoff), and > i had a barter system where i was trying to build a website for evolution > raw foods in exchange for dogfood for our puppies. they cancelled that > contract as soon as katherine left, and called in the debt for the food we > had been getting for the past year for our puppies when i told them that > katherine lft me. they no longer had faith that i could get the project > done under their deadline, given my disability, and the reality of my > divorce situation. i have yet to pay that off, but they are willing to > forgive part of it in lieu of work done. > > i am unsure how to proceed with the income tax thing as i am simply > struggling to get food right now each month, and pay my bills. > > chris > > on thu, mar 26, 2026 at 9:26\u202fam tim turple <tturple@merchantlaw.com> > wrote: > >> they are requesting your sworn financial statement and property >> statement. >> >> we sent the answer over to her lawyer yesterday. >> >> we will have to complete the other documents. >> sent from my iphone >> >> on mar 26, 2026, at 8:01\u202fam, chris hallberg <hallberg1974@gmail.com> >> wrote: >> >> \ufeff >> >> you don't often get email from hallberg1974@gmail.com. learn why this is >> important <https://aka.ms/learnaboutsenderidentification> >> dear tim, >> to maximize the efficiency of your billable time, i have prepared this >> executive summary and strategic roadmap. i have synthesized the facts, the >> opposing counsel's tactics, and my proposed long-term strategy so you have >> a clear, top-level view of the case without having to piece together my >> previous emails. >> my goal is to provide you with the factual ammunition you need to >> aggressively pursue my claims, while deferring to your expertise on the >> legal execution. >> 1. the opposing strategy: financial attrition (\"starve-out\") >> it is clear from opposing counsel\u2019s correspondence that they are >> utilizing a calculated financial attrition strategy designed to force a >> disabled, unrepresented spouse into an inequitable mediation settlement >> . >> the tactic: they are leveraging my strictly limited cpp-d income >> ($1,281.09/month) by withholding interim support, knowing i cannot survive >> while carrying the marital debt and housing costs >> . >> the damage: this tactic has successfully ruined my credit (dropping it >> approximately 100 points). enterprise rental deductions drained my bank >> account two months in a row because katherine\u2019s sandbox insurance failed to >> cover the rental after she wrecked the bmw >> . i am now facing a $1,400 power bill and a $640 energy bill with zero >> means to pay them. >> the legal counter: we must frame this to the court not as a standard >> separation, but as extreme bad faith. they are weaponizing my poverty and >> my disability to force a surrender on property division and tracing >> exemptions >> . >> 2. the factual narrative: premeditated patient abandonment >> katherine was my primary caregiver for 5 years while i was bedbound >> . my severe health deterioration spans the last 8 years (chronic cluster >> headaches, spinal arthritis, and sciatic nerve damage) >> . in june 2025, i severely injured my back/sciatica moving equipment from >> our flooded studio, leaving me barely able to walk >> . >> her october 3rd departure was not a spontaneous reaction to an argument; >> it was a premeditated exit designed to leave me stranded and blindsided >> . >> the \"trojan horse\" meals: in her final week, she prepared and froze >> hellofresh meals to create the illusion of providing for me. however, she >> knew i was strictly restricted to a liquid diet due to my medical conditions >> . she planned for her clean getaway while leaving me with no consumable >> food. >> the vehicle sabotage: shortly before leaving via a text message, she >> totaled the bmw (while i suspect she was secretly moving items to her >> parents' house) >> . she then took the only remaining roadworthy vehicle (the kia, >> registered in my name), leaving a disabled, bereaved man without medical >> transportation >> . >> 3. the documented pattern: evading accountability >> katherine\u2019s abrupt departure fits a long-documented pattern of avoiding >> accountability >> . >> when our co-owned studio business flooded with sewage twice, she refused >> to fulfill her operational responsibilities, forcing the physical and >> administrative burden onto my disabled shoulders >> . >> when we established transparency rules for our polyamorous relationship, >> she repeatedly violated them and avoided the necessary communications >> . >> when she decided to end our 16-year relationship, she did so with a text >> message and immediately hid behind her lawyer, refusing to engage in any >> transition planning for her disabled spouse >> . >> 4. proposed long-term strategic roadmap >> based on these facts, i believe our long-term strategy should follow >> these three phases. please let me know if you agree with this approach: >> phase 1: emergency triage & intervention (immediate) >> action: proceed immediately with the urgent chambers application for >> interim relief. >> objective: force the immediate return of the kia (or funds to >> re-plate/insure it), secure emergency interim spousal support, and stop the >> utility cutoffs. >> argument: use the \"premeditated abandonment\" narrative to show the court >> that katherine knowingly stranded a disabled man on a liquid diet, making >> judicial intervention a matter of immediate health and safety >> . >> phase 2: financial stabilization & debt clearance (short-term) >> action: demand immediate disclosure of katherine\u2019s termination/severance >> package from inclusion saskatchewan. >> objective: prevent my credit from dropping further. we must aggressively >> propose that her lump-sum severance and the upcoming bmw insurance payout >> be used instantly to wipe out the high-interest joint marital debt and the >> enterprise collections account. >> argument: as the primary earner who orchestrated this financial crisis, >> her severance should be utilized to stop the financial bleeding for both of >> us, rather than being hoarded while i drown in utility arrears. >> phase 3: final settlement & protection of assets (long-term) >> action: proceed with the formal answer and counter-petition. >> objective: secure 24 months of exclusive home occupancy (while my said >> application processes), formalize the $2,000/month spousal support under >> the advisory guidelines, and enforce the tracing of my exempt inheritance. >> argument: because she swore a false property statement omitting my >> inheritance >> , and because she executed this separation in extreme bad faith, we >> should pursue an unequal division of property in my favor and demand that >> she pay my legal costs. >> i am fully prepared to follow your legal direction, but i wanted to >> ensure you had the complete psychological and strategic framework of how >> katherine operates. she avoids conflict until forced, which means we must >> apply firm legal pressure through the court to get any results. >> please let me know your thoughts on this roadmap, and kindly provide an >> update on the filing of the urgent chambers application. >> sincerely, >> christopher hallberg >> >> ____________________________ >> >> please note, this was a summary i had my ai in notebook llm create. i am >> trying to keep all evidence in there so it can generate reports for me, and >> ideally help do some of the legwork for us to reduce your workload in this. >> i have kept pictures of how she left the house when she left as well on my >> camera if we need them, i can take bank screenshots of the transactions >> that enterprise made, and my actual city power bill came yesterday and it >> is $1800. they will cut me off at the end of april it if is not paid. >> >> last month, i had to focus on left over cell phone bills and internet >> bills or i would have lost my way to communicate with the outside world. >> after paying the balance of those bills and purchasing ensure for the >> month, my bank account was overdrawn by $10. my cpp disability did not >> cover anywhere close to what i need. >> >> additionally, yesterday i got a letter from my bank saying she has >> transferred the mortgage payment fromour scotiabank account to her wealth >> simple account. she appears to have made some mortgage payments in the >> interim. i am not sure what her plan is here, but i wanted to advise you of >> it. >> >> chris >> >> i have not been able to afford to do my taxes since she left, and i have dyscalculia and dyslexia. i have never been able to reliably do them myself. i get them done through h&r block each year. as soon as i have some income from her, it is on my priority list of things to do, but until then all i can do is tell you what i have made this year based on my income from cpp. the only other money i have had come in was through either insurance (there was a $750 check from sandbox insurance after the bmw writeoff), and i had a barter system where i was trying to build a website for evolution raw foods in exchange for dogfood for our puppies. they cancelled that contract as soon as katherine left, and called in the debt for the food we had been getting for the past year for our puppies when i told them that katherine lft me. they no longer had faith that i could get the project done under their deadline, given my disability, and the reality of my divorce situation. i have yet to pay that off, but they are willing to forgive part of it in lieu of work done. i am unsure how to proceed with the income tax thing as i am simply struggling to get food right now each month, and pay my bills. chris on thu, mar 26, 2026 at 9:26\u202fam tim turple <tturple@merchantlaw.com> wrote: > they are requesting your sworn financial statement and property statement. > > we sent the answer over to her lawyer yesterday. > > we will have to complete the other documents. > sent from my iphone > > on mar 26, 2026, at 8:01\u202fam, chris hallberg <hallberg1974@gmail.com> > wrote: > > \ufeff > > you don't often get email from hallberg1974@gmail.com. learn why this is > important <https://aka.ms/learnaboutsenderidentification> > dear tim, > to maximize the efficiency of your billable time, i have prepared this > executive summary and strategic roadmap. i have synthesized the facts, the > opposing counsel's tactics, and my proposed long-term strategy so you have > a clear, top-level view of the case without having to piece together my > previous emails. > my goal is to provide you with the factual ammunition you need to > aggressively pursue my claims, while deferring to your expertise on the > legal execution. > 1. the opposing strategy: financial attrition (\"starve-out\") > it is clear from opposing counsel\u2019s correspondence that they are utilizing > a calculated financial attrition strategy designed to force a disabled, > unrepresented spouse into an inequitable mediation settlement > . > the tactic: they are leveraging my strictly limited cpp-d income > ($1,281.09/month) by withholding interim support, knowing i cannot survive > while carrying the marital debt and housing costs > . > the damage: this tactic has successfully ruined my credit (dropping it > approximately 100 points). enterprise rental deductions drained my bank > account two months in a row because katherine\u2019s sandbox insurance failed to > cover the rental after she wrecked the bmw > . i am now facing a $1,400 power bill and a $640 energy bill with zero > means to pay them. > the legal counter: we must frame this to the court not as a standard > separation, but as extreme bad faith. they are weaponizing my poverty and > my disability to force a surrender on property division and tracing > exemptions > . > 2. the factual narrative: premeditated patient abandonment > katherine was my primary caregiver for 5 years while i was bedbound > . my severe health deterioration spans the last 8 years (chronic cluster > headaches, spinal arthritis, and sciatic nerve damage) > . in june 2025, i severely injured my back/sciatica moving equipment from > our flooded studio, leaving me barely able to walk > . > her october 3rd departure was not a spontaneous reaction to an argument; > it was a premeditated exit designed to leave me stranded and blindsided > . > the \"trojan horse\" meals: in her final week, she prepared and froze > hellofresh meals to create the illusion of providing for me. however, she > knew i was strictly restricted to a liquid diet due to my medical conditions > . she planned for her clean getaway while leaving me with no consumable > food. > the vehicle sabotage: shortly before leaving via a text message, she > totaled the bmw (while i suspect she was secretly moving items to her > parents' house) > . she then took the only remaining roadworthy vehicle (the kia, registered > in my name), leaving a disabled, bereaved man without medical transportation > . > 3. the documented pattern: evading accountability > katherine\u2019s abrupt departure fits a long-documented pattern of avoiding > accountability > . > when our co-owned studio business flooded with sewage twice, she refused > to fulfill her operational responsibilities, forcing the physical and > administrative burden onto my disabled shoulders > . > when we established transparency rules for our polyamorous relationship, > she repeatedly violated them and avoided the necessary communications > . > when she decided to end our 16-year relationship, she did so with a text > message and immediately hid behind her lawyer, refusing to engage in any > transition planning for her disabled spouse > . > 4. proposed long-term strategic roadmap > based on these facts, i believe our long-term strategy should follow these > three phases. please let me know if you agree with this approach: > phase 1: emergency triage & intervention (immediate) > action: proceed immediately with the urgent chambers application for > interim relief. > objective: force the immediate return of the kia (or funds to > re-plate/insure it), secure emergency interim spousal support, and stop the > utility cutoffs. > argument: use the \"premeditated abandonment\" narrative to show the court > that katherine knowingly stranded a disabled man on a liquid diet, making > judicial intervention a matter of immediate health and safety > . > phase 2: financial stabilization & debt clearance (short-term) > action: demand immediate disclosure of katherine\u2019s termination/severance > package from inclusion saskatchewan. > objective: prevent my credit from dropping further. we must aggressively > propose that her lump-sum severance and the upcoming bmw insurance payout > be used instantly to wipe out the high-interest joint marital debt and the > enterprise collections account. > argument: as the primary earner who orchestrated this financial crisis, > her severance should be utilized to stop the financial bleeding for both of > us, rather than being hoarded while i drown in utility arrears. > phase 3: final settlement & protection of assets (long-term) > action: proceed with the formal answer and counter-petition. > objective: secure 24 months of exclusive home occupancy (while my said > application processes), formalize the $2,000/month spousal support under > the advisory guidelines, and enforce the tracing of my exempt inheritance. > argument: because she swore a false property statement omitting my > inheritance > , and because she executed this separation in extreme bad faith, we should > pursue an unequal division of property in my favor and demand that she pay > my legal costs. > i am fully prepared to follow your legal direction, but i wanted to ensure > you had the complete psychological and strategic framework of how katherine > operates. she avoids conflict until forced, which means we must apply firm > legal pressure through the court to get any results. > please let me know your thoughts on this roadmap, and kindly provide an > update on the filing of the urgent chambers application. > sincerely, > christopher hallberg > > ____________________________ > > please note, this was a summary i had my ai in notebook llm create. i am > trying to keep all evidence in there so it can generate reports for me, and > ideally help do some of the legwork for us to reduce your workload in this. > i have kept pictures of how she left the house when she left as well on my > camera if we need them, i can take bank screenshots of the transactions > that enterprise made, and my actual city power bill came yesterday and it > is $1800. they will cut me off at the end of april it if is not paid. > > last month, i had to focus on left over cell phone bills and internet > bills or i would have lost my way to communicate with the outside world. > after paying the balance of those bills and purchasing ensure for the > month, my bank account was overdrawn by $10. my cpp disability did not > cover anywhere close to what i need. > > additionally, yesterday i got a letter from my bank saying she has > transferred the mortgage payment fromour scotiabank account to her wealth > simple account. she appears to have made some mortgage payments in the > interim. i am not sure what her plan is here, but i wanted to advise you of > it. > > chris > > they are requesting your sworn financial statement and property statement. we sent the answer over to her lawyer yesterday. we will have to complete the other documents. sent from my iphone on mar 26, 2026, at 8:01\u202fam, chris hallberg <hallberg1974@gmail.com> wrote: \ufeff you don't often get email from hallberg1974@gmail.com. learn why this is important<https://aka.ms/learnaboutsenderidentification> dear tim, to maximize the efficiency of your billable time, i have prepared this executive summary and strategic roadmap. i have synthesized the facts, the opposing counsel's tactics, and my proposed long-term strategy so you have a clear, top-level view of the case without having to piece together my previous emails. my goal is to provide you with the factual ammunition you need to aggressively pursue my claims, while deferring to your expertise on the legal execution.",
+        "the opposing strategy: financial attrition (\"starve-out\") it is clear from opposing counsel\u2019s correspondence that they are utilizing a calculated financial attrition strategy designed to force a disabled, unrepresented spouse into an inequitable mediation settlement . the tactic: they are leveraging my strictly limited cpp-d income ($1,281.09/month) by withholding interim support, knowing i cannot survive while carrying the marital debt and housing costs . the damage: this tactic has successfully ruined my credit (dropping it approximately 100 points). enterprise rental deductions drained my bank account two months in a row because katherine\u2019s sandbox insurance failed to cover the rental after she wrecked the bmw . i am now facing a $1,400 power bill and a $640 energy bill with zero means to pay them. the legal counter: we must frame this to the court not as a standard separation, but as extreme bad faith. they are weaponizing my poverty and my disability to force a surrender on property division and tracing exemptions .",
+        "the factual narrative: premeditated patient abandonment katherine was my primary caregiver for 5 years while i was bedbound . my severe health deterioration spans the last 8 years (chronic cluster headaches, spinal arthritis, and sciatic nerve damage) . in june 2025, i severely injured my back/sciatica moving equipment from our flooded studio, leaving me barely able to walk . her october 3rd departure was not a spontaneous reaction to an argument; it was a premeditated exit designed to leave me stranded and blindsided . the \"trojan horse\" meals: in her final week, she prepared and froze hellofresh meals to create the illusion of providing for me. however, she knew i was strictly restricted to a liquid diet due to my medical conditions . she planned for her clean getaway while leaving me with no consumable food. the vehicle sabotage: shortly before leaving via a text message, she totaled the bmw (while i suspect she was secretly moving items to her parents' house) . she then took the only remaining roadworthy vehicle (the kia, registered in my name), leaving a disabled, bereaved man without medical transportation .",
+        "the documented pattern: evading accountability katherine\u2019s abrupt departure fits a long-documented pattern of avoiding accountability . when our co-owned studio business flooded with sewage twice, she refused to fulfill her operational responsibilities, forcing the physical and administrative burden onto my disabled shoulders . when we established transparency rules for our polyamorous relationship, she repeatedly violated them and avoided the necessary communications . when she decided to end our 16-year relationship, she did so with a text message and immediately hid behind her lawyer, refusing to engage in any transition planning for her disabled spouse .",
+        "proposed long-term strategic roadmap based on these facts, i believe our long-term strategy should follow these three phases. please let me know if you agree with this approach: phase 1: emergency triage & intervention (immediate) action: proceed immediately with the urgent chambers application for interim relief. objective: force the immediate return of the kia (or funds to re-plate/insure it), secure emergency interim spousal support, and stop the utility cutoffs. argument: use the \"premeditated abandonment\" narrative to show the court that katherine knowingly stranded a disabled man on a liquid diet, making judicial intervention a matter of immediate health and safety . phase 2: financial stabilization & debt clearance (short-term) action: demand immediate disclosure of katherine\u2019s termination/severance package from inclusion saskatchewan. objective: prevent my credit from dropping further. we must aggressively propose that her lump-sum severance and the upcoming bmw insurance payout be used instantly to wipe out the high-interest joint marital debt and the enterprise collections account. argument: as the primary earner who orchestrated this financial crisis, her severance should be utilized to stop the financial bleeding for both of us, rather than being hoarded while i drown in utility arrears. phase 3: final settlement & protection of assets (long-term) action: proceed with the formal answer and counter-petition. objective: secure 24 months of exclusive home occupancy (while my said application processes), formalize the $2,000/month spousal support under the advisory guidelines, and enforce the tracing of my exempt inheritance. argument: because she swore a false property statement omitting my inheritance , and because she executed this separation in extreme bad faith, we should pursue an unequal division of property in my favor and demand that she pay my legal costs. i am fully prepared to follow your legal direction, but i wanted to ensure you had the complete psychological and strategic framework of how katherine operates. she avoids conflict until forced, which means we must apply firm legal pressure through the court to get any results. please let me know your thoughts on this roadmap, and kindly provide an update on the filing of the urgent chambers application. sincerely, christopher hallberg ____________________________ please note, this was a summary i had my ai in notebook llm create. i am trying to keep all evidence in there so it can generate reports for me, and ideally help do some of the legwork for us to reduce your workload in this. i have kept pictures of how she left the house when she left as well on my camera if we need them, i can take bank screenshots of the transactions that enterprise made, and my actual city power bill came yesterday and it is $1800. they will cut me off at the end of april it if is not paid. last month, i had to focus on left over cell phone bills and internet bills or i would have lost my way to communicate with the outside world. after paying the balance of those bills and purchasing ensure for the month, my bank account was overdrawn by $10. my cpp disability did not cover anywhere close to what i need. additionally, yesterday i got a letter from my bank saying she has transferred the mortgage payment fromour scotiabank account to her wealth simple account. she appears to have made some mortgage payments in the interim. i am not sure what her plan is here, but i wanted to advise you of it. chris dear tim, to maximize the efficiency of your billable time, i have prepared this executive summary and strategic roadmap. i have synthesized the facts, the opposing counsel's tactics, and my proposed long-term strategy so you have a clear, top-level view of the case without having to piece together my previous emails. my goal is to provide you with the factual ammunition you need to aggressively pursue my claims, while deferring to your expertise on the legal execution.",
+        "the opposing strategy: financial attrition (\"starve-out\") it is clear from opposing counsel\u2019s correspondence that they are utilizing a calculated financial attrition strategy designed to force a disabled, unrepresented spouse into an inequitable mediation settlement . the tactic: they are leveraging my strictly limited cpp-d income ($1,281.09/month) by withholding interim support, knowing i cannot survive while carrying the marital debt and housing costs . the damage: this tactic has successfully ruined my credit (dropping it approximately 100 points). enterprise rental deductions drained my bank account two months in a row because katherine\u2019s sandbox insurance failed to cover the rental after she wrecked the bmw . i am now facing a $1,400 power bill and a $640 energy bill with zero means to pay them. the legal counter: we must frame this to the court not as a standard separation, but as extreme bad faith. they are weaponizing my poverty and my disability to force a surrender on property division and tracing exemptions .",
+        "the factual narrative: premeditated patient abandonment katherine was my primary caregiver for 5 years while i was bedbound . my severe health deterioration spans the last 8 years (chronic cluster headaches, spinal arthritis, and sciatic nerve damage) . in june 2025, i severely injured my back/sciatica moving equipment from our flooded studio, leaving me barely able to walk . her october 3rd departure was not a spontaneous reaction to an argument; it was a premeditated exit designed to leave me stranded and blindsided . the \"trojan horse\" meals: in her final week, she prepared and froze hellofresh meals to create the illusion of providing for me. however, she knew i was strictly restricted to a liquid diet due to my medical conditions . she planned for her clean getaway while leaving me with no consumable food. the vehicle sabotage: shortly before leaving via a text message, she totaled the bmw (while i suspect she was secretly moving items to her parents' house) . she then took the only remaining roadworthy vehicle (the kia, registered in my name), leaving a disabled, bereaved man without medical transportation .",
+        "the documented pattern: evading accountability katherine\u2019s abrupt departure fits a long-documented pattern of avoiding accountability . when our co-owned studio business flooded with sewage twice, she refused to fulfill her operational responsibilities, forcing the physical and administrative burden onto my disabled shoulders . when we established transparency rules for our polyamorous relationship, she repeatedly violated them and avoided the necessary communications . when she decided to end our 16-year relationship, she did so with a text message and immediately hid behind her lawyer, refusing to engage in any transition planning for her disabled spouse .",
+        "proposed long-term strategic roadmap based on these facts, i believe our long-term strategy should follow these three phases. please let me know if you agree with this approach: phase 1: emergency triage & intervention (immediate) action: proceed immediately with the urgent chambers application for interim relief. objective: force the immediate return of the kia (or funds to re-plate/insure it), secure emergency interim spousal support, and stop the utility cutoffs. argument: use the \"premeditated abandonment\" narrative to show the court that katherine knowingly stranded a disabled man on a liquid diet, making judicial intervention a matter of immediate health and safety . phase 2: financial stabilization & debt clearance (short-term) action: demand immediate disclosure of katherine\u2019s termination/severance package from inclusion saskatchewan. objective: prevent my credit from dropping further. we must aggressively propose that her lump-sum severance and the upcoming bmw insurance payout be used instantly to wipe out the high-interest joint marital debt and the enterprise collections account. argument: as the primary earner who orchestrated this financial crisis, her severance should be utilized to stop the financial bleeding for both of us, rather than being hoarded while i drown in utility arrears. phase 3: final settlement & protection of assets (long-term) action: proceed with the formal answer and counter-petition. objective: secure 24 months of exclusive home occupancy (while my said application processes), formalize the $2,000/month spousal support under the advisory guidelines, and enforce the tracing of my exempt inheritance. argument: because she swore a false property statement omitting my inheritance , and because she executed this separation in extreme bad faith, we should pursue an unequal division of property in my favor and demand that she pay my legal costs. i am fully prepared to follow your legal direction, but i wanted to ensure you had the complete psychological and strategic framework of how katherine operates. she avoids conflict until forced, which means we must apply firm legal pressure through the court to get any results. please let me know your thoughts on this roadmap, and kindly provide an update on the filing of the urgent chambers application. sincerely, christopher hallberg ____________________________ please note, this was a summary i had my ai in notebook llm create. i am trying to keep all evidence in there so it can generate reports for me, and ideally help do some of the legwork for us to reduce your workload in this. i have kept pictures of how she left the house when she left as well on my camera if we need them, i can take bank screenshots of the transactions that enterprise made, and my actual city power bill came yesterday and it is $1800. they will cut me off at the end of april it if is not paid. last month, i had to focus on left over cell phone bills and internet bills or i would have lost my way to communicate with the outside world. after paying the balance of those bills and purchasing ensure for the month, my bank account was overdrawn by $10. my cpp disability did not cover anywhere close to what i need. additionally, yesterday i got a letter from my bank saying she has transferred the mortgage payment fromour scotiabank account to her wealth simple account. she appears to have made some mortgage payments in the interim. i am not sure what her plan is here, but i wanted to advise you of it. chris good afternoon, mr. hallberg: kindly review the attached revised document from mr. turple in regard to the above-mentioned matter. i have made the revision you have suggested. please sign and send back as soon as possible. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 - 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. hi lisa, on line 15, i was divorced previously. should that be stated? it says never married. if not i can sign it and send it back get outlook for android<https://aka.ms/aab9ysg> ________________________________ from: lisa effler <leffler@merchantlaw.com> sent: monday, march 23, 2026 4:00:05 pm to: hallberg1974@gmail.com <hallberg1974@gmail.com> cc: tim turple <tturple@merchantlaw.com> subject: re: answer and counter-petition; andersen v hallberg; good afternoon, mr. hallberg: please see the attached document that mr. turple has made some revisions to and advise us of any changes required. if no changes are required, please sign and return. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 \u2013 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. good afternoon, mr. hallberg: please see the attached document that mr. turple has made some revisions to and advise us of any changes required. if no changes are required, please sign and return. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 - 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. good morning, mr. hallberg: please review the attached letter from mr. turple and advise if there are any modifications that are required prior to sending to ms. watson. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 - 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 - 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. from: judy smith <jsmith@scharfsteinlaw.com> sent: march 9, 2026 5:00 pm to: tim turple <tturple@merchantlaw.com> subject: katherine andersen and chris hallberg you don't often get email from jsmith@scharfsteinlaw.com<mailto:jsmith@scharfsteinlaw.com>. learn why this is important<https://aka.ms/learnaboutsenderidentification> good afternoon tim attached please find a letter from valerie watson dated today\u2019s date, with respect to this matter. judy smith assistant to brent d. barilla, k.c. email:  jsmith@scharfsteinlaw.com<mailto:jsmith@scharfsteinlaw.com> [cid:image001.jpg@01dcafe6.110b62d0] 200 princeton tower 123-2nd avenue south saskatoon, sk s7k 7e6 phone: 306.653.2838 fax: 306.652.4747 email: lawyers@scharfsteinlaw.com<mailto:reception@scharfsteinlaw.com> www.scharfsteinlaw.com<http://www.scharfsteinlaw.com/> p before printing, please think about the environment. this e-mail is confidential and is solicitor-client privileged and may contain confidential information.  if you are not the intended recipient of this message, any dissemination, distribution or copying of this message is strictly prohibited.  if you have received this e-mail in error, please notify us immediately by return e-mail and delete this e-mail.  thank you. good morning, mr. hallberg: i am resending the answer and counter petition from mr. turple for your review in regard to the above-mentioned matter. please advise if there are any revisions to be made. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 - 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. tim and lisa, to save billable hours and ensure the court record is complete, i am providing a chronological index of the substantive legal and financial disclosures i engaged in directly with opposing counsel (valerie watson k.c. and kristy oleksyn at scharfstein llp) prior to your firm taking over communication. i have already laid the groundwork for my claims regarding spousal support, exclusive occupancy, tracing of exempt inheritance, and human rights disability accommodations. my instructions to you: please formally contact valerie watson k.c. and demand they produce the complete, unedited correspondence threads (both my sent emails and their replies) between my email and their office from october 4, 2025, through november 4, 2025. placing the burden on them to supply these threads officially puts my disclosures on the record and saves you from having to bill me to sort through raw email forwards. critically, because i disclosed my tracing exemptions on october 9, 2025, this file will prove that katherine knowingly omitted my inheritance from her sworn property statement on december 30, 2025. when you request their file, verify it contains the following critical emails establishing my legal positions:",
+        "october 4, 2025 \u2013 initial financial baseline & abandonment notified opposing counsel that katherine took the only roadworthy vehicle (kia), leaving me stranded. established my income is solely cpp-d (~$1,200/month) vs. katherine as the primary earner, and noted $3,000 in outstanding insurance arrears.",
+        "october 5, 2025 \u2013 acute bereavement & transportation crisis notified counsel of the sudden death of my stepfather in edmonton and my inability to attend the funeral because katherine took the kia after totalling the bmw.",
+        "october 6 & 8, 2025 \u2013 financial mitigation & said application notified counsel i placed holds on the mortgage and joint credit cards due to inability to pay. notified them i was pursuing a said application and that rental vehicles were booked out due to sgi claim backlogs. key opposing counsel threat: on oct 8, kristy oleksyn threatened to withdraw katherine's temporary mortgage assistance, falsely accusing me of \"renting\" the home to cary reid. i explicitly countered that cary was present strictly as a disability support worker/accommodation.",
+        "october 9, 2025 \u2013 comprehensive disclosure (the most important document) property & tracing: formally stated that i owned the marital home prior to the relationship, and that i used my father's inheritance for the down payment, home improvements, and paying off marital debt. spousal support & health insurance: officially requested 1,400\u20131,700/month in interim support for 24 months, citing the federal spousal support advisory guidelines and the 5.85:1 income disparity. also requested katherine maintain me on her employer health insurance to cover essential medical needs. caregiver/patient dynamic: documented that katherine was my primary caregiver from 2019\u20132024 while i was bedbound, severely impacting my earning capacity. exclusive occupancy & abandoned assets: requested 24 months of exclusive home occupancy as a medical necessity (saskatchewan human rights code accommodation) while my said application processes. set a 7-14 day ultimatum for the removal of abandoned studio items causing a \"disability accommodation emergency\".",
+        "october 10, 2025 \u2013 mediation refusal & property protection refused to select a mediator (lana wickstrom or demi peters) without first obtaining legal representation to prevent a power imbalance. stated that cary reid must be present to document the removal of any of katherine's items to protect the property inventory for mediation.",
+        "october 22, 2025 \u2013 emergency financial update notified counsel of impending utility cutoffs (595.32overdue)andscotiabankvisacollections(251.65 overdue) resulting from the lack of interim support. disclosed the evolution foods barter agreement delay ($2,610 value) caused by the separation timing, impacting my livelihood.",
+        "november 4, 2025 \u2013 notice of representation officially notified kristy oleksyn and valerie watson: \"i have retained merchant law as my council. please reach out to them instead of me for this matter\". (note: they flagrantly ignored this. they served me personally on january 19, 2026, and continued to email me directly as recently as february 23, 2026). please secure these threads from scharfstein llp so we can move forward with the emergency chambers application for interim support and exclusive occupancy based on the facts i have already put on their desk. sincerely, chris hallberg good morning, mr. hallberg: please review the attached document from mr. turple in regard to the above-mentioned matter. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 - 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. also, this is the credit card debt that was under my name with scotia bank this is combined debt from our marriage that she left me with. i also have a credit card from canadian tire financial that is at about 5000 these debts came from surgery on our dog, insurance for the house and vehicles monthly expenses and more over the past 3 years. i never made a big purchase without discussing with her first. these were joint choices i paid them all off before we moved back to saskatoon about 3 years ago get outlook for android<https://aka.ms/aab9ysg> ________________________________ from: lisa effler <leffler@merchantlaw.com> sent: wednesday, march 11, 2026 10:46:39 am to: chris hallberg <hallberg1974@gmail.com> cc: tim turple <tturple@merchantlaw.com> subject: re: annual income: andersen v hallberg thank you for sending me your cpp deposit information for the month. i also require your monthly disability information so we can make the proper calculations for your petition. if you could please send that as soon as possible, i can continue entering the information. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 \u2013 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. from: chris hallberg <hallberg1974@gmail.com> sent: march 11, 2026 10:43 am to: lisa effler <leffler@merchantlaw.com> subject: re: annual income: andersen v hallberg hi lisa, i don't know where anything is in this house as it is still packed with stuff that her lawyer said i couldnt sell from the studio in addition to her stuff. i have no idea how to access her computer and she had all my info in it. i have screen capped my direct deposit from cpp this month. it's the same every month and had been for about 5 years i think. i can't afford to do my taxes, i have no way to get to an appointment to get my taxes and i am dyslexic with discalcula so i can't do them on my own. chris [cid:image002.png@01dcb144.56054270] on tue, mar 10, 2026, 3:26\u202fpm lisa effler <leffler@merchantlaw.com<mailto:leffler@merchantlaw.com>> wrote: good afternoon, mr. hallberg: i am looking to obtain your annual income for the year of 2025.  if you could please provide that to me as soon as possible, i can continue to work on the answer and counter-petition for your matter with mr. turple. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 \u2013 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. that is my disability payment. that is all i get. that is my entire income. it is cpp disability get outlook for android<https://aka.ms/aab9ysg> ________________________________ from: lisa effler <leffler@merchantlaw.com> sent: wednesday, march 11, 2026 10:46:39 am to: chris hallberg <hallberg1974@gmail.com> cc: tim turple <tturple@merchantlaw.com> subject: re: annual income: andersen v hallberg thank you for sending me your cpp deposit information for the month. i also require your monthly disability information so we can make the proper calculations for your petition. if you could please send that as soon as possible, i can continue entering the information. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 \u2013 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. from: chris hallberg <hallberg1974@gmail.com> sent: march 11, 2026 10:43 am to: lisa effler <leffler@merchantlaw.com> subject: re: annual income: andersen v hallberg hi lisa, i don't know where anything is in this house as it is still packed with stuff that her lawyer said i couldnt sell from the studio in addition to her stuff. i have no idea how to access her computer and she had all my info in it. i have screen capped my direct deposit from cpp this month. it's the same every month and had been for about 5 years i think. i can't afford to do my taxes, i have no way to get to an appointment to get my taxes and i am dyslexic with discalcula so i can't do them on my own. chris [cid:image002.png@01dcb144.56054270] on tue, mar 10, 2026, 3:26\u202fpm lisa effler <leffler@merchantlaw.com<mailto:leffler@merchantlaw.com>> wrote: good afternoon, mr. hallberg: i am looking to obtain your annual income for the year of 2025.  if you could please provide that to me as soon as possible, i can continue to work on the answer and counter-petition for your matter with mr. turple. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 \u2013 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. thank you for sending me your cpp deposit information for the month. i also require your monthly disability information so we can make the proper calculations for your petition. if you could please send that as soon as possible, i can continue entering the information. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 \u2013 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. from: chris hallberg <hallberg1974@gmail.com> sent: march 11, 2026 10:43 am to: lisa effler <leffler@merchantlaw.com> subject: re: annual income: andersen v hallberg hi lisa, i don't know where anything is in this house as it is still packed with stuff that her lawyer said i couldnt sell from the studio in addition to her stuff. i have no idea how to access her computer and she had all my info in it. i have screen capped my direct deposit from cpp this month. it's the same every month and had been for about 5 years i think. i can't afford to do my taxes, i have no way to get to an appointment to get my taxes and i am dyslexic with discalcula so i can't do them on my own. chris [cid:image002.png@01dcb144.56054270] on tue, mar 10, 2026, 3:26\u202fpm lisa effler <leffler@merchantlaw.com<mailto:leffler@merchantlaw.com>> wrote: good afternoon, mr. hallberg: i am looking to obtain your annual income for the year of 2025.  if you could please provide that to me as soon as possible, i can continue to work on the answer and counter-petition for your matter with mr. turple. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 \u2013 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. hi lisa, i have already sent them to you  in my last email as an attachment. i scanned them then i ocr'd the text so you could copy and paste it. i don't know where those files went off the top of my head, as i struggle with these things when in autistic shock. i also got the house assessed by a real estate agent and provided that report as well in my previous email chris get outlook for android<https://aka.ms/aab9ysg> ________________________________ from: lisa effler <leffler@merchantlaw.com> sent: monday, february 23, 2026 4:23:29 pm to: chris hallberg <hallberg1974@gmail.com> cc: tim turple <tturple@merchantlaw.com> subject: re: hallberg v anderson good afternoon, mr. hallberg: i understand that you have been served some papers from scharfstein law but we have not received said papers. if you could kindly forward the papers you were served, other than receiving letters from scharfstein law, it would be appreciated and placed on your file with us. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 \u2013 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. ok. i will try to get this on a computer and get it back to you asap. thank you. i appreciate this more than you know. i am in a really bad place and i just need time and help. this will be paid one way or another i just need time. chris on mon, dec 22, 2025, 9:39\u202fam lisa effler <leffler@merchantlaw.com> wrote: > it is still a requirement to sign the agreement and send it back. the > $5,000 is in trust for you as mentioned. > > > > i\u2019m sure that as long as you agree to make payments on what is owed, mr. > turple would be in agreeance. > > > > lisa effler \u221e legal assistant > > assistant to timothy e. turple > > merchant law group llp > > barristers & solicitors > > #920 \u2013 410 22nd street east > > saskatoon, sk s7k 5t6 > > tel: (306) 653-7777 > > fax: (306) 975-1983 > > [image: 0x0000515c0e84 picture] > > > > the information in this email is intended soley for the addressee(s) > named, and is confidential. any any other distribution, disclosure or > copying is strictly prohibited.  if you have received this communication in > error, please reply by email to the sender and delete or destroy all copies > of this message. > > > > > > *from:* chris hallberg <hallberg1974@gmail.com> > *sent:* december 22, 2025 9:30 am > *to:* lisa effler <leffler@merchantlaw.com> > *cc:* tim turple <tturple@merchantlaw.com> > *subject:* re: retainer agreement > > > > i have no way to pay this until i have some kind of support in place from > my wife. i am seeking costs in this due to the circumstances of her leaving. > > > > i am a disabled man in cpp disability. she left on a friday with a text > message saying contact her lawyer. > > > > > > i was rejected from legal aid and had no options. > > > > i used the last of my credit to pay the retainer. > > > > my wife is the aed at inclusion sask and makes about 100k a year. > > > > i have most of the bills in my name and make about $1200 a month on cpp . > > > > i had discussed this with tim and he said he could help. that is why i > brought in the retainer. > > > > i am out of options. > > > > i can't afford food. i can't afford my mortgage i can't afford my bills i > can't afford to eat and i have had no contact aside from my wife's lawyer. > > > > i told them i retained merchant law and have not heard anything from > anyone since. > > > > > > i don't know what to do. i am in heavy autistic shock and beyond > overwhelmed. i have no options. > > > > please help > > > > on mon, dec 22, 2025, 9:24\u202fam lisa effler <leffler@merchantlaw.com> wrote: > > > > good morning, mr. hallberg: > > > > please see and sign as soon as possible the attached retainer agreement > from mr. turple. please also note that the $5,000 we have received was a > retainer for your file. this is not the whole payment for mr. turple\u2019s > services. > > > > we keep the $5,000 in trust for you to pay for services but once that is > gone, there will be additional fees. mr. turple does charge $600/hr. > > > > > > thank you. > > > > lisa effler \u221e legal assistant > > assistant to timothy e. turple > > merchant law group llp > > barristers & solicitors > > #920 \u2013 410 22nd street east > > saskatoon, sk s7k 5t6 > > tel: (306) 653-7777 > > fax: (306) 975-1983 > > [image: 0x0000515c0e84 picture] > > > > the information in this email is intended soley for the addressee(s) > named, and is confidential. any any other distribution, disclosure or > copying is strictly prohibited.  if you have received this communication in > error, please reply by email to the sender and delete or destroy all copies > of this message. > > > > > > hi lisa, i was served by katherines lawyer this week. i have attached the document. i have reached out to realty executives and had a realtor come appraise the house. i have attached that as well.  i am stil in the position where i require immediate emergency support, i am in no condition to negotiate property disputes when i have no money to eat, and can not leave my house, and all my bills are going unpaid because she is not providing the support she should be. i have had to contact the police to get help with food, i am still on a liquid diet and those items are not available at any foodbank, salvation army, or emergency service. i do not have money to pay for food or bills until i get support from here, and this is destroying my credit, and leaving me in a position where i can not pay my bills. i have provided the pdf from the summons and a text transcript to hopefully help with document processing on your end. my position to their document is that there are a lot of items on that property list that need to be figured out still, this will take time, i need to be able to eat, and survive while we hash this out. thank you chris on mon, dec 22, 2025 at 9:41\u202fam chris hallberg <hallberg1974@gmail.com> wrote: > ok. i will try to get this on a computer and get it back to you asap. > > thank you. i appreciate this more than you know. i am in a really bad > place and i just need time and help. > > this will be paid one way or another i just need time. > > chris > > on mon, dec 22, 2025, 9:39\u202fam lisa effler <leffler@merchantlaw.com> wrote: > >> it is still a requirement to sign the agreement and send it back. the >> $5,000 is in trust for you as mentioned. >> >> >> >> i\u2019m sure that as long as you agree to make payments on what is owed, mr. >> turple would be in agreeance. >> >> >> >> lisa effler \u221e legal assistant >> >> assistant to timothy e. turple >> >> merchant law group llp >> >> barristers & solicitors >> >> #920 \u2013 410 22nd street east >> >> saskatoon, sk s7k 5t6 >> >> tel: (306) 653-7777 >> >> fax: (306) 975-1983 >> >> [image: 0x0000515c0e84 picture] >> >> >> >> the information in this email is intended soley for the addressee(s) >> named, and is confidential. any any other distribution, disclosure or >> copying is strictly prohibited.  if you have received this communication in >> error, please reply by email to the sender and delete or destroy all copies >> of this message. >> >> >> >> >> >> *from:* chris hallberg <hallberg1974@gmail.com> >> *sent:* december 22, 2025 9:30 am >> *to:* lisa effler <leffler@merchantlaw.com> >> *cc:* tim turple <tturple@merchantlaw.com> >> *subject:* re: retainer agreement >> >> >> >> i have no way to pay this until i have some kind of support in place from >> my wife. i am seeking costs in this due to the circumstances of her leaving. >> >> >> >> i am a disabled man in cpp disability. she left on a friday with a text >> message saying contact her lawyer. >> >> >> >> >> >> i was rejected from legal aid and had no options. >> >> >> >> i used the last of my credit to pay the retainer. >> >> >> >> my wife is the aed at inclusion sask and makes about 100k a year. >> >> >> >> i have most of the bills in my name and make about $1200 a month on cpp . >> >> >> >> i had discussed this with tim and he said he could help. that is why i >> brought in the retainer. >> >> >> >> i am out of options. >> >> >> >> i can't afford food. i can't afford my mortgage i can't afford my bills i >> can't afford to eat and i have had no contact aside from my wife's lawyer. >> >> >> >> i told them i retained merchant law and have not heard anything from >> anyone since. >> >> >> >> >> >> i don't know what to do. i am in heavy autistic shock and beyond >> overwhelmed. i have no options. >> >> >> >> please help >> >> >> >> on mon, dec 22, 2025, 9:24\u202fam lisa effler <leffler@merchantlaw.com> >> wrote: >> >> >> >> good morning, mr. hallberg: >> >> >> >> please see and sign as soon as possible the attached retainer agreement >> from mr. turple. please also note that the $5,000 we have received was a >> retainer for your file. this is not the whole payment for mr. turple\u2019s >> services. >> >> >> >> we keep the $5,000 in trust for you to pay for services but once that is >> gone, there will be additional fees. mr. turple does charge $600/hr. >> >> >> >> >> >> thank you. >> >> >> >> lisa effler \u221e legal assistant >> >> assistant to timothy e. turple >> >> merchant law group llp >> >> barristers & solicitors >> >> #920 \u2013 410 22nd street east >> >> saskatoon, sk s7k 5t6 >> >> tel: (306) 653-7777 >> >> fax: (306) 975-1983 >> >> [image: 0x0000515c0e84 picture] >> >> >> >> the information in this email is intended soley for the addressee(s) >> named, and is confidential. any any other distribution, disclosure or >> copying is strictly prohibited.  if you have received this communication in >> error, please reply by email to the sender and delete or destroy all copies >> of this message. >> >> >> >> >> >> it is still a requirement to sign the agreement and send it back. the $5,000 is in trust for you as mentioned. i\u2019m sure that as long as you agree to make payments on what is owed, mr. turple would be in agreeance. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 \u2013 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. from: chris hallberg <hallberg1974@gmail.com> sent: december 22, 2025 9:30 am to: lisa effler <leffler@merchantlaw.com> cc: tim turple <tturple@merchantlaw.com> subject: re: retainer agreement i have no way to pay this until i have some kind of support in place from my wife. i am seeking costs in this due to the circumstances of her leaving. i am a disabled man in cpp disability. she left on a friday with a text message saying contact her lawyer. i was rejected from legal aid and had no options. i used the last of my credit to pay the retainer. my wife is the aed at inclusion sask and makes about 100k a year. i have most of the bills in my name and make about $1200 a month on cpp . i had discussed this with tim and he said he could help. that is why i brought in the retainer. i am out of options. i can't afford food. i can't afford my mortgage i can't afford my bills i can't afford to eat and i have had no contact aside from my wife's lawyer. i told them i retained merchant law and have not heard anything from anyone since. i don't know what to do. i am in heavy autistic shock and beyond overwhelmed. i have no options. please help on mon, dec 22, 2025, 9:24\u202fam lisa effler <leffler@merchantlaw.com<mailto:leffler@merchantlaw.com>> wrote: good morning, mr. hallberg: please see and sign as soon as possible the attached retainer agreement from mr. turple. please also note that the $5,000 we have received was a retainer for your file. this is not the whole payment for mr. turple\u2019s services. we keep the $5,000 in trust for you to pay for services but once that is gone, there will be additional fees. mr. turple does charge $600/hr. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 \u2013 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message. i have no way to pay this until i have some kind of support in place from my wife. i am seeking costs in this due to the circumstances of her leaving. i am a disabled man in cpp disability. she left on a friday with a text message saying contact her lawyer. i was rejected from legal aid and had no options. i used the last of my credit to pay the retainer. my wife is the aed at inclusion sask and makes about 100k a year. i have most of the bills in my name and make about $1200 a month on cpp . i had discussed this with tim and he said he could help. that is why i brought in the retainer. i am out of options. i can't afford food. i can't afford my mortgage i can't afford my bills i can't afford to eat and i have had no contact aside from my wife's lawyer. i told them i retained merchant law and have not heard anything from anyone since. i don't know what to do. i am in heavy autistic shock and beyond overwhelmed. i have no options. please help on mon, dec 22, 2025, 9:24\u202fam lisa effler <leffler@merchantlaw.com> wrote: > > > good morning, mr. hallberg: > > > > please see and sign as soon as possible the attached retainer agreement > from mr. turple. please also note that the $5,000 we have received was a > retainer for your file. this is not the whole payment for mr. turple\u2019s > services. > > > > we keep the $5,000 in trust for you to pay for services but once that is > gone, there will be additional fees. mr. turple does charge $600/hr. > > > > > > thank you. > > > > lisa effler \u221e legal assistant > > assistant to timothy e. turple > > merchant law group llp > > barristers & solicitors > > #920 \u2013 410 22nd street east > > saskatoon, sk s7k 5t6 > > tel: (306) 653-7777 > > fax: (306) 975-1983 > > [image: 0x0000515c0e84 picture] > > > > the information in this email is intended soley for the addressee(s) > named, and is confidential. any any other distribution, disclosure or > copying is strictly prohibited.  if you have received this communication in > error, please reply by email to the sender and delete or destroy all copies > of this message. > > > > > good morning, mr. hallberg: please see and sign as soon as possible the attached retainer agreement from mr. turple. please also note that the $5,000 we have received was a retainer for your file. this is not the whole payment for mr. turple\u2019s services. we keep the $5,000 in trust for you to pay for services but once that is gone, there will be additional fees. mr. turple does charge $600/hr. thank you. lisa effler \u221e legal assistant assistant to timothy e. turple merchant law group llp barristers & solicitors #920 - 410 22nd street east saskatoon, sk s7k 5t6 tel: (306) 653-7777 fax: (306) 975-1983 [0x0000515c0e84 picture] the information in this email is intended soley for the addressee(s) named, and is confidential. any any other distribution, disclosure or copying is strictly prohibited.  if you have received this communication in error, please reply by email to the sender and delete or destroy all copies of this message."
+      ],
+      "type": "Affidavit"
+    },
+    "identity": "Dr. Miller",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-04-08_123440_Re Financial Statement Anderse.md_9863905cee47",
+    "title": "Re: Financial Statement; Andersen v Hallberg",
+    "timestamp": "2026-04-08 12:34:40",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-04-08_123440_Re Financial Statement Anderse.md",
+    "summary": "# Email: Re: Financial Statement; Andersen v Hallberg **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2026-04-08 12:34:40 **Source:** lega...",
+    "domainTags": [
+      "statement"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-04-07_185119_Fwd Katherine Deborah Andersen.md_2aba22dbb7ca",
+    "title": "Fwd: Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026",
+    "timestamp": "2026-04-07 18:51:19",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-04-07_185119_Fwd Katherine Deborah Andersen.md",
+    "summary": "# Email: Fwd: Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026 **From:** Tim Turple <tturple@merchantlaw.com> **Date:** 20...",
+    "domain": "Family Law",
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-04-07_183929_FW Katherine Deborah Andersen .md_542f2b9285ff",
+    "title": "FW: Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026",
+    "timestamp": "2026-04-07 18:39:29",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-04-07_183929_FW Katherine Deborah Andersen .md",
+    "summary": "# Email: FW: Katherine Deborah Andersen v. Christopher Rickie Hallberg - DIV-SA-0005-2026 **From:** Tim Turple <tturple@merchantlaw.com> **Date:** 202...",
+    "domain": "Family Law",
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-03-30_175106_April 1st surgery cancellation.md_7345fd597340",
+    "title": "April 1st surgery, cancellation",
+    "timestamp": "2026-03-30 17:51:06",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-30_175106_April 1st surgery cancellation.md",
+    "summary": "# Email: April 1st surgery, cancellation **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2026-03-30 17:51:06 **Source:** legal_email  --- ...",
+    "domain": "Family Law",
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-03-27_160600_re Income Tax Statements.md_7b02917b54c0",
+    "title": "re: Income Tax Statements",
+    "timestamp": "2026-03-27 16:06:00",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-27_160600_re Income Tax Statements.md",
+    "summary": "# Email: re: Income Tax Statements **From:** Lisa Effler <leffler@merchantlaw.com> **Date:** 2026-03-27 16:06:00 **Source:** legal_email  ---  Good mo...",
+    "domainTags": [
+      "statement"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    }
+  },
+  {
+    "id": "legal_email_2026-03-26_145221_Re Subject Executive Summary  .md_b258d0bf02cd",
+    "title": "Re: Subject: Executive Summary & Proposed Long-Term Case Strategy (For Review)",
+    "timestamp": "2026-03-26 14:52:21",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-26_145221_Re Subject Executive Summary  .md",
+    "summary": "# Email: Re: Subject: Executive Summary & Proposed Long-Term Case Strategy (For Review) **From:** Tim Turple <tturple@merchantlaw.com> **Date:** 2026-...",
+    "flagged": true,
+    "flags": [
+      "said application",
+      "spousal support",
+      "settlement"
+    ],
+    "flag_context": "...months of exclusive home occupancy (while my SAID application processes), formalize the $2,000/month spous... | ...e-plate/insure it), secure emergency interim spousal support, and stop the utility cutoffs. Argument: Use... | ...esented spouse into an inequitable mediation settlement . The Tactic: They are leveraging my strictl...",
+    "domainTags": [
+      "statement",
+      "claim",
+      "transaction",
+      "medical",
+      "account",
+      "sworn",
+      "balance"
+    ],
+    "domain": "Witness",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": null,
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Scotiabank",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "witness_metadata": {
+      "declarant": "Unknown",
+      "sworn_date": "Unknown",
+      "paragraphs": [
+        "the opposing strategy: financial attrition (\"starve-out\") it is clear from opposing counsel\u2019s correspondence that they are utilizing a calculated financial attrition strategy designed to force a disabled, unrepresented spouse into an inequitable mediation settlement . the tactic: they are leveraging my strictly limited cpp-d income ($1,281.09/month) by withholding interim support, knowing i cannot survive while carrying the marital debt and housing costs . the damage: this tactic has successfully ruined my credit (dropping it approximately 100 points). enterprise rental deductions drained my bank account two months in a row because katherine\u2019s sandbox insurance failed to cover the rental after she wrecked the bmw . i am now facing a $1,400 power bill and a $640 energy bill with zero means to pay them. the legal counter: we must frame this to the court not as a standard separation, but as extreme bad faith. they are weaponizing my poverty and my disability to force a surrender on property division and tracing exemptions .",
+        "the factual narrative: premeditated patient abandonment katherine was my primary caregiver for 5 years while i was bedbound . my severe health deterioration spans the last 8 years (chronic cluster headaches, spinal arthritis, and sciatic nerve damage) . in june 2025, i severely injured my back/sciatica moving equipment from our flooded studio, leaving me barely able to walk . her october 3rd departure was not a spontaneous reaction to an argument; it was a premeditated exit designed to leave me stranded and blindsided . the \"trojan horse\" meals: in her final week, she prepared and froze hellofresh meals to create the illusion of providing for me. however, she knew i was strictly restricted to a liquid diet due to my medical conditions . she planned for her clean getaway while leaving me with no consumable food. the vehicle sabotage: shortly before leaving via a text message, she totaled the bmw (while i suspect she was secretly moving items to her parents' house) . she then took the only remaining roadworthy vehicle (the kia, registered in my name), leaving a disabled, bereaved man without medical transportation .",
+        "the documented pattern: evading accountability katherine\u2019s abrupt departure fits a long-documented pattern of avoiding accountability . when our co-owned studio business flooded with sewage twice, she refused to fulfill her operational responsibilities, forcing the physical and administrative burden onto my disabled shoulders . when we established transparency rules for our polyamorous relationship, she repeatedly violated them and avoided the necessary communications . when she decided to end our 16-year relationship, she did so with a text message and immediately hid behind her lawyer, refusing to engage in any transition planning for her disabled spouse .",
+        "proposed long-term strategic roadmap based on these facts, i believe our long-term strategy should follow these three phases. please let me know if you agree with this approach: phase 1: emergency triage & intervention (immediate) action: proceed immediately with the urgent chambers application for interim relief. objective: force the immediate return of the kia (or funds to re-plate/insure it), secure emergency interim spousal support, and stop the utility cutoffs. argument: use the \"premeditated abandonment\" narrative to show the court that katherine knowingly stranded a disabled man on a liquid diet, making judicial intervention a matter of immediate health and safety . phase 2: financial stabilization & debt clearance (short-term) action: demand immediate disclosure of katherine\u2019s termination/severance package from inclusion saskatchewan. objective: prevent my credit from dropping further. we must aggressively propose that her lump-sum severance and the upcoming bmw insurance payout be used instantly to wipe out the high-interest joint marital debt and the enterprise collections account. argument: as the primary earner who orchestrated this financial crisis, her severance should be utilized to stop the financial bleeding for both of us, rather than being hoarded while i drown in utility arrears. phase 3: final settlement & protection of assets (long-term) action: proceed with the formal answer and counter-petition. objective: secure 24 months of exclusive home occupancy (while my said application processes), formalize the $2,000/month spousal support under the advisory guidelines, and enforce the tracing of my exempt inheritance. argument: because she swore a false property statement omitting my inheritance , and because she executed this separation in extreme bad faith, we should pursue an unequal division of property in my favor and demand that she pay my legal costs. i am fully prepared to follow your legal direction, but i wanted to ensure you had the complete psychological and strategic framework of how katherine operates. she avoids conflict until forced, which means we must apply firm legal pressure through the court to get any results. please let me know your thoughts on this roadmap, and kindly provide an update on the filing of the urgent chambers application. sincerely, christopher hallberg ____________________________ please note, this was a summary i had my ai in notebook llm create. i am trying to keep all evidence in there so it can generate reports for me, and ideally help do some of the legwork for us to reduce your workload in this. i have kept pictures of how she left the house when she left as well on my camera if we need them, i can take bank screenshots of the transactions that enterprise made, and my actual city power bill came yesterday and it is $1800. they will cut me off at the end of april it if is not paid. last month, i had to focus on left over cell phone bills and internet bills or i would have lost my way to communicate with the outside world. after paying the balance of those bills and purchasing ensure for the month, my bank account was overdrawn by $10. my cpp disability did not cover anywhere close to what i need. additionally, yesterday i got a letter from my bank saying she has transferred the mortgage payment fromour scotiabank account to her wealth simple account. she appears to have made some mortgage payments in the interim. i am not sure what her plan is here, but i wanted to advise you of it. chris"
+      ],
+      "type": "Affidavit"
+    },
+    "identity": "Dr. Miller",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-03-26_102517_Re Subject Executive Summary  .md_a54fc9aca35b",
+    "title": "Re: Subject: Executive Summary & Proposed Long-Term Case Strategy (For Review)",
+    "timestamp": "2026-03-26 10:25:17",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-26_102517_Re Subject Executive Summary  .md",
+    "summary": "# Email: Re: Subject: Executive Summary & Proposed Long-Term Case Strategy (For Review) **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 20...",
+    "flagged": true,
+    "flags": [
+      "spousal support",
+      "settlement"
+    ],
+    "flag_context": "...e-plate/insure it), secure emergency interim spousal support, and stop the >> utility cutoffs. >> Argumen... | ...esented spouse into an inequitable mediation settlement >> . >> The Tactic: They are leveraging my s...",
+    "domainTags": [
+      "statement",
+      "claim",
+      "transaction",
+      "medical",
+      "account",
+      "sworn",
+      "balance"
+    ],
+    "domain": "Witness",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": null,
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Scotiabank",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "witness_metadata": {
+      "declarant": "Unknown",
+      "sworn_date": "Unknown",
+      "paragraphs": [],
+      "type": "Affidavit"
+    },
+    "identity": "Dr. Miller",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-03-26_101657_Re Subject Executive Summary  .md_7478dee65567",
+    "title": "Re: Subject: Executive Summary & Proposed Long-Term Case Strategy (For Review)",
+    "timestamp": "2026-03-26 10:16:57",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-26_101657_Re Subject Executive Summary  .md",
+    "summary": "# Email: Re: Subject: Executive Summary & Proposed Long-Term Case Strategy (For Review) **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 20...",
+    "flagged": true,
+    "flags": [
+      "spousal support",
+      "settlement"
+    ],
+    "flag_context": "...e-plate/insure it), secure emergency interim spousal support, and stop the > utility cutoffs. > Argument:... | ...esented spouse into an inequitable mediation settlement > . > The Tactic: They are leveraging my str...",
+    "domainTags": [
+      "statement",
+      "claim",
+      "transaction",
+      "medical",
+      "account",
+      "sworn",
+      "balance"
+    ],
+    "domain": "Witness",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": null,
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Scotiabank",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "witness_metadata": {
+      "declarant": "Unknown",
+      "sworn_date": "Unknown",
+      "paragraphs": [],
+      "type": "Affidavit"
+    },
+    "identity": "Dr. Miller",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-03-26_071823_Subject Executive Summary  Pro.md_7bc561daa5d9",
+    "title": "Subject: Executive Summary & Proposed Long-Term Case Strategy (For Review)",
+    "timestamp": "2026-03-26 07:18:23",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-26_071823_Subject Executive Summary  Pro.md",
+    "summary": "# Email: Subject: Executive Summary & Proposed Long-Term Case Strategy (For Review) **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2026-0...",
+    "flagged": true,
+    "flags": [
+      "spousal support",
+      "settlement"
+    ],
+    "flag_context": "...e-plate/insure it), secure emergency interim spousal support, and stop the utility cutoffs. Argument: Use... | ...esented spouse into an inequitable mediation settlement . The Tactic: They are leveraging my strictl...",
+    "domainTags": [
+      "statement",
+      "claim",
+      "transaction",
+      "medical",
+      "account",
+      "balance"
+    ],
+    "domain": "Financial",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": null,
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Scotiabank",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "Dr. Miller",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-03-24_214531_re Answer and Counter Petition.md_a3d7da696b00",
+    "title": "re: Answer and Counter Petition; Andersen v Hallberg;DIV-SA-05-2026",
+    "timestamp": "2026-03-24 21:45:31",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-24_214531_re Answer and Counter Petition.md",
+    "summary": "# Email: re: Answer and Counter Petition; Andersen v Hallberg;DIV-SA-05-2026 **From:** Lisa Effler <leffler@merchantlaw.com> **Date:** 2026-03-24 21:4...",
+    "domain": "Family Law"
+  },
+  {
+    "id": "legal_email_2026-03-23_220631_Re Answer and Counter-Petition.md_600fc0adec55",
+    "title": "Re: Answer and Counter-Petition; Andersen v Hallberg;",
+    "timestamp": "2026-03-23 22:06:31",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-23_220631_Re Answer and Counter-Petition.md",
+    "summary": "# Email: Re: Answer and Counter-Petition; Andersen v Hallberg;  **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2026-03-23 22:06:31 **Sour...",
+    "domain": "Family Law",
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-03-23_220005_re Answer and Counter-Petition.md_c0713831fcd0",
+    "title": "re: Answer and Counter-Petition; Andersen v Hallberg;",
+    "timestamp": "2026-03-23 22:00:05",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-23_220005_re Answer and Counter-Petition.md",
+    "summary": "# Email: re: Answer and Counter-Petition; Andersen v Hallberg;  **From:** Lisa Effler <leffler@merchantlaw.com> **Date:** 2026-03-23 22:00:05 **Source...",
+    "domain": "Family Law"
+  },
+  {
+    "id": "legal_email_2026-03-23_161642_re Andersen v Hallberg Letter .md_0e3efac52800",
+    "title": "re: Andersen v Hallberg; Letter to Valerie Watson",
+    "timestamp": "2026-03-23 16:16:42",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-23_161642_re Andersen v Hallberg Letter .md",
+    "summary": "# Email: re: Andersen v Hallberg; Letter to Valerie Watson **From:** Lisa Effler <leffler@merchantlaw.com> **Date:** 2026-03-23 16:16:42 **Source:** l...",
+    "domain": "Family Law"
+  },
+  {
+    "id": "legal_email_2026-03-23_155047_DIV-SA-05-2026 Andersen v Hall.md_eaa9d1d52a58",
+    "title": "DIV-SA-05-2026; Andersen v Hallberg; Answer and Counter Petition",
+    "timestamp": "2026-03-23 15:50:47",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-23_155047_DIV-SA-05-2026 Andersen v Hall.md",
+    "summary": "# Email: DIV-SA-05-2026; Andersen v Hallberg; Answer and Counter Petition **From:** Lisa Effler <leffler@merchantlaw.com> **Date:** 2026-03-23 15:50:4...",
+    "domain": "Family Law"
+  },
+  {
+    "id": "legal_email_2026-03-23_154750_FW Katherine Andersen and Chri.md_c9ef8b7ac937",
+    "title": "FW: Katherine Andersen and Chris Hallberg",
+    "timestamp": "2026-03-23 15:47:50",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-23_154750_FW Katherine Andersen and Chri.md",
+    "summary": "# Email: FW: Katherine Andersen and Chris Hallberg **From:** Tim Turple <tturple@merchantlaw.com> **Date:** 2026-03-23 15:47:50 **Source:** legal_emai...",
+    "domain": "Family Law",
+    "identity": "John Smith Esq.",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-03-12_155044_re DIV-SA-05-2026 Andersen v H.md_f7c64a9d066c",
+    "title": "re: DIV-SA-05-2026; Andersen v Hallberg; Answer and Counter Petition",
+    "timestamp": "2026-03-12 15:50:44",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-12_155044_re DIV-SA-05-2026 Andersen v H.md",
+    "summary": "# Email: re: DIV-SA-05-2026; Andersen v Hallberg; Answer and Counter Petition **From:** Lisa Effler <leffler@merchantlaw.com> **Date:** 2026-03-12 15:...",
+    "domain": "Family Law"
+  },
+  {
+    "id": "legal_email_2026-03-12_065326_INSTRUCTIONS Demand for Comple.md_fe964260b965",
+    "title": "INSTRUCTIONS: Demand for Complete Correspondence File from Opposing Counsel & Case Index",
+    "timestamp": "2026-03-12 06:53:26",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-12_065326_INSTRUCTIONS Demand for Comple.md",
+    "summary": "# Email: INSTRUCTIONS: Demand for Complete Correspondence File from Opposing Counsel & Case Index **From:** Chris Hallberg <hallberg1974@gmail.com> **...",
+    "flagged": true,
+    "flags": [
+      "sgi claim",
+      "said application",
+      "spousal support"
+    ],
+    "flag_context": "... that rental vehicles were booked out due to SGI claim backlogs. Key Opposing Counsel Threat: On Oc... | ...October 6 & 8, 2025 \u2013 Financial Mitigation & SAID Application Notified counsel I placed holds on the mortg... | ... laid the groundwork for my claims regarding spousal support, exclusive occupancy, tracing of exempt inhe...",
+    "domainTags": [
+      "statement",
+      "claim",
+      "credit card",
+      "medical",
+      "sworn",
+      "balance",
+      "sgi"
+    ],
+    "domain": "Witness",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": "backlogs",
+      "dateOfLoss": null,
+      "adjuster": null,
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Scotiabank",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:52"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 5.85,
+        "net_flow": -5.85
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": [
+          {
+            "date": "2026-04-25",
+            "description": "ADVISORY GUIDELINES AND THE",
+            "amount": 5.85,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          }
+        ]
+      },
+      "forensic_flags": []
+    },
+    "witness_metadata": {
+      "declarant": "Unknown",
+      "sworn_date": "Unknown",
+      "paragraphs": [
+        "october 4, 2025 \u2013 initial financial baseline & abandonment notified opposing counsel that katherine took the only roadworthy vehicle (kia), leaving me stranded. established my income is solely cpp-d (~$1,200/month) vs. katherine as the primary earner, and noted $3,000 in outstanding insurance arrears.",
+        "october 5, 2025 \u2013 acute bereavement & transportation crisis notified counsel of the sudden death of my stepfather in edmonton and my inability to attend the funeral because katherine took the kia after totalling the bmw.",
+        "october 6 & 8, 2025 \u2013 financial mitigation & said application notified counsel i placed holds on the mortgage and joint credit cards due to inability to pay. notified them i was pursuing a said application and that rental vehicles were booked out due to sgi claim backlogs. key opposing counsel threat: on oct 8, kristy oleksyn threatened to withdraw katherine's temporary mortgage assistance, falsely accusing me of \"renting\" the home to cary reid. i explicitly countered that cary was present strictly as a disability support worker/accommodation.",
+        "october 9, 2025 \u2013 comprehensive disclosure (the most important document) property & tracing: formally stated that i owned the marital home prior to the relationship, and that i used my father's inheritance for the down payment, home improvements, and paying off marital debt. spousal support & health insurance: officially requested 1,400\u20131,700/month in interim support for 24 months, citing the federal spousal support advisory guidelines and the 5.85:1 income disparity. also requested katherine maintain me on her employer health insurance to cover essential medical needs. caregiver/patient dynamic: documented that katherine was my primary caregiver from 2019\u20132024 while i was bedbound, severely impacting my earning capacity. exclusive occupancy & abandoned assets: requested 24 months of exclusive home occupancy as a medical necessity (saskatchewan human rights code accommodation) while my said application processes. set a 7-14 day ultimatum for the removal of abandoned studio items causing a \"disability accommodation emergency\".",
+        "october 10, 2025 \u2013 mediation refusal & property protection refused to select a mediator (lana wickstrom or demi peters) without first obtaining legal representation to prevent a power imbalance. stated that cary reid must be present to document the removal of any of katherine's items to protect the property inventory for mediation.",
+        "october 22, 2025 \u2013 emergency financial update notified counsel of impending utility cutoffs (595.32overdue)andscotiabankvisacollections(251.65 overdue) resulting from the lack of interim support. disclosed the evolution foods barter agreement delay ($2,610 value) caused by the separation timing, impacting my livelihood.",
+        "november 4, 2025 \u2013 notice of representation officially notified kristy oleksyn and valerie watson: \"i have retained merchant law as my council. please reach out to them instead of me for this matter\". (note: they flagrantly ignored this. they served me personally on january 19, 2026, and continued to email me directly as recently as february 23, 2026). please secure these threads from scharfstein llp so we can move forward with the emergency chambers application for interim support and exclusive occupancy based on the facts i have already put on their desk. sincerely, chris hallberg"
+      ],
+      "type": "Affidavit"
+    },
+    "identity": "John Smith Esq.",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-03-11_165138_Re Annual Income Andersen v Ha.md_7f87905e2061",
+    "title": "Re: Annual Income: Andersen v Hallberg",
+    "timestamp": "2026-03-11 16:51:38",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-11_165138_Re Annual Income Andersen v Ha.md",
+    "summary": "# Email: Re: Annual Income: Andersen v Hallberg **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2026-03-11 16:51:38 **Source:** legal_emai...",
+    "domainTags": [
+      "credit card",
+      "deposit"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:52"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 4.56,
+        "net_flow": -4.56
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": [
+          {
+            "date": "2026-04-25",
+            "description": "01DCB14",
+            "amount": 4.56,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          }
+        ]
+      },
+      "forensic_flags": []
+    },
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-03-11_164831_Re Annual Income Andersen v Ha.md_6c21f4c71774",
+    "title": "Re: Annual Income: Andersen v Hallberg",
+    "timestamp": "2026-03-11 16:48:31",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-11_164831_Re Annual Income Andersen v Ha.md",
+    "summary": "# Email: Re: Annual Income: Andersen v Hallberg **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2026-03-11 16:48:31 **Source:** legal_emai...",
+    "domainTags": [
+      "deposit"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:52"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 4.56,
+        "net_flow": -4.56
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": [
+          {
+            "date": "2026-04-25",
+            "description": "01DCB14",
+            "amount": 4.56,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          }
+        ]
+      },
+      "forensic_flags": []
+    },
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-03-11_164639_RE Annual Income Andersen v Ha.md_44fc85d25a46",
+    "title": "RE: Annual Income: Andersen v Hallberg",
+    "timestamp": "2026-03-11 16:46:39",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-03-11_164639_RE Annual Income Andersen v Ha.md",
+    "summary": "# Email: RE: Annual Income: Andersen v Hallberg **From:** Lisa Effler <leffler@merchantlaw.com> **Date:** 2026-03-11 16:46:39 **Source:** legal_email ...",
+    "domainTags": [
+      "deposit"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:52"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 4.56,
+        "net_flow": -4.56
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": [
+          {
+            "date": "2026-04-25",
+            "description": "01DCB14",
+            "amount": 4.56,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          }
+        ]
+      },
+      "forensic_flags": []
+    },
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-02-23_225425_Re Hallberg v Anderson.md_9550eee21990",
+    "title": "Re: Hallberg v Anderson",
+    "timestamp": "2026-02-23 22:54:25",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-02-23_225425_Re Hallberg v Anderson.md",
+    "summary": "# Email: Re: Hallberg v Anderson **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2026-02-23 22:54:25 **Source:** legal_email  ---  Hi Lisa...",
+    "domain": "Family Law",
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-02-23_193353_Fw Katherine Andersen  Yoursel.md_a357b776160c",
+    "title": "Fw: Katherine Andersen & Yourself",
+    "timestamp": "2026-02-23 19:33:53",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-02-23_193353_Fw Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Fw: Katherine Andersen & Yourself  **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2026-02-23 19:33:53 **Source:** legal_email  -...",
+    "domain": "Family Law",
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2026-02-23_190606_Katherine Andersen  Yourself.md_213f4afa6060",
+    "title": "Katherine Andersen & Yourself",
+    "timestamp": "2026-02-23 19:06:06",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-02-23_190606_Katherine Andersen  Yourself.md",
+    "summary": "# Email: Katherine Andersen & Yourself  **From:** Kristy Oleksyn <koleksyn@scharfsteinlaw.com> **Date:** 2026-02-23 19:06:06 **Source:** legal_email  ...",
+    "domain": "Family Law"
+  },
+  {
+    "id": "legal_email_2026-01-22_092535_Re Retainer Agreement.md_5a7ebd5d0607",
+    "title": "Re: Retainer Agreement",
+    "timestamp": "2026-01-22 09:25:35",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2026-01-22_092535_Re Retainer Agreement.md",
+    "summary": "# Email: Re: Retainer Agreement **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2026-01-22 09:25:35 **Source:** legal_email  ---  Hi Lisa,...",
+    "domain": "Family Law",
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "mock_sgi_assessment.md_efaf0298b445",
     "title": "Initial Injury Assessment",
     "timestamp": "2026-01-15 10:00:00",
     "type": "Document",
     "source": "local",
     "status": "discovery",
     "path": "mock_sgi_assessment.md",
+    "summary": "Saskatchewan Government Insurance (SGI) Date of Loss: 2025-11-20 Claim Number: 16-892471 Adjuster: Robert Henderson  Patient Assessment & Incident Rep...",
     "flagged": true,
     "flags": [
       "collision"
     ],
+    "flag_context": "...ort  The claimant was involved in a rear-end collision. Upon physical examination and x-ray diagnos...",
     "domainTags": [
       "sgi",
       "injury",
@@ -955,44 +883,1138 @@
         "S42.0"
       ],
       "injurySeverity": "High/Severe"
-    }
+    },
+    "identity": "SGI Adjuster",
+    "identityColor": "#888"
   },
   {
-    "id": "pixel8_2024-04-19_202640_5551234.md_638628",
+    "id": "legal_email_2025-12-22_153947_RE Retainer Agreement.md_f70e28928d94",
+    "title": "RE: Retainer Agreement",
+    "timestamp": "2025-12-22 15:39:47",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-12-22_153947_RE Retainer Agreement.md",
+    "summary": "# Email: RE: Retainer Agreement **From:** Lisa Effler <leffler@merchantlaw.com> **Date:** 2025-12-22 15:39:47 **Source:** legal_email  ---  It is stil...",
+    "domain": "Family Law",
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-12-22_152452_re Retainer Agreement.md_5f90527f9229",
+    "title": "re: Retainer Agreement",
+    "timestamp": "2025-12-22 15:24:52",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-12-22_152452_re Retainer Agreement.md",
+    "summary": "# Email: re: Retainer Agreement **From:** Lisa Effler <leffler@merchantlaw.com> **Date:** 2025-12-22 15:24:52 **Source:** legal_email  ---   Good morn...",
+    "domain": "Family Law"
+  },
+  {
+    "id": "legal_email_2025-12-22_094151_Re Retainer Agreement.md_ddd49918bd3e",
+    "title": "Re: Retainer Agreement",
+    "timestamp": "2025-12-22 09:41:51",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-12-22_094151_Re Retainer Agreement.md",
+    "summary": "# Email: Re: Retainer Agreement **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-12-22 09:41:51 **Source:** legal_email  ---  Ok. I wi...",
+    "domain": "Family Law",
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-12-22_093002_Re Retainer Agreement.md_df31af6cc0f8",
+    "title": "Re: Retainer Agreement",
+    "timestamp": "2025-12-22 09:30:02",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-12-22_093002_Re Retainer Agreement.md",
+    "summary": "# Email: Re: Retainer Agreement **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-12-22 09:30:02 **Source:** legal_email  ---  I have n...",
+    "domain": "Family Law",
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-11-04_203503_Re Katherine Andersen  Yoursel.md_351149109f1f",
+    "title": "Re: Katherine Andersen & Yourself",
+    "timestamp": "2025-11-04 20:35:03",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-11-04_203503_Re Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Re: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-11-04 20:35:03 **Source:** legal_email  --...",
+    "domain": "Family Law",
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-11-04_203351_Re Katherine Andersen  Yoursel.md_200412f19456",
+    "title": "Re: Katherine Andersen & Yourself",
+    "timestamp": "2025-11-04 20:33:51",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-11-04_203351_Re Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Re: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-11-04 20:33:51 **Source:** legal_email  --...",
+    "domain": "Family Law",
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-29_201319_Katherine Andersen  Yourself.md_b0e6649a1731",
+    "title": "Katherine Andersen & Yourself",
+    "timestamp": "2025-10-29 20:13:19",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-29_201319_Katherine Andersen  Yourself.md",
+    "summary": "# Email: Katherine Andersen & Yourself **From:** Kristy Oleksyn <koleksyn@scharfsteinlaw.com> **Date:** 2025-10-29 20:13:19 **Source:** legal_email  -...",
+    "domain": "Family Law",
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-28_194503_Fwd Katherine Andersen  Yourse.md_eec426c6f756",
+    "title": "Fwd: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-28 19:45:03",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-28_194503_Fwd Katherine Andersen  Yourse.md",
+    "summary": "# Email: Fwd: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-28 19:45:03 **Source:** legal_email  -...",
+    "domain": "Family Law",
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-28_194401_Fwd Katherine Andersen  Yourse.md_0b6af5600acc",
+    "title": "Fwd: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-28 19:44:01",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-28_194401_Fwd Katherine Andersen  Yourse.md",
+    "summary": "# Email: Fwd: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-28 19:44:01 **Source:** legal_email  -...",
+    "domainTags": [
+      "account",
+      "balance",
+      "statement"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-25_151928_Re Katherine Andersen  Yoursel.md_18ce780d386c",
+    "title": "Re: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-25 15:19:28",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-25_151928_Re Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Re: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-25 15:19:28 **Source:** legal_email  --...",
+    "domainTags": [
+      "account",
+      "balance",
+      "statement"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-24_175920_Katherine Andersen  Yourself.md_ab03c508a975",
+    "title": "Katherine Andersen & Yourself",
+    "timestamp": "2025-10-24 17:59:20",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-24_175920_Katherine Andersen  Yourself.md",
+    "summary": "# Email: Katherine Andersen & Yourself **From:** Kristy Oleksyn <koleksyn@scharfsteinlaw.com> **Date:** 2025-10-24 17:59:20 **Source:** legal_email  -...",
+    "domain": "Family Law",
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-23_202122_New bill arrival Katherine And.md_bcc36f93593e",
+    "title": "New bill arrival. Katherine Andersen-Hallberg vs Chris Hallberg",
+    "timestamp": "2025-10-23 20:21:22",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-23_202122_New bill arrival Katherine And.md",
+    "summary": "# Email: New bill arrival. Katherine Andersen-Hallberg vs Chris Hallberg **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-23 20:21:...",
+    "domainTags": [
+      "account"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-23_193403_Fw Katherine Andersen  Yoursel.md_4dd420b73a82",
+    "title": "Fw: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-23 19:34:03",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-23_193403_Fw Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Fw: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-23 19:34:03 **Source:** legal_email  --...",
+    "flagged": true,
+    "flags": [
+      "spousal support"
+    ],
+    "flag_context": "...nd has significantly drained my finances   **Spousal Support Consideration:**  - I note that no considera...",
+    "domainTags": [
+      "sgi"
+    ],
+    "domain": "SGI/Medical",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": "Chris Hallberg",
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-23_062911_Re Katherine Andersen  Yoursel.md_3ac4e0c3f914",
+    "title": "Re: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-23 06:29:11",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-23_062911_Re Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Re: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-23 06:29:11 **Source:** legal_email  --...",
+    "flagged": true,
+    "flags": [
+      "liability"
+    ],
+    "flag_context": "...**without prejudice and without admission of liability**: 1. **Utilities:** Authorize or arrange **...",
+    "domainTags": [
+      "account",
+      "chequing"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Scotiabank",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-23_062902_Fw Katherine Andersen  Yoursel.md_09f6d693cd9c",
+    "title": "Fw: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-23 06:29:02",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-23_062902_Fw Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Fw: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-23 06:29:02 **Source:** legal_email  --...",
+    "domain": "Family Law",
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-23_062851_Fw Katherine Andersen  Yoursel.md_637c0b5d562b",
+    "title": "Fw: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-23 06:28:51",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-23_062851_Fw Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Fw: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-23 06:28:51 **Source:** legal_email  --...",
+    "flagged": true,
+    "flags": [
+      "liability"
+    ],
+    "flag_context": "...**without prejudice and without admission of liability**: 1. **Utilities:** Authorize or arrange **...",
+    "domainTags": [
+      "account",
+      "chequing"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Scotiabank",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:52"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-21_142835_Re Katherine Andersen  Yoursel.md_23e8a5565233",
+    "title": "Re: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-21 14:28:35",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-21_142835_Re Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Re: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-21 14:28:35 **Source:** legal_email  --...",
+    "domainTags": [
+      "account",
+      "chequing"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:52"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-21_103006_Re Katherine Andersen  Yoursel.md_ff7d0feca87b",
+    "title": "Re: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-21 10:30:06",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-21_103006_Re Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Re: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-21 10:30:06 **Source:** legal_email  --...",
+    "flagged": true,
+    "flags": [
+      "spousal support"
+    ],
+    "flag_context": "...easonable access to transportation.**   **5. Spousal Support and Procedural Fairness**   Given the above,...",
+    "domainTags": [
+      "statement",
+      "medical",
+      "account",
+      "chequing",
+      "deposit",
+      "sgi"
+    ],
+    "domain": "Financial",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": null,
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Scotiabank",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:52"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-20_204018_Katherine Andersen  Yourself.md_3687abd24503",
+    "title": "Katherine Andersen & Yourself",
+    "timestamp": "2025-10-20 20:40:18",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-20_204018_Katherine Andersen  Yourself.md",
+    "summary": "# Email: Katherine Andersen & Yourself **From:** Kristy Oleksyn <koleksyn@scharfsteinlaw.com> **Date:** 2025-10-20 20:40:18 **Source:** legal_email  -...",
+    "domainTags": [
+      "account",
+      "chequing"
+    ],
+    "domain": "Financial",
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-17_202248_Katherine Andersen  Yourself.md_419d622df055",
+    "title": "Katherine Andersen & Yourself",
+    "timestamp": "2025-10-17 20:22:48",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-17_202248_Katherine Andersen  Yourself.md",
+    "summary": "# Email: Katherine Andersen & Yourself **From:** Kristy Oleksyn <koleksyn@scharfsteinlaw.com> **Date:** 2025-10-17 20:22:48 **Source:** legal_email  -...",
+    "domain": "Family Law"
+  },
+  {
+    "id": "legal_email_2025-10-17_173046_Re Katherine Andersen  Yoursel.md_a799e017a856",
+    "title": "Re: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-17 17:30:46",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-17_173046_Re Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Re: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-17 17:30:46 **Source:** legal_email  --...",
+    "flagged": true,
+    "flags": [
+      "spousal support"
+    ],
+    "flag_context": "...nd has significantly drained my finances   **Spousal Support Consideration:**  - I note that no considera...",
+    "domainTags": [
+      "sgi"
+    ],
+    "domain": "SGI/Medical",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": null,
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-10_160903_Fw Katherine Andersen  Yoursel.md_386f43cb2ca8",
+    "title": "Fw: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-10 16:09:03",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-10_160903_Fw Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Fw: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-10 16:09:03 **Source:** legal_email  --...",
+    "domainTags": [
+      "claim"
+    ],
+    "domain": "SGI/Medical",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": "number",
+      "dateOfLoss": null,
+      "adjuster": "Kristy Oleksyn",
+      "icd_codes": [],
+      "injurySeverity": "Unknown"
+    },
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-10_154256_Katherine Andersen  Yourself.md_f21e2afb5121",
+    "title": "Katherine Andersen & Yourself",
+    "timestamp": "2025-10-10 15:42:56",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-10_154256_Katherine Andersen  Yourself.md",
+    "summary": "# Email: Katherine Andersen & Yourself **From:** Kristy Oleksyn <koleksyn@scharfsteinlaw.com> **Date:** 2025-10-10 15:42:56 **Source:** legal_email  -...",
+    "domainTags": [
+      "claim"
+    ],
+    "domain": "SGI/Medical",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": "number",
+      "dateOfLoss": null,
+      "adjuster": null,
+      "icd_codes": [],
+      "injurySeverity": "Unknown"
+    },
+    "identity": "Sarah Andersen",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-10_111311_Re Fw Katherine Andersen  Your.md_11c2afc61552",
+    "title": "Re: Fw: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-10 11:13:11",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-10_111311_Re Fw Katherine Andersen  Your.md",
+    "summary": "# Email: Re: Fw: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-10 11:13:11 **Source:** legal_email...",
+    "flagged": true,
+    "flags": [
+      "sgi adjuster"
+    ],
+    "flag_context": "...d help arrange a rental. I also contacted my SGI adjuster, who also stated they would assist. However,...",
+    "domainTags": [
+      "balance",
+      "sgi",
+      "claim"
+    ],
+    "domain": "Financial",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": "information",
+      "dateOfLoss": null,
+      "adjuster": null,
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "SGI Adjuster",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-10_075009_Re Katherine- law.md_0dfb2b34037b",
+    "title": "Re: Katherine- law",
+    "timestamp": "2025-10-10 07:50:09",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-10_075009_Re Katherine- law.md",
+    "summary": "# Email: Re: Katherine- law **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-10 07:50:09 **Source:** legal_email  ---   Dear Counse...",
+    "flagged": true,
+    "flags": [
+      "said application",
+      "spousal support",
+      "settlement"
+    ],
+    "flag_context": "...6 (24 months). >  >  > Rationale: >  >  > 1. SAID Application Timeline: >  > - Application submission: Nov... | ...y law proceedings and  > transitions >  >  > Spousal Support (Family Law): >  > - Federal Spousal Support... | ..., with proceeds handled through mediation  > settlement discussions >  > - (C) Katherine specifies w...",
+    "domainTags": [
+      "sgi",
+      "statement",
+      "claim",
+      "medical",
+      "credit card",
+      "balance",
+      "account",
+      "prescribed",
+      "impairment"
+    ],
+    "domain": "Financial",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": "Christopher Hallberg",
+      "icd_codes": [],
+      "injurySeverity": "High/Severe"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "TD",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 13.16,
+        "net_flow": -13.16
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": [
+          {
+            "date": "2026-04-25",
+            "description": "306.25",
+            "amount": 0.73,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "- THIS REPRESENTS A RATIO OF",
+            "amount": 5.85,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "- FEDERAL GUIDELINES CALCULATION BASED ON",
+            "amount": 5.85,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "306.25",
+            "amount": 0.73,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          }
+        ]
+      },
+      "forensic_flags": []
+    },
+    "identity": "Dr. Miller",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-09_104046_Katherine- law.md_72f3066e3737",
+    "title": "Katherine- law",
+    "timestamp": "2025-10-09 10:40:46",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-09_104046_Katherine- law.md",
+    "summary": "# Email: Katherine- law **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-09 10:40:46 **Source:** legal_email  ---  Date: October 9,...",
+    "flagged": true,
+    "flags": [
+      "said application",
+      "spousal support",
+      "settlement"
+    ],
+    "flag_context": "...ober 31, 2026 (24 months).   Rationale:   1. SAID Application Timeline:  - Application submission: Novembe... | ...ing family law proceedings and transitions   Spousal Support (Family Law):  - Federal Spousal Support Adv... | ...ace, with proceeds handled through mediation settlement discussions  - (C) Katherine specifies which...",
+    "domainTags": [
+      "sgi",
+      "statement",
+      "claim",
+      "medical",
+      "credit card",
+      "balance",
+      "account",
+      "prescribed",
+      "impairment"
+    ],
+    "domain": "Financial",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": "Christopher Hallberg",
+      "icd_codes": [],
+      "injurySeverity": "High/Severe"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "TD",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 19.01,
+        "net_flow": -19.01
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": [
+          {
+            "date": "2026-04-25",
+            "description": "306.25",
+            "amount": 0.73,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "- THIS REPRESENTS A RATIO OF",
+            "amount": 5.85,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "REQUESTING MID-TO-HIGH RANGE GIVEN EXTREME INCOME DISPARITY OF",
+            "amount": 5.85,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "- FEDERAL GUIDELINES CALCULATION BASED ON",
+            "amount": 5.85,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "306.25",
+            "amount": 0.73,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          }
+        ]
+      },
+      "forensic_flags": []
+    },
+    "identity": "Dr. Miller",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-09_094014_Re Katherine Andersen  Yoursel.md_87d9d5c08a1c",
+    "title": "Re: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-09 09:40:14",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-09_094014_Re Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Re: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-09 09:40:14 **Source:** legal_email  --...",
+    "flagged": true,
+    "flags": [
+      "said application",
+      "spousal support",
+      "settlement"
+    ],
+    "flag_context": "...ober 31, 2026 (24 months).   Rationale:   1. SAID Application Timeline:  - Application submission: Novembe... | ...ing family law proceedings and transitions   Spousal Support (Family Law):  - Federal Spousal Support Adv... | ...ace, with proceeds handled through mediation settlement discussions  - (C) Katherine specifies which...",
+    "domainTags": [
+      "sgi",
+      "statement",
+      "claim",
+      "medical",
+      "credit card",
+      "balance",
+      "account",
+      "prescribed",
+      "impairment"
+    ],
+    "domain": "Financial",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": "Christopher Hallberg",
+      "icd_codes": [],
+      "injurySeverity": "High/Severe"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "TD",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 19.01,
+        "net_flow": -19.01
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": [
+          {
+            "date": "2026-04-25",
+            "description": "306.25",
+            "amount": 0.73,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "- THIS REPRESENTS A RATIO OF",
+            "amount": 5.85,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "REQUESTING MID-TO-HIGH RANGE GIVEN EXTREME INCOME DISPARITY OF",
+            "amount": 5.85,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "- FEDERAL GUIDELINES CALCULATION BASED ON",
+            "amount": 5.85,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          },
+          {
+            "date": "2026-04-25",
+            "description": "306.25",
+            "amount": 0.73,
+            "evidence_anchor": "INFERRED_FROM_TEXT",
+            "form_section": "Debts and Liabilities"
+          }
+        ]
+      },
+      "forensic_flags": []
+    },
+    "identity": "SAID Caseworker",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-08_214532_RE Katherine Andersen  Yoursel.md_f53f0eec638e",
+    "title": "RE: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-08 21:45:32",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-08_214532_RE Katherine Andersen  Yoursel.md",
+    "summary": "# Email: RE: Katherine Andersen & Yourself **From:** Kristy Oleksyn <koleksyn@scharfsteinlaw.com> **Date:** 2025-10-08 21:45:32 **Source:** legal_emai...",
+    "domainTags": [
+      "account",
+      "sgi"
+    ],
+    "domain": "Financial",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": "Chris Hallberg",
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "SAID Caseworker",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-08_174100_Re Katherine Andersen  Yoursel.md_fc5529c2cfd7",
+    "title": "Re: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-08 17:41:00",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-08_174100_Re Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Re: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-08 17:41:00 **Source:** legal_email  --...",
+    "domainTags": [
+      "account",
+      "sgi"
+    ],
+    "domain": "Financial",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": "Kristy Oleksyn",
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "SAID Caseworker",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-06_193650_Katherine Andersen  Yourself.md_c63f31f20115",
+    "title": "Katherine Andersen & Yourself",
+    "timestamp": "2025-10-06 19:36:50",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-06_193650_Katherine Andersen  Yourself.md",
+    "summary": "# Email: Katherine Andersen & Yourself **From:** Kristy Oleksyn <koleksyn@scharfsteinlaw.com> **Date:** 2025-10-06 19:36:50 **Source:** legal_email  -...",
+    "domain": "Family Law",
+    "identity": "SAID Caseworker",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-05_203104_Re Katherine Andersen  Yoursel.md_b0808bcc9265",
+    "title": "Re: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-05 20:31:04",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-05_203104_Re Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Re: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-05 20:31:04 **Source:** legal_email  --...",
+    "domainTags": [
+      "chequing",
+      "account",
+      "sgi",
+      "medical"
+    ],
+    "domain": "Financial",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": "Chris Hallberg",
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-04_170218_Re Katherine Andersen  Yoursel.md_53d56971d3d3",
+    "title": "Re: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-04 17:02:18",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-04_170218_Re Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Re: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-04 17:02:18 **Source:** legal_email  --...",
+    "domainTags": [
+      "account",
+      "chequing",
+      "medical"
+    ],
+    "domain": "Financial",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": "Chris Hallberg",
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "financial_metadata": {
+      "metadata": {
+        "institution": "Unknown",
+        "account_type": "Unknown",
+        "statement_period": "Unknown",
+        "generated_at": "2026-04-25T00:M:51"
+      },
+      "summary": {
+        "total_credits": 0.0,
+        "total_debits": 0.0,
+        "net_flow": 0.0
+      },
+      "form_13_1_mapping": {
+        "PART_1_ASSETS": [],
+        "PART_2_DEBTS": []
+      },
+      "forensic_flags": []
+    },
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-04_072041_Re Katherine Andersen  Yoursel.md_3f923cc99546",
+    "title": "Re: Katherine Andersen & Yourself",
+    "timestamp": "2025-10-04 07:20:41",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-04_072041_Re Katherine Andersen  Yoursel.md",
+    "summary": "# Email: Re: Katherine Andersen & Yourself **From:** Chris Hallberg <hallberg1974@gmail.com> **Date:** 2025-10-04 07:20:41 **Source:** legal_email  --...",
+    "domainTags": [
+      "medical"
+    ],
+    "domain": "SGI/Medical",
+    "sgi_metadata": {
+      "domain": "SGI/Medical",
+      "claimNumber": null,
+      "dateOfLoss": null,
+      "adjuster": "Kristy Oleksyn",
+      "icd_codes": [],
+      "injurySeverity": "Moderate"
+    },
+    "identity": "Chris Hallberg",
+    "identityColor": "#888"
+  },
+  {
+    "id": "legal_email_2025-10-03_220428_Katherine Andersen  Yourself.md_1793e18e840f",
+    "title": "Katherine Andersen & Yourself",
+    "timestamp": "2025-10-03 22:04:28",
+    "type": "email",
+    "source": "legal_email",
+    "status": "discovery",
+    "path": "emails/legal_email_2025-10-03_220428_Katherine Andersen  Yourself.md",
+    "summary": "# Email: Katherine Andersen & Yourself **From:** Kristy Oleksyn <koleksyn@scharfsteinlaw.com> **Date:** 2025-10-03 22:04:28 **Source:** legal_email  -...",
+    "domain": "Family Law"
+  },
+  {
+    "id": "pixel8_2024-04-19_202640_5551234.md_e243c133b1e5",
     "title": "5551234",
     "timestamp": "2024-04-19 20:26:40",
     "type": "sms",
     "source": "pixel8",
     "status": "discovery",
     "path": "sms/pixel8_2024-04-19_202640_5551234.md",
-    "flagged": true,
-    "flags": [
-      "divorce"
-    ],
+    "summary": "# SMS from 5551234 **Time:** 2024-04-19 20:26:40 **Direction:** RECEIVED **Source:** pixel8  This is a test message for the divorce bins.",
     "domain": "Family Law"
   },
   {
-    "id": "sms_5551234_20240419202640.md_661976",
+    "id": "sms_5551234_20240419202640.md_b1890fb8eb92",
     "title": "Text Message (Received (Inbound))",
     "timestamp": "2024-04-19 20:26:40",
     "type": "sms",
     "source": "Android Backup",
     "status": "discovery",
     "path": "sms/sms_5551234_20240419202640.md",
+    "summary": "# Text Message: Received (Inbound)  **Contact:** Ex (5551234) **Date:** 2024-04-19 20:26:40 **Type:** Received (Inbound)  ---  This is a test message ...",
     "domain": "Family Law"
   },
   {
-    "id": "old_laptop_test.md_637895",
+    "id": "old_laptop_test.md_a0f5617829bb",
     "title": "Initial Consultation",
     "timestamp": "2015-05-12 14:30:00",
     "type": "email",
     "source": "old_laptop",
     "status": "discovery",
     "path": "emails/old_laptop_test.md",
-    "flagged": true,
-    "flags": [
-      "lawyer@firm.com"
-    ],
+    "summary": "# Email: Initial Consultation  **From:** <lawyer@firm.com> **Date:** 2015-05-12 14:30:00 **Source:** old_laptop  ---  This is a test email from an old...",
     "domain": "Family Law"
   }
 ]

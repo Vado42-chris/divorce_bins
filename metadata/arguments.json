@@ -19,5 +19,194 @@
     "description": "Arguments analyzing the overlap between the collision liability, SAID income scaling, and calculated spousal/property support.",
     "items": [],
     "legalMemo": "## Tactical Synthesis: The Nexus of Liability & Support\n\nThis argument cross-references the SGI collision fault with the SAID income constraints. Since the respondent (Sarah Andersen) is liable for the wreck that necessitated the SAID reliance, any attempts by opposing counsel to reduce spousal support based on SAID income must be aggressively countered using the collision documentation as the root cause of the disability."
+  },
+  {
+    "0": {
+      "id": "arg_1776888400001",
+      "title": "SGI Collision Liability (Sarah Andersen)",
+      "description": "Evidence establishing Sarah Andersen's fault in the vehicle wreck and the resulting timeline of medical impact.",
+      "items": [
+        "1000006202.png_976888"
+      ],
+      "legalMemo": "## Tactical Synthesis: SGI Liability & Medical Impact\n\nThis sequence tracks the specific timeline of the vehicle collision caused by Sarah Andersen. Linking the SGI adjuster reports with Dr. Miller's early medical evaluations establishes the direct causation between her actions and the resulting disability. This liability is a critical focal point for any subsequent financial settlement discussions."
+    },
+    "1": {
+      "id": "arg_1776888400002",
+      "title": "Disability Documentation & SAID Status",
+      "description": "Medical records from Dr. Miller and correspondence with the SAID Caseworker verifying permanent accommodation requirements.",
+      "items": [],
+      "legalMemo": "## Tactical Synthesis: SAID Qualification & Accommodation\n\nThis bin isolates all medical evidence and provincial communications securing SAID benefits. It is imperative that this documentation remains isolated from contentious dispute pools to ensure the provincial benefit is protected regardless of the overarching family law proceedings."
+    },
+    "2": {
+      "id": "arg_1776888400003",
+      "title": "Divorce Settlement: Spousal Support Offset",
+      "description": "Arguments analyzing the overlap between the collision liability, SAID income scaling, and calculated spousal/property support.",
+      "items": [],
+      "legalMemo": "## Tactical Synthesis: The Nexus of Liability & Support\n\nThis argument cross-references the SGI collision fault with the SAID income constraints. Since the respondent (Sarah Andersen) is liable for the wreck that necessitated the SAID reliance, any attempts by opposing counsel to reduce spousal support based on SAID income must be aggressively countered using the collision documentation as the root cause of the disability."
+    },
+    "id": "arg_1777040086422",
+    "evidenceIds": []
+  },
+  {
+    "0": {
+      "id": "arg_1776888400001",
+      "title": "SGI Collision Liability (Sarah Andersen)",
+      "description": "Evidence establishing Sarah Andersen's fault in the vehicle wreck and the resulting timeline of medical impact.",
+      "items": [
+        "1000006202.png_976888"
+      ],
+      "legalMemo": "## Tactical Synthesis: SGI Liability & Medical Impact\n\nThis sequence tracks the specific timeline of the vehicle collision caused by Sarah Andersen. Linking the SGI adjuster reports with Dr. Miller's early medical evaluations establishes the direct causation between her actions and the resulting disability. This liability is a critical focal point for any subsequent financial settlement discussions."
+    },
+    "1": {
+      "id": "arg_1776888400002",
+      "title": "Disability Documentation & SAID Status",
+      "description": "Medical records from Dr. Miller and correspondence with the SAID Caseworker verifying permanent accommodation requirements.",
+      "items": [],
+      "legalMemo": "## Tactical Synthesis: SAID Qualification & Accommodation\n\nThis bin isolates all medical evidence and provincial communications securing SAID benefits. It is imperative that this documentation remains isolated from contentious dispute pools to ensure the provincial benefit is protected regardless of the overarching family law proceedings."
+    },
+    "2": {
+      "id": "arg_1776888400003",
+      "title": "Divorce Settlement: Spousal Support Offset",
+      "description": "Arguments analyzing the overlap between the collision liability, SAID income scaling, and calculated spousal/property support.",
+      "items": [],
+      "legalMemo": "## Tactical Synthesis: The Nexus of Liability & Support\n\nThis argument cross-references the SGI collision fault with the SAID income constraints. Since the respondent (Sarah Andersen) is liable for the wreck that necessitated the SAID reliance, any attempts by opposing counsel to reduce spousal support based on SAID income must be aggressively countered using the collision documentation as the root cause of the disability."
+    },
+    "3": {
+      "0": {
+        "id": "arg_1776888400001",
+        "title": "SGI Collision Liability (Sarah Andersen)",
+        "description": "Evidence establishing Sarah Andersen's fault in the vehicle wreck and the resulting timeline of medical impact.",
+        "items": [
+          "1000006202.png_976888"
+        ],
+        "legalMemo": "## Tactical Synthesis: SGI Liability & Medical Impact\n\nThis sequence tracks the specific timeline of the vehicle collision caused by Sarah Andersen. Linking the SGI adjuster reports with Dr. Miller's early medical evaluations establishes the direct causation between her actions and the resulting disability. This liability is a critical focal point for any subsequent financial settlement discussions."
+      },
+      "1": {
+        "id": "arg_1776888400002",
+        "title": "Disability Documentation & SAID Status",
+        "description": "Medical records from Dr. Miller and correspondence with the SAID Caseworker verifying permanent accommodation requirements.",
+        "items": [],
+        "legalMemo": "## Tactical Synthesis: SAID Qualification & Accommodation\n\nThis bin isolates all medical evidence and provincial communications securing SAID benefits. It is imperative that this documentation remains isolated from contentious dispute pools to ensure the provincial benefit is protected regardless of the overarching family law proceedings."
+      },
+      "2": {
+        "id": "arg_1776888400003",
+        "title": "Divorce Settlement: Spousal Support Offset",
+        "description": "Arguments analyzing the overlap between the collision liability, SAID income scaling, and calculated spousal/property support.",
+        "items": [],
+        "legalMemo": "## Tactical Synthesis: The Nexus of Liability & Support\n\nThis argument cross-references the SGI collision fault with the SAID income constraints. Since the respondent (Sarah Andersen) is liable for the wreck that necessitated the SAID reliance, any attempts by opposing counsel to reduce spousal support based on SAID income must be aggressively countered using the collision documentation as the root cause of the disability."
+      },
+      "id": "arg_1777040086422",
+      "evidenceIds": []
+    },
+    "id": "arg_1777040156243",
+    "evidenceIds": []
+  },
+  {
+    "0": {
+      "id": "arg_1776888400001",
+      "title": "SGI Collision Liability (Sarah Andersen)",
+      "description": "Evidence establishing Sarah Andersen's fault in the vehicle wreck and the resulting timeline of medical impact.",
+      "items": [
+        "1000006202.png_976888"
+      ],
+      "legalMemo": "## Tactical Synthesis: SGI Liability & Medical Impact\n\nThis sequence tracks the specific timeline of the vehicle collision caused by Sarah Andersen. Linking the SGI adjuster reports with Dr. Miller's early medical evaluations establishes the direct causation between her actions and the resulting disability. This liability is a critical focal point for any subsequent financial settlement discussions."
+    },
+    "1": {
+      "id": "arg_1776888400002",
+      "title": "Disability Documentation & SAID Status",
+      "description": "Medical records from Dr. Miller and correspondence with the SAID Caseworker verifying permanent accommodation requirements.",
+      "items": [],
+      "legalMemo": "## Tactical Synthesis: SAID Qualification & Accommodation\n\nThis bin isolates all medical evidence and provincial communications securing SAID benefits. It is imperative that this documentation remains isolated from contentious dispute pools to ensure the provincial benefit is protected regardless of the overarching family law proceedings."
+    },
+    "2": {
+      "id": "arg_1776888400003",
+      "title": "Divorce Settlement: Spousal Support Offset",
+      "description": "Arguments analyzing the overlap between the collision liability, SAID income scaling, and calculated spousal/property support.",
+      "items": [],
+      "legalMemo": "## Tactical Synthesis: The Nexus of Liability & Support\n\nThis argument cross-references the SGI collision fault with the SAID income constraints. Since the respondent (Sarah Andersen) is liable for the wreck that necessitated the SAID reliance, any attempts by opposing counsel to reduce spousal support based on SAID income must be aggressively countered using the collision documentation as the root cause of the disability."
+    },
+    "3": {
+      "0": {
+        "id": "arg_1776888400001",
+        "title": "SGI Collision Liability (Sarah Andersen)",
+        "description": "Evidence establishing Sarah Andersen's fault in the vehicle wreck and the resulting timeline of medical impact.",
+        "items": [
+          "1000006202.png_976888"
+        ],
+        "legalMemo": "## Tactical Synthesis: SGI Liability & Medical Impact\n\nThis sequence tracks the specific timeline of the vehicle collision caused by Sarah Andersen. Linking the SGI adjuster reports with Dr. Miller's early medical evaluations establishes the direct causation between her actions and the resulting disability. This liability is a critical focal point for any subsequent financial settlement discussions."
+      },
+      "1": {
+        "id": "arg_1776888400002",
+        "title": "Disability Documentation & SAID Status",
+        "description": "Medical records from Dr. Miller and correspondence with the SAID Caseworker verifying permanent accommodation requirements.",
+        "items": [],
+        "legalMemo": "## Tactical Synthesis: SAID Qualification & Accommodation\n\nThis bin isolates all medical evidence and provincial communications securing SAID benefits. It is imperative that this documentation remains isolated from contentious dispute pools to ensure the provincial benefit is protected regardless of the overarching family law proceedings."
+      },
+      "2": {
+        "id": "arg_1776888400003",
+        "title": "Divorce Settlement: Spousal Support Offset",
+        "description": "Arguments analyzing the overlap between the collision liability, SAID income scaling, and calculated spousal/property support.",
+        "items": [],
+        "legalMemo": "## Tactical Synthesis: The Nexus of Liability & Support\n\nThis argument cross-references the SGI collision fault with the SAID income constraints. Since the respondent (Sarah Andersen) is liable for the wreck that necessitated the SAID reliance, any attempts by opposing counsel to reduce spousal support based on SAID income must be aggressively countered using the collision documentation as the root cause of the disability."
+      },
+      "id": "arg_1777040086422",
+      "evidenceIds": []
+    },
+    "4": {
+      "0": {
+        "id": "arg_1776888400001",
+        "title": "SGI Collision Liability (Sarah Andersen)",
+        "description": "Evidence establishing Sarah Andersen's fault in the vehicle wreck and the resulting timeline of medical impact.",
+        "items": [
+          "1000006202.png_976888"
+        ],
+        "legalMemo": "## Tactical Synthesis: SGI Liability & Medical Impact\n\nThis sequence tracks the specific timeline of the vehicle collision caused by Sarah Andersen. Linking the SGI adjuster reports with Dr. Miller's early medical evaluations establishes the direct causation between her actions and the resulting disability. This liability is a critical focal point for any subsequent financial settlement discussions."
+      },
+      "1": {
+        "id": "arg_1776888400002",
+        "title": "Disability Documentation & SAID Status",
+        "description": "Medical records from Dr. Miller and correspondence with the SAID Caseworker verifying permanent accommodation requirements.",
+        "items": [],
+        "legalMemo": "## Tactical Synthesis: SAID Qualification & Accommodation\n\nThis bin isolates all medical evidence and provincial communications securing SAID benefits. It is imperative that this documentation remains isolated from contentious dispute pools to ensure the provincial benefit is protected regardless of the overarching family law proceedings."
+      },
+      "2": {
+        "id": "arg_1776888400003",
+        "title": "Divorce Settlement: Spousal Support Offset",
+        "description": "Arguments analyzing the overlap between the collision liability, SAID income scaling, and calculated spousal/property support.",
+        "items": [],
+        "legalMemo": "## Tactical Synthesis: The Nexus of Liability & Support\n\nThis argument cross-references the SGI collision fault with the SAID income constraints. Since the respondent (Sarah Andersen) is liable for the wreck that necessitated the SAID reliance, any attempts by opposing counsel to reduce spousal support based on SAID income must be aggressively countered using the collision documentation as the root cause of the disability."
+      },
+      "3": {
+        "0": {
+          "id": "arg_1776888400001",
+          "title": "SGI Collision Liability (Sarah Andersen)",
+          "description": "Evidence establishing Sarah Andersen's fault in the vehicle wreck and the resulting timeline of medical impact.",
+          "items": [
+            "1000006202.png_976888"
+          ],
+          "legalMemo": "## Tactical Synthesis: SGI Liability & Medical Impact\n\nThis sequence tracks the specific timeline of the vehicle collision caused by Sarah Andersen. Linking the SGI adjuster reports with Dr. Miller's early medical evaluations establishes the direct causation between her actions and the resulting disability. This liability is a critical focal point for any subsequent financial settlement discussions."
+        },
+        "1": {
+          "id": "arg_1776888400002",
+          "title": "Disability Documentation & SAID Status",
+          "description": "Medical records from Dr. Miller and correspondence with the SAID Caseworker verifying permanent accommodation requirements.",
+          "items": [],
+          "legalMemo": "## Tactical Synthesis: SAID Qualification & Accommodation\n\nThis bin isolates all medical evidence and provincial communications securing SAID benefits. It is imperative that this documentation remains isolated from contentious dispute pools to ensure the provincial benefit is protected regardless of the overarching family law proceedings."
+        },
+        "2": {
+          "id": "arg_1776888400003",
+          "title": "Divorce Settlement: Spousal Support Offset",
+          "description": "Arguments analyzing the overlap between the collision liability, SAID income scaling, and calculated spousal/property support.",
+          "items": [],
+          "legalMemo": "## Tactical Synthesis: The Nexus of Liability & Support\n\nThis argument cross-references the SGI collision fault with the SAID income constraints. Since the respondent (Sarah Andersen) is liable for the wreck that necessitated the SAID reliance, any attempts by opposing counsel to reduce spousal support based on SAID income must be aggressively countered using the collision documentation as the root cause of the disability."
+        },
+        "id": "arg_1777040086422",
+        "evidenceIds": []
+      },
+      "id": "arg_1777040156243",
+      "evidenceIds": []
+    },
+    "id": "arg_1777041647523",
+    "evidenceIds": []
   }
 ]
